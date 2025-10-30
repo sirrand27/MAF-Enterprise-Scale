@@ -28,7 +28,7 @@ On this page you will find the meeting recordings and PowerPoint slides from pre
 
 ### Slides
 
-A PDF of the PowerPoint slides are available [here.](./media/community-calls/may-2025/MAF-Community-Call-07052025.pdf)
+A PDF of the PowerPoint slides are available [here.](./media/community-calls/may-2025/ALZ-Community-Call-07052025.pdf)
 
 ## 29th January 2025 (29/01/2025)
 
@@ -38,7 +38,7 @@ A PDF of the PowerPoint slides are available [here.](./media/community-calls/may
 
 ### Slides
 
-A PDF of the PowerPoint slides are available [here.](./media/community-calls/jan-2025/MAF-Community-Call-29012025.pdf)
+A PDF of the PowerPoint slides are available [here.](./media/community-calls/jan-2025/ALZ-Community-Call-29012025.pdf)
 
 ## 25th September 2024 (25/09/2024)
 
@@ -48,7 +48,7 @@ A PDF of the PowerPoint slides are available [here.](./media/community-calls/jan
 
 ### Slides
 
-A PDF of the PowerPoint slides are available [here.](./media/community-calls/sept-2024/MAF-Community-Call-25092024.pdf)
+A PDF of the PowerPoint slides are available [here.](./media/community-calls/sept-2024/ALZ-Community-Call-25092024.pdf)
 
 ## 12th June 2024 (12/06/2024)
 
@@ -58,7 +58,7 @@ A PDF of the PowerPoint slides are available [here.](./media/community-calls/sep
 
 ### Slides
 
-A PDF of the PowerPoint slides is available [here.](./media/community-calls/june-2024/MAF-Community-Call-12062024.pdf)
+A PDF of the PowerPoint slides is available [here.](./media/community-calls/june-2024/ALZ-Community-Call-12062024.pdf)
 
 ## 11th March 2024 (11/03/2024)
 
@@ -68,7 +68,7 @@ A PDF of the PowerPoint slides is available [here.](./media/community-calls/june
 
 ### Slides
 
-A PDF of the PowerPoint slides is available [here.](./media/community-calls/march-2024/MAF-Community-Call-11032024.pdf)
+A PDF of the PowerPoint slides is available [here.](./media/community-calls/march-2024/ALZ-Community-Call-11032024.pdf)
 
 ## 6th December 2023 (06/12/2023)
 
@@ -78,7 +78,7 @@ A PDF of the PowerPoint slides is available [here.](./media/community-calls/marc
 
 ### Slides
 
-A PDF of the PowerPoint slides is available [here.](./media/community-calls/dec-2023/MAF-Community-Call-06122023.pdf)
+A PDF of the PowerPoint slides is available [here.](./media/community-calls/dec-2023/ALZ-Community-Call-06122023.pdf)
 
 ## 25th September 2023 (25/09/2023)
 
@@ -88,7 +88,7 @@ A PDF of the PowerPoint slides is available [here.](./media/community-calls/dec-
 
 ### Slides
 
-A PDF of the PowerPoint slides is available [here.](./media/community-calls/sept-2023/MAF-Community-Call-25092023.pdf)
+A PDF of the PowerPoint slides is available [here.](./media/community-calls/sept-2023/ALZ-Community-Call-25092023.pdf)
 
 ## 27th April 2023 (27/04/2023)
 
@@ -98,7 +98,7 @@ A PDF of the PowerPoint slides is available [here.](./media/community-calls/sept
 
 ### Slides
 
-A PDF of the PowerPoint slides is available [here.](./media/community-calls/april-2023/MAF-Community-Call-27-04-2023.pdf)
+A PDF of the PowerPoint slides is available [here.](./media/community-calls/april-2023/ALZ-Community-Call-27-04-2023.pdf)
 
 ## 31st January 2023 (31/01/2023)
 
@@ -108,7 +108,7 @@ A PDF of the PowerPoint slides is available [here.](./media/community-calls/apri
 
 ### Slides
 
-A PDF of the PowerPoint slides is available [here.](./media/community-calls/jan-2023/MAF-Community-Call-31012023.pdf)
+A PDF of the PowerPoint slides is available [here.](./media/community-calls/jan-2023/ALZ-Community-Call-31012023.pdf)
 
 ## 2nd May 2022 (02/05/2022)
 
@@ -118,7 +118,7 @@ A PDF of the PowerPoint slides is available [here.](./media/community-calls/jan-
 
 ### Slides
 
-A PDF of the PowerPoint slides is available [here.](./media/community-calls/may-2022/MAF-Community-Call-02052022.pdf)
+A PDF of the PowerPoint slides is available [here.](./media/community-calls/may-2022/ALZ-Community-Call-02052022.pdf)
 
 ## 17th November 2021 (17/11/2021)
 

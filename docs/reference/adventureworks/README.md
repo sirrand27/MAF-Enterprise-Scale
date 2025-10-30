@@ -28,7 +28,7 @@ If customer started with a Enterprise-Scale foundation deployment, and if the bu
 ## Prerequisites
 
 To deploy this ARM template, there are a number of prerequisites that must be met.
-See [here](../../wiki/Deploying-MAF-Pre-requisites.md) for more details.
+See [here](../../wiki/Deploying-ALZ-Pre-requisites.md) for more details.
 
 ### Optional prerequisites
 
@@ -96,4 +96,4 @@ By default, all recommendations are enabled and you must explicitly disable them
 
 Once you have deployed the reference implementation, you can create new subscriptions, or move an existing subscriptions to the **Azure Foundations** > **Online** or **Corp**  management group, and finally assign RBAC to the groups/users who should use the Azure foundations (subscriptions) so they can start deploying their workloads.
 
-Refer to the [Create Azure Foundation(s)](../../EnterpriseScale-Deploy-azure-foundations.md) article for guidance to create Azure Foundations.
+Refer to the [Create Azure Foundation(s)](../../EnterpriseScale-Deploy-landing-zones.md) article for guidance to create Azure Foundations.

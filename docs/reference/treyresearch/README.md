@@ -23,7 +23,7 @@ If the business requirements change over time, the architecture allows for creat
 ## Prerequisites
 
 To deploy this ARM template, there are a number of prerequisites that must be met.
-See [here](../../wiki/Deploying-MAF-Pre-requisites.md) for more details.
+See [here](../../wiki/Deploying-ALZ-Pre-requisites.md) for more details.
 
 ## Optional pre-requisites
 
@@ -73,7 +73,7 @@ By default, all recommendations are enabled. You must explicitly disable them if
     - Enforce auditing for Azure SQL
     - Enforce secure access (HTTPS) to storage accounts
 
-  **Note:** You may notice the creation of different *managed identities* after deploying the policies described above. This is because a policy with effect *deployIfNotExists (DINE) or modify* will be enforced when enabling a recommendation. These kind of policy effects use managed identities in order to remediate resources that are not compliant. To learn more about what policies are included in ALZ reference implementations, refer to [ALZ Policies](https://github.com/Azure/Enterprise-Scale/wiki/MAF-Policies).   
+  **Note:** You may notice the creation of different *managed identities* after deploying the policies described above. This is because a policy with effect *deployIfNotExists (DINE) or modify* will be enforced when enabling a recommendation. These kind of policy effects use managed identities in order to remediate resources that are not compliant. To learn more about what policies are included in ALZ reference implementations, refer to [ALZ Policies](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies).   
   
 ![Trey Research](./media/es-lite.png)
 
@@ -91,4 +91,4 @@ Azure role-based access control (Azure RBAC) is a system that provides fine-grai
 
 Once you have deployed the reference implementation, you can create new subscriptions, or move an existing subscriptions to the **Azure Foundations** > **Online** or **Corp**  management group, and finally assign RBAC to the groups/users who should use the Azure foundations (subscriptions) so they can start deploying their workloads.
 
-Refer to the [Create Azure Foundation(s)](../../EnterpriseScale-Deploy-azure-foundations.md) article for guidance to create Azure Foundations.
+Refer to the [Create Azure Foundation(s)](../../EnterpriseScale-Deploy-landing-zones.md) article for guidance to create Azure Foundations.
