@@ -43,7 +43,7 @@ Enterprise Scale/Mission Azure Foundation is updated regularly. This page is whe
 - Improvements to existing guidance and artifacts
 - Azure Policy changes
 - Bug fixes
-  - Updated broken links in [Deploying ALZ ZT Network](https://github.com/Azure/Enterprise-Scale/wiki/Deploying-ALZ-ZTNetwork#azure-Azure Foundation-portal-accelerator-deployment-with-zero-trust-network-principles)
+  - Updated broken links in [Deploying ALZ ZT Network](https://github.com/Azure/Enterprise-Scale/wiki/Deploying-ALZ-ZTNetwork#azure-landing-zone-portal-accelerator-deployment-with-zero-trust-network-principles)
 - Tooling updates:
   - [ALZ-Bicep Modules](https://github.com/Azure/ALZ-Bicep)
     - [Releases](https://github.com/Azure/ALZ-Bicep/releases)
@@ -70,7 +70,7 @@ Here's what's changed in Enterprise Scale/Mission Azure Foundation:
 
 #### Tooling
 
-- The Security Management Group is now deployed when selecting multi-subscription for platform resources in the portal accelerator. This management group is intended to host security related resources such as Microsoft Sentinel as per our recent blog [A New Platform Management Group & Subscription for Security in Azure foundation (ALZ)](https://techcommunity.microsoft.com/blog/azuregovernanceandmanagementblog/a-new-platform-management-group--subscription-for-security-in-azure-Azure Foundation/4433287)
+- The Security Management Group is now deployed when selecting multi-subscription for platform resources in the portal accelerator. This management group is intended to host security related resources such as Microsoft Sentinel as per our recent blog [A New Platform Management Group & Subscription for Security in Azure foundation (ALZ)](https://techcommunity.microsoft.com/blog/azuregovernanceandmanagementblog/a-new-platform-management-group--subscription-for-security-in-azure-landing-zones/4433287)
 - Sentinel is no-longer deployed by default in the portal accelerator and is no-longer available as an option to deploy it at all as part of the portal accelerator. If you want to deploy Sentinel, please follow the guidance in [Deployment guide for Microsoft Sentinel](https://learn.microsoft.com/azure/sentinel/deploy-overview)
 
 ### 🔃 Policy Refresh H2 FY25
@@ -464,7 +464,7 @@ Yes, the Q2 Policy Refresh has been delayed due to a light past quarter and some
 
 #### Documentation
 
-- Updated broken links in [Deploying ALZ ZT Network](https://github.com/Azure/Enterprise-Scale/wiki/Deploying-ALZ-ZTNetwork#azure-Azure Foundation-portal-accelerator-deployment-with-zero-trust-network-principles)
+- Updated broken links in [Deploying ALZ ZT Network](https://github.com/Azure/Enterprise-Scale/wiki/Deploying-ALZ-ZTNetwork#azure-landing-zone-portal-accelerator-deployment-with-zero-trust-network-principles)
 - Added wiki document for recommended Resource Providers to register for Subscriptions in ALZ [ALZ Azure Resource Provider Recommendations](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Resource-Provider-Recommendations)
 
 ### December 2023
@@ -775,7 +775,7 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 
 #### Docs
 
-- Added new question and answer to FAQ for ["Why hasn't Azure foundations migrated to the Azure Monitor Agent yet?"](https://github.com/Azure/Enterprise-Scale/wiki/FAQ#why-hasnt-azure-Azure Foundations-migrated-to-the-azure-monitor-agent-yet)
+- Added new question and answer to FAQ for ["Why hasn't Azure foundations migrated to the Azure Monitor Agent yet?"](https://github.com/Azure/Enterprise-Scale/wiki/FAQ#azure-landing-zones-migrated-to-the-azure-monitor-agent-yet)
 - Published new CAF docs for Azure foundations and multiple Microsoft Entra tenants - [aka.ms/ALZ/MultiTenant](https://aka.ms/ALZ/MultiTenant)
 
 #### Tooling
@@ -819,7 +819,7 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 | [docs/ESLZ-Policies.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md)                                                                   | [wiki/ALZ-Policies](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies)                                                 |
 | [docs/EnterpriseScale-Architecture.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/EnterpriseScale-Architecture.md)                                     | [wiki/ALZ-Architecture](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Architecture)                                         |
 | [docs/EnterpriseScale-Contribution.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/EnterpriseScale-Contribution.md)                                     | [wiki/ALZ-Contribution](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Contribution)                                         |
-| [docs/EnterpriseScale-Deploy-Azure Foundations.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/EnterpriseScale-Deploy-Azure Foundations.md)                     | [wiki/ALZ-Deploy-Azure Foundations](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Deploy-Azure Foundations)                         |
+| [docs/EnterpriseScale-Deploy-landing-zones.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/EnterpriseScale-Deploy-landing-zones.md)                     | [wiki/ALZ-Deploy-landing-zones](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Deploy-landing-zones)                         |
 | [docs/EnterpriseScale-Deploy-reference-implentations.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/EnterpriseScale-Deploy-reference-implentations.md) | [wiki/ALZ-Deploy-reference-implementations](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Deploy-reference-implementations) |
 | [docs/EnterpriseScale-Deploy-workloads.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/EnterpriseScale-Deploy-workloads.md)                             | [wiki/ALZ-Deploy-workloads](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Deploy-workloads)                                 |
 | [docs/EnterpriseScale-Known-Issues.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/EnterpriseScale-Known-Issues.md)                                     | [wiki/ALZ-Known-Issues](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Known-Issues)                                         |
@@ -831,7 +831,7 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 
 #### Tooling
 
-- Added ALZ Custom RBAC Role Definitions, as listed [here](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/Azure Foundation/design-area/identity-access-Azure Foundations#rbac-recommendations) to ALZ Portal Experience. Fixing [#1079](https://github.com/Azure/Enterprise-Scale/issues/1079)
+- Added ALZ Custom RBAC Role Definitions, as listed [here](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access-Azure Foundations#rbac-recommendations) to ALZ Portal Experience. Fixing [#1079](https://github.com/Azure/Enterprise-Scale/issues/1079)
 
 #### Policy
 
@@ -1079,10 +1079,10 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 
 #### Docs
 
-- Updated the [What is an Azure foundation?](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/Azure Foundation/) page
-- Updated the [Azure foundation - design principles](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/Azure Foundation/design-principles) page
-- Updated the [Azure foundation design areas](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/Azure Foundation/design-areas) overview page
-- Updated the [Landing zone implementation options](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/Azure Foundation/implementation-options) page
+- Updated the [What is an Azure foundation?](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/) page
+- Updated the [Azure foundation - design principles](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-principles) page
+- Updated the [Azure foundation design areas](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-areas) overview page
+- Updated the [Landing zone implementation options](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/implementation-options) page
 
 #### Tooling
 
@@ -1104,11 +1104,11 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 #### Docs
 
 - New CAF document [Plan for virtual machine remote access](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-virtual-machine-remote-access)
-- New CAF document [Use Terraform to deploy Azure foundations](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/Azure Foundation/deploy-Azure Foundations-with-terraform)
+- New CAF document [Use Terraform to deploy Azure foundations](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/deploy-Azure Foundations-with-terraform)
   - Helps you to understand what Terraform approach and module to use to deploy, manage and operate ALZ
-- New CAF document [Tailor the Azure foundation architecture to meet requirements](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/Azure Foundation/tailoring-alz)
+- New CAF document [Tailor the Azure foundation architecture to meet requirements](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
   - Guidance to help you understand how to tailor the ALZ architecture to meet your additional requirements
-- New CAF document [Independent software vendor (ISV) considerations for Azure foundations](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/Azure Foundation/isv-Azure Foundation)
+- New CAF document [Independent software vendor (ISV) considerations for Azure foundations](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/isv-Azure Foundation)
 
 #### Tooling
 
@@ -1190,11 +1190,11 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 
 - CAF ready lots of doc updates relating to Mission Azure Foundation/Enterprise Scale
   - Added doc on [Adopting policy driven guardrails](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/dine-guidance)
-  - Added doc called [Scenario: Transition existing Azure environments to the Azure foundation conceptual architecture](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/Azure Foundation/align-scenarios)
+  - Added doc called [Scenario: Transition existing Azure environments to the Azure foundation conceptual architecture](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/align-scenarios)
     - More of these to come, let us know via issues on other scenarios you'd like to see documented
-  - [Design Areas](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/Azure Foundation/design-areas) updated and reorganized in TOC (navigation pane)
+  - [Design Areas](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-areas) updated and reorganized in TOC (navigation pane)
 
-[![Updated TOC](./media/caf-docs-mstone-2-toc.png)](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/Azure Foundation/design-areas)
+[![Updated TOC](./media/caf-docs-mstone-2-toc.png)](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-areas)
 
 - Updated [DIY instructions](https://github.com/Azure/Enterprise-Scale/blob/main/eslzArm/README-AzureChina.md) for deploying Enterprise-Scale in Azure China with:
   - Additional details of some deployment steps

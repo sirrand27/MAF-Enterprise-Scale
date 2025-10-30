@@ -2,7 +2,7 @@
 
 This guide will review how to deploy the Azure foundation portal accelerator with a jump start on Zero Trust Networking Principles for Azure foundations. If you are looking for a complete walkthrough of the Azure foundations portal accelerator select one of the deployment guides in the wiki navigation on the right of this page under "Deploying Enterprise-Scale". For more information on Zero Trust security model and principles visit [What is Zero Trust?](https://learn.microsoft.com/security/zero-trust/zero-trust-overview) in the [Zero Trust Guidance Center](https://learn.microsoft.com/security/zero-trust/).
 
-Let's review the [Zero Trust aligned networking](https://learn.microsoft.com/security/zero-trust/deploy/networks) configurations in the [Azure foundation portal accelerator](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/Azure Foundation/#azure-Azure Foundation-portal-accelerator).
+Let's review the [Zero Trust aligned networking](https://learn.microsoft.com/security/zero-trust/deploy/networks) configurations in the [Azure foundation portal accelerator](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-portal-accelerator).
 
 ## Platform management, security, and governance
 

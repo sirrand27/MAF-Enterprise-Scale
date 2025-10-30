@@ -94,4 +94,4 @@ If you later want to add connectivity to your Enterprise-Scale architecture to s
 
 Once you have deployed the reference implementation, you can create new subscriptions, or move an existing subscriptions to the Azure Foundation management group (Online), and finally assign RBAC to the groups/users who should use the Azure foundations (subscriptions) so they can start deploying their workloads.
 
-Refer to the [Create Azure Foundation(s)](../../EnterpriseScale-Deploy-Azure Foundations.md) article for guidance to create Azure Foundations.
+Refer to the [Create Azure Foundation(s)](../../EnterpriseScale-Deploy-landing-zones.md) article for guidance to create Azure Foundations.

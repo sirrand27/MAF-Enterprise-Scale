@@ -2,16 +2,16 @@
 
 - [How long does enterprise-scale architecture take to deploy?](#how-long-does-enterprise-scale-architecture-take-to-deploy)
 - [Why are there custom policy definitions as part of enterprise-scale architecture?](#why-are-there-custom-policy-definitions-as-part-of-enterprise-scale-reference-implementation)
-- [Where can I see the policy definitions used by enterprise-scale Azure foundations reference implementation?](#where-can-i-see-the-policy-definitions-used-by-the-enterprise-scale-Azure Foundations-reference-implementation)
+- [Where can I see the policy definitions used by enterprise-scale Azure foundations reference implementation?](#where-can-i-see-the-policy-definitions-used-by-the-enterprise-scale-azure-foundations-reference-implementation)
 - [Why does enterprise-scale architecture require permission at tenant root '/' scope?](#why-does-the-enterprise-scale-reference-implementation-require-permission-at-tenant-root--scope)
-- [The Azure foundation accelerator portal-based deployment doesn't display all subscriptions in the drop-down lists?](#the-enterprise-scale-also-known-as-the-azure-Azure Foundation-accelerator-portal-based-deployment-doesnt-display-all-subscriptions-in-the-drop-down-lists)
+- [The Azure foundation accelerator portal-based deployment doesn't display all subscriptions in the drop-down lists?](#the-enterprise-scale-also-known-as-the-azure-foundation-accelerator-portal-based-deployment-doesnt-display-all-subscriptions-in-the-drop-down-lists)
 - [Can we use and customize the ARM templates for enterprise-scale architecture and check them into our repository and deploy it from there?](#can-we-use-and-customize-the-arm-templates-for-enterprise-scale-architecture-and-check-them-into-our-repository-and-deploy-it-from-there)
-- [What if we can't deploy by using the Azure foundation accelerator portal-based experience, but can deploy via infrastructure-as-code?](#what-if-we-cant-deploy-by-using-the-azure-Azure Foundation-accelerator-portal-based-experience-but-can-deploy-via-infrastructure-as-code)
+- [What if we can't deploy by using the Azure foundation accelerator portal-based experience, but can deploy via infrastructure-as-code?](#what-if-we-cant-deploy-by-using-the-azure-foundation-accelerator-portal-based-experience-but-can-deploy-via-infrastructure-as-code)
 - [If we already deployed enterprise-scale architecture without using infrastructure-as-code, do we have to delete everything and start again to use infrastructure-as-code?](#if-we-already-deployed-enterprise-scale-architecture-without-using-infrastructure-as-code-do-we-have-to-delete-everything-and-start-again-to-use-infrastructure-as-code)
 - [The `AzureDiagnostics` table in my Log Analytics Workspace has hit the 500 column limit, what should I do?](#the-azurediagnostics-table-in-my-log-analytics-workspace-has-hit-the-500-column-limit-what-should-i-do)
 - [What happens if I have existing Management Groups that have the same Name/IDs as ones that will be deployed in the ALZ Portal Accelerator?](#what-happens-if-i-have-existing-management-groups-that-have-the-same-nameids-as-ones-that-will-be-deployed-in-the-alz-portal-accelerator)
 - [What are the ALZ Portal Accelerator Management Group Name/IDs that are created?](#what-are-the-alz-portal-accelerator-management-group-nameids-that-are-created)
-- [Why hasn't Azure foundations migrated to the Azure Monitor Agent yet?](#why-hasnt-azure-Azure Foundations-migrated-to-the-azure-monitor-agent-yet)
+- [Why hasn't Azure foundations migrated to the Azure Monitor Agent yet?](#why-hasnt-azure-foundations-migrated-to-the-azure-monitor-agent-yet)
 - [What is the impact of GitHub Releases and ALZ?](#what-is-the-impact-of-github-releases-and-alz)
 
 ---
@@ -65,14 +65,14 @@ All of the ARM templates for enterprise-scale architecture are developed and opt
 
 Finally, taking the same templates for future operations requires you to redeploy to the entire tenant for any change, and also requires permanent owner role-based access control assignment on the tenant root "`/`" scope.
 
-However, if you want to deploy and manage enterprise-scale architecture via infrastructure-as-code, see [What if we can't deploy using the Azure foundation accelerator portal-based experience, but want to deploy via infrastructure-as-code?](#what-if-we-cant-deploy-by-using-the-azure-Azure Foundation-accelerator-portal-based-experience-but-can-deploy-via-infrastructure-as-code).
+However, if you want to deploy and manage enterprise-scale architecture via infrastructure-as-code, see [What if we can't deploy using the Azure foundation accelerator portal-based experience, but want to deploy via infrastructure-as-code?](#what-if-we-cant-deploy-by-using-the-azure-foundation-accelerator-portal-based-experience-but-can-deploy-via-infrastructure-as-code).
 
 ## What if we can't deploy by using the Azure foundation accelerator portal-based experience, but can deploy via infrastructure-as-code?
 
 The following implementation options are available when you use infrastructure-as-code:
 
-- The [Azure foundation accelerator](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/Azure Foundation/#azure-Azure Foundation-accelerator) portal-based experience can integrate and bootstrap a CI/CD pipeline using GitHub with [AzOps](https://github.com/Azure/AzOps) as documented at [Deploying Enterprise Scale](https://github.com/Azure/Enterprise-Scale/wiki/Deploying-Enterprise-Scale).
-- The [Enterprise-scale Do-It-Yourself (DIY) ARM templates](https://github.com/Azure/Enterprise-Scale/tree/main/eslzArm#enterprise-scale-Azure Foundations-arm-templates) method
+- The [Azure foundation accelerator](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-accelerator) portal-based experience can integrate and bootstrap a CI/CD pipeline using GitHub with [AzOps](https://github.com/Azure/AzOps) as documented at [Deploying Enterprise Scale](https://github.com/Azure/Enterprise-Scale/wiki/Deploying-Enterprise-Scale).
+- The [Enterprise-scale Do-It-Yourself (DIY) ARM templates](https://github.com/Azure/Enterprise-Scale/tree/main/eslzArm#enterprise-scale-azure-foundations-arm-templates) method
 - The [ALZ Terraform module](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale#terraform-module-for-cloud-adoption-framework-enterprise-scale)
 - The [ALZ Bicep modules](https://github.com/Azure/ALZ-Bicep)
 

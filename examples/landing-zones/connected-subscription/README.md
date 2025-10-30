@@ -164,7 +164,7 @@ New-AzManagementGroupDeployment `
             -Name <name> `
             -Location -<location> `
             -ManagementGroupId <mgmtGroupId> `
-            -TemplateUri "https://raw.githubusercontent.com/Azure/Enterprise-Scale/main/examples/Azure Foundations/connected-subscription/connectedSubscription.json"
+            -TemplateUri "https://raw.githubusercontent.com/Azure/Enterprise-Scale/main/examples/landing-zones/connected-subscription/connectedSubscription.json"
 ````
 
 ## Deploy using Azure CLI
@@ -174,4 +174,4 @@ az deployment mg create \
   --name <name> \
   --location <location> \
   --management-group-id <mgmtGroupId> \
-  --template-uri "https://raw.githubusercontent.com/Azure/Enterprise-Scale/main/examples/Azure Foundations/connected-subscription/connectedSubscription.json"
+  --template-uri "https://raw.githubusercontent.com/Azure/Enterprise-Scale/main/examples/landing-zones/connected-subscription/connectedSubscription.json"

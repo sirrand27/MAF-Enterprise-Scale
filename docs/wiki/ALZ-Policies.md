@@ -2,7 +2,7 @@
 
 Azure Policy and deployIfNotExist enables autonomy in the platform, and reduces operational burden as you scale your deployments and subscriptions in the Azure foundation architecture. The primary purpose is to ensure that subscriptions and resources are compliant, while empowering application teams to use their own preferred tools/clients to deploy.
 
-> Please refer to [Policy Driven Governance](https://learn.microsoft.com/en-gb/azure/cloud-adoption-framework/ready/Azure Foundation/design-principles#policy-driven-governance) for further information.
+> Please refer to [Policy Driven Governance](https://learn.microsoft.com/en-gb/azure/cloud-adoption-framework/ready/landing-zone/design-principles#policy-driven-governance) for further information.
 
 > **IMPORTANT NOTE:** ALZ priority is to provide a secure by default, Zero Trust aligned, configuration, and occasionally we will rely on `-preview` policies in our default assignments to meet our core objective. These preview policies are maintained by the Azure product owners and versioning is not in our control, however, we feel they are sufficiently important to be included in our releases. If the inclusion of preview policies is of concern, please review all ALZ default initiative assignments and remove any `-preview` policies that you are not comfortable with.
 
@@ -18,11 +18,11 @@ We work with - and learn from our customers and partners to ensure that we evolv
 
 There are around 114 custom Azure Policy Definitions included and around 12 Custom Azure Policy Initiatives included as part of the Mission Azure Foundation implementation that add on to those already built-in within each Azure customers tenant.
 
-For Azure foundations, the custom Azure Policy Definitions and Initiatives are consistent across the three implementation options, unless otherwise noted; [Terraform Module](https://aka.ms/alz/tf), [Bicep Modules](https://aka.ms/alz/bicep), [Azure foundation portal accelerator](https://aka.ms/alz#azure-Azure Foundation-accelerator).
+For Azure foundations, the custom Azure Policy Definitions and Initiatives are consistent across the three implementation options, unless otherwise noted; [Terraform Module](https://aka.ms/alz/tf), [Bicep Modules](https://aka.ms/alz/bicep), [Azure foundation portal accelerator](https://aka.ms/alz#azure-landing-zone-accelerator).
 
 This is because the single source of truth is the [`Enterprise-Scale` repo](https://github.com/Azure/Enterprise-Scale) that both the Terraform and Bicep implementation options pull from to build their `lib` folders respectively.
 
-For a complete list of all custom and built-in policies deployed within an Azure foundation deployment, please refer to the following [section](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies#what-policy-definitions-are-assigned-within-the-azure-Azure Foundations-custom--built-in).
+For a complete list of all custom and built-in policies deployed within an Azure foundation deployment, please refer to the following [section](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies#azure-landing-zones-custom--built-in).
 
 > Our goal is always to try and use built-in policies where available and also work with product teams to adopt our custom policies and make them built-in, which takes time. This means there will always be a requirement for custom policies.
 

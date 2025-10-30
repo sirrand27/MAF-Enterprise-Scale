@@ -61,7 +61,7 @@ New-AzManagementGroupDeployment `
             -Name <name> `
             -Location -<location> `
             -ManagementGroupId <mgmtGroupId> `
-            -TemplateUri "https://raw.githubusercontent.com/Azure/Enterprise-Scale/main/examples/Azure Foundations/subscription-into-managementGroup/subscriptionIntoManagementGroup.json"
+            -TemplateUri "https://raw.githubusercontent.com/Azure/Enterprise-Scale/main/examples/landing-zones/subscription-into-managementGroup/subscriptionIntoManagementGroup.json"
 ````
 
 ## Deploy using Azure CLI
@@ -71,4 +71,4 @@ az deployment mg create \
   --name <name> \
   --location <location> \
   --management-group-id <mgmtGroupId> \
-  --template-uri "https://raw.githubusercontent.com/Azure/Enterprise-Scale/main/examples/Azure Foundations/subscription-into-managementGroup/subscriptionIntoManagementGroup.json"
+  --template-uri "https://raw.githubusercontent.com/Azure/Enterprise-Scale/main/examples/landing-zones/subscription-into-managementGroup/subscriptionIntoManagementGroup.json"

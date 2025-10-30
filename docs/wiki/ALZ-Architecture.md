@@ -39,15 +39,15 @@ At the centre of the Enterprise-Scale architecture lies a critical design path, 
 
 ## Critical Design Areas
 
-The [eight critical design areas](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/Azure Foundation/design-areas) are intended to support the translation of customer requirements to Azure constructs and capabilities, to address the mismatch between on-premises infrastructure and cloud-design which typically creates dissonance and friction with respect to the Enterprise-Scale definition and Azure adoption.
+The [eight critical design areas](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-areas) are intended to support the translation of customer requirements to Azure constructs and capabilities, to address the mismatch between on-premises infrastructure and cloud-design which typically creates dissonance and friction with respect to the Enterprise-Scale definition and Azure adoption.
 
 The impact of decisions made within these critical areas will reverberate across the Enterprise-Scale architecture and influence other decisions. Readers and reference implementation users are strongly advised to familiarize themselves with these eight areas, to better understand the consequences of encompassed decisions, which may later produce trade-offs within related areas.
 
-* [Billing and Active Directory tenants](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/Azure Foundation/design-area/azure-billing-ad-tenant)
-* [Identity and access management](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/Azure Foundation/design-area/identity-access)
-* [Network topology and connectivity](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/Azure Foundation/design-area/network-topology-and-connectivity)
-* [Resource organization](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/Azure Foundation/design-area/resource-org)
-* [Security](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/Azure Foundation/design-area/security)
-* [Management](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/Azure Foundation/design-area/management)
-* [Governance](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/Azure Foundation/design-area/governance)
-* [Platform automation and DevOps](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/Azure Foundation/design-area/platform-automation-devops)
+* [Billing and Active Directory tenants](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-ad-tenant)
+* [Identity and access management](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access)
+* [Network topology and connectivity](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity)
+* [Resource organization](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org)
+* [Security](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/security)
+* [Management](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/management)
+* [Governance](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/governance)
+* [Platform automation and DevOps](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/platform-automation-devops)

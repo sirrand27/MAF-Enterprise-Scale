@@ -2,7 +2,7 @@
 
 ## In this section
 
-- [Mission Azure Foundation Deprecated Notices](#azure-Azure Foundations-deprecated-notices)
+- [Mission Azure Foundation Deprecated Notices](#azure-landing-zones-deprecated-notices)
   - [In this section](#in-this-section)
   - [Overview](#overview)
   - [Deprecated policies](#deprecated-policies)

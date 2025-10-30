@@ -12,7 +12,7 @@
   * [What if I already have an existing Azure footprint](./What-is-Enterprise-Scale#what-if-i-already-have-an-existing-azure-footprint)
 * [How it Works](./How-Enterprise-Scale-Works)
   * [Design principles](./How-Enterprise-Scale-Works#enterprise-scale-design-principles)
-  * [Separating platform and Azure foundations](./How-Enterprise-Scale-Works#separating-platform-and-Azure Foundations)
+  * [Separating platform and Azure foundations](./How-Enterprise-Scale-Works#separating-platform-and-landing-zones)
   * [Management Group Structure](./How-Enterprise-Scale-Works#enterprise-scale-management-group-structure)
   * [What happens when you deploy Enterprise-Scale?](./How-Enterprise-Scale-Works#what-happens-when-you-deploy-enterprise-scale)
 * Deploying Enterprise-Scale
@@ -20,7 +20,7 @@
   * [ALZ Resource Providers Guidance](./ALZ-Resource-Provider-Recommendations)
   * [Configure Microsoft Entra permissions](./ALZ-Setup-aad-permissions)
   * [Configure Azure permissions](./ALZ-Setup-azure)
-  * [Deploy Azure foundations](./ALZ-Deploy-Azure Foundations)
+  * [Deploy Azure foundations](./ALZ-Deploy-landing-zones)
   * [Deploy reference implementations](./ALZ-Deploy-reference-implementations)
   * [Telemetry Tracking Using Customer Usage Attribution (PID)](./Deploying-ALZ-CustomerUsage)
   * [Deploy without hybrid connectivity to on-premises](./Deploying-ALZ-Foundation)
