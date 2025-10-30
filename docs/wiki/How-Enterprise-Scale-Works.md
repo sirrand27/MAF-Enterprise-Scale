@@ -84,7 +84,7 @@ By default, all recommended settings and resources recommendations are enabled a
 
 - A scalable Management Group hierarchy aligned to core platform capabilities, allowing you to operationalize at scale using centrally managed Azure RBAC and Azure Policy where platform and workloads have clear separation.
 
-- Azure Policies that will enable autonomy for the platform and the Azure foundations. The full list of policies leveraged by Enterprise-Scale, their intent, assignment scope, and life-cycle can be viewed [here](./ALZ-Policies).
+- Azure Policies that will enable autonomy for the platform and the Azure foundations. The full list of policies leveraged by Enterprise-Scale, their intent, assignment scope, and life-cycle can be viewed [here](./MAF-Policies).
 - An Azure subscription dedicated for **Management**, which enables core platform capabilities at scale using Azure Policy such as:
 
   - A Log Analytics workspace
@@ -92,7 +92,7 @@ By default, all recommended settings and resources recommendations are enabled a
   - Azure Security Center (Standard or Free tier)
   - Diagnostics settings for Activity Logs, VMs, Management Groups and PaaS resources sent to Log Analytics
 
-- When deploying [**Adventure Works**](./ALZ-Deploy-reference-implementations#deploy-a-reference-implementation) or [**Contoso**](./ALZ-Deploy-reference-implementations#deploy-a-reference-implementation): An Azure subscription dedicated for **Connectivity**, which deploys core Azure networking resources such as:
+- When deploying [**Adventure Works**](./MAF-Deploy-reference-implementations#deploy-a-reference-implementation) or [**Contoso**](./MAF-Deploy-reference-implementations#deploy-a-reference-implementation): An Azure subscription dedicated for **Connectivity**, which deploys core Azure networking resources such as:
 
   - A hub virtual network
   - Azure Firewall

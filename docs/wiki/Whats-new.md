@@ -43,10 +43,10 @@ Enterprise Scale/Mission Azure Foundation is updated regularly. This page is whe
 - Improvements to existing guidance and artifacts
 - Azure Policy changes
 - Bug fixes
-  - Updated broken links in [Deploying ALZ ZT Network](https://github.com/Azure/Enterprise-Scale/wiki/Deploying-ALZ-ZTNetwork#azure-landing-zone-portal-accelerator-deployment-with-zero-trust-network-principles)
+  - Updated broken links in [Deploying ALZ ZT Network](https://github.com/Azure/Enterprise-Scale/wiki/Deploying-MAF-ZTNetwork#azure-landing-zone-portal-accelerator-deployment-with-zero-trust-network-principles)
 - Tooling updates:
-  - [ALZ-Bicep Modules](https://github.com/Azure/ALZ-Bicep)
-    - [Releases](https://github.com/Azure/ALZ-Bicep/releases)
+  - [MAF-Bicep Modules](https://github.com/Azure/MAF-Bicep)
+    - [Releases](https://github.com/Azure/MAF-Bicep/releases)
   - [Terraform Module for Cloud Adoption Framework Enterprise-scale](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale)
     - [Releases](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases)
 
@@ -166,7 +166,7 @@ Here's what's changed in Enterprise Scale/Mission Azure Foundation:
 - Fixed a Portal Accelerator bug that results in failed deployment when choosing not to deploy policies to the Identity management group.
 - Updated the display name of the many `Effect` parameters to clearly identify the policy it applies to in the initiative [Enforce recommended guardrails for Azure Key Vault](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-KeyVault.html).
 - Updated the policy and policySet definition API version `2023-04-01` to supporting policy versioning. In this repo, this is used in the master policies.json and initiatives.json files, that are built from individual policy and initiative files in the src folder.
-- Added description for custom ALZ policy [Deny-Subnet-Without-Penp](https://www.azadvertizer.net/azpolicyadvertizer/Deny-Subnet-Without-Penp.html) to the [ALZ Policies Extra](./ALZ-Policies-Extra) wiki page.
+- Added description for custom ALZ policy [Deny-Subnet-Without-Penp](https://www.azadvertizer.net/azpolicyadvertizer/Deny-Subnet-Without-Penp.html) to the [ALZ Policies Extra](./MAF-Policies-Extra) wiki page.
 - Updated initiative [Enforce-EncryptTransit_20240509](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-EncryptTransit_20240509.html) `AppServiceMinTlsVersion` parameter to include TLS version 1.3 (as supported by the policy).
 - Removed duplicate policy assignment "Container Apps should only be accessible over HTTPS" from initiative [Enforce-EncryptTransit_20241211](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-EncryptTransit_20241211.html). Note, this is a breaking change, and existing assignments should be removed and re-assigned.
 - Added new custom policies [Audit-Tags-Mandatory](https://www.azadvertizer.net/azpolicyadvertizer/Audit-Tags-Mandatory.html) and [Audit-Tags-Mandatory-Rg](https://www.azadvertizer.net/azpolicyadvertizer/Audit-Tags-Mandatory-Rg.html) to support auditing for the existence of mandatory tags (based on an array of tags). Not assigned by default.
@@ -211,7 +211,7 @@ Here's what's changed in Enterprise Scale/Mission Azure Foundation:
 
 #### Known Issue
 
->Note: there a known issue when re-deploying ALZ using the portal accelerator with CMK enabled. For details please see [Known Issues](ALZ-Known-Issues).
+>Note: there a known issue when re-deploying ALZ using the portal accelerator with CMK enabled. For details please see [Known Issues](MAF-Known-Issues).
 
 ### October 2024
 
@@ -225,7 +225,7 @@ Here's what's changed in Enterprise Scale/Mission Azure Foundation:
 
 #### Documentation
 
-- The [ALZ Policies](./ALZ-Policies) and [ALZ Deprecated Services](./ALZ-Deprecated-Services) documentation has been updated to reflect changes in AMBA. To provide more flexibility for future growth AMBA is transitioning from a single Azure Foundation policy initiative and instead is adopting a modular approach by splitting the Azure Foundation initiative into the following distinct components (initiatives):
+- The [ALZ Policies](./MAF-Policies) and [ALZ Deprecated Services](./MAF-Deprecated-Services) documentation has been updated to reflect changes in AMBA. To provide more flexibility for future growth AMBA is transitioning from a single Azure Foundation policy initiative and instead is adopting a modular approach by splitting the Azure Foundation initiative into the following distinct components (initiatives):
   - Key Management
   - Load Balancing
   - Network Changes
@@ -271,9 +271,9 @@ Here's what's changed in Enterprise Scale/Mission Azure Foundation:
 
 #### Documentation
 
-- As the Log Analytics agent is set to be retired on August 31, 2024, it is crucial for users to plan their migration to avoid any disruption in their monitoring services. The migration involves understanding the current setup, including agents, workspaces, solutions, insights, and data collections, and then configuring the new data collections to ensure a smooth transition. Tools like the AMA Migration Helper and DCR Config Generator can assist in automating and tracking the migration process. We've now made available [migration guidance](./ALZ-AMA-Migration-Guidance) to assist in the process.
-- Developed a script to facilitate the transition from Microsoft Monitoring Agent (MMA) to Azure Monitor Agent (AMA) within Azure foundations. Review the [migration guidance](./ALZ-AMA-Migration-Guidance) for additional information on how the script can be used.
-- General update AMA documentation [ALZ AMA Update](./ALZ-AMA-Update)
+- As the Log Analytics agent is set to be retired on August 31, 2024, it is crucial for users to plan their migration to avoid any disruption in their monitoring services. The migration involves understanding the current setup, including agents, workspaces, solutions, insights, and data collections, and then configuring the new data collections to ensure a smooth transition. Tools like the AMA Migration Helper and DCR Config Generator can assist in automating and tracking the migration process. We've now made available [migration guidance](./MAF-AMA-Migration-Guidance) to assist in the process.
+- Developed a script to facilitate the transition from Microsoft Monitoring Agent (MMA) to Azure Monitor Agent (AMA) within Azure foundations. Review the [migration guidance](./MAF-AMA-Migration-Guidance) for additional information on how the script can be used.
+- General update AMA documentation [ALZ AMA Update](./MAF-AMA-Update)
 
 #### Policy
 
@@ -314,7 +314,7 @@ Key updates include:
 
 We've missed Q3 timelines completely, but for good reason. We've held back this cycle of Policy Refresh in order to address some key initiatives that we feel are critical to the success of our customers. This is the single largest update to the ALZ Policy since the inception of the project. We're excited to share these updates with you, and we're confident that they will provide significant value to your deployments and the compliance of your Mission Azure Foundation.
 
-- 📌Major Update: New "Workload Specific Compliance" section added to ALZ Portal accelerator. This will allow you to apply compliance policies to specific workloads, such as SQL, Storage, and more. These additional compliance controls are frequently required by highly regulated industries like financial services, healthcare, etc. Note: they are not assigned by default, you are required to select the workload and management group scope to apply assignments. For more information review [ALZ Policy - Extra](./ALZ-Policies-Extra)
+- 📌Major Update: New "Workload Specific Compliance" section added to ALZ Portal accelerator. This will allow you to apply compliance policies to specific workloads, such as SQL, Storage, and more. These additional compliance controls are frequently required by highly regulated industries like financial services, healthcare, etc. Note: they are not assigned by default, you are required to select the workload and management group scope to apply assignments. For more information review [ALZ Policy - Extra](./MAF-Policies-Extra)
 This release includes:
   - 25 new custom initiatives added to support key Azure workloads/services
   - Significantly enhanced [Deny-PublicPaasEndpoints](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Deny-PublicPaasEndpoints.html) to cover additional services (no public access)
@@ -371,8 +371,8 @@ Special Note: Existing consumers of ALZ will notice that some "assigned by defau
 #### Documentation
 
 - Archived the readme content in the eslzArm folder as it is no longer relevant. Please refer to the [ALZ Wiki](https://aka.ms/alz/wiki) for the latest information on how to deploy Enterprise-Scale Azure Foundations. To view the content that was previously here, refer to the [archive](https://github.com/Azure/Enterprise-Scale/blob/45d5c2bd8c1a9e19b1a46a3a0dabb311e5320b64/eslzArm/README.md).
-- Added new instructions for deploying hub and spoke network topology in [multiple regions](./Deploying-ALZ-HubAndSpoke#deploying-networking-resources-in-an-additional-region).
-- Added new instructions for deploying additional vWAN hubs in [multiple regions](./Deploying-ALZ-HubAndSpoke#deploying-networking-resources-in-an-additional-region).
+- Added new instructions for deploying hub and spoke network topology in [multiple regions](./Deploying-MAF-HubAndSpoke#deploying-networking-resources-in-an-additional-region).
+- Added new instructions for deploying additional vWAN hubs in [multiple regions](./Deploying-MAF-HubAndSpoke#deploying-networking-resources-in-an-additional-region).
 
 #### Tooling
 
@@ -393,7 +393,7 @@ Special Note: Existing consumers of ALZ will notice that some "assigned by defau
 
 #### Documentation
 
-- Added new AMA Policies and Initiatives to [ALZ Policies](./ALZ-Policies) documentation.
+- Added new AMA Policies and Initiatives to [ALZ Policies](./MAF-Policies) documentation.
 - Updated [community call wiki page](https://aka.ms/alz/community) with links for March 2024 recording and slides.
 
 #### Tooling
@@ -416,7 +416,7 @@ Special Note: Existing consumers of ALZ will notice that some "assigned by defau
 
 #### Tooling
 
-- Disabled a Policy in the Microsoft Defender for SQL initiative. As it is not required at this stage. See [ALZ AMA FAQ](./ALZ-AMA-FAQ) for more details.
+- Disabled a Policy in the Microsoft Defender for SQL initiative. As it is not required at this stage. See [ALZ AMA FAQ](./MAF-AMA-FAQ) for more details.
 - Changed enforcementMode of the assignment of Policy "Deploy-UserAssignedManagedIdentity-VMInsights" to Default. This is to ensure that a Resource Group and a User Assigned Managed Identity are created on new subscriptions (subscriptions that are added after the initial deployment).
 - Bug fix for Portal Accelerator. userAssignedIdentityResourceGroup has been added as output for the Portal UI, this fixes deploying the Resource Group with a custom name.
 - Bug fix for Portal Accelerator. `subscriptionIds` now uses lambda function to obtain the subscription IDs from `corpConnectedLzSubscriptionId`. This fixes the Invalid Template error when selecting a corp connected Azure foundation deployment.
@@ -429,9 +429,9 @@ The Azure Monitor Agent (AMA) is the new way to collect and send data to Azure M
 
 This update currently applies to Greenfield Portal Deployment Scenarios. Brownfield guidance as well as Bicep and Terraform updates to follow in short-term.
 
-We are happy to announce that we have added a new section in the documentation for AMA. Please visit [ALZ AMA Update](./ALZ-AMA-Update) for a detailed overview of the changes made to the ARM templates and Policies, as well as the deprecated policy assignments.
+We are happy to announce that we have added a new section in the documentation for AMA. Please visit [ALZ AMA Update](./MAF-AMA-Update) for a detailed overview of the changes made to the ARM templates and Policies, as well as the deprecated policy assignments.
 
-> **IMPORTANT** We've added an ALZ AMA FAQ with important information about key changes in AMA. Please read the [ALZ AMA FAQ](./ALZ-AMA-FAQ) for more information.
+> **IMPORTANT** We've added an ALZ AMA FAQ with important information about key changes in AMA. Please read the [ALZ AMA FAQ](./MAF-AMA-FAQ) for more information.
 
 ### 🔃 Policy Refresh Q2 FY24
 
@@ -439,7 +439,7 @@ Yes, the Q2 Policy Refresh has been delayed due to a light past quarter and some
 
 #### Policy
 
-> **IMPORTANT** We've updated the ALZ Policy FAQ with important information about the new Diagnostic Settings v2 policies and initiatives that are will be landing soon. Please read the [ALZ Policy FAQ and Tips](./ALZ-Policies-FAQ) for more information.
+> **IMPORTANT** We've updated the ALZ Policy FAQ with important information about the new Diagnostic Settings v2 policies and initiatives that are will be landing soon. Please read the [ALZ Policy FAQ and Tips](./MAF-Policies-FAQ) for more information.
 
 - Added built-in policy to Deploy-MDFC-Config initiative and default assignment to [Setup subscriptions to transition to an alternative vulnerability assessment solution](https://www.azadvertizer.net/azpolicyadvertizer/766e621d-ba95-4e43-a6f2-e945db3d7888.html). This policy will enable the Microsoft Defender for Endpoint Threat Vulnerability solution on all virtual machines in all subscriptions, which is free to all Azure subscribers. This is implemented as the Qualys based solution is retiring on 1 May, 2024. For more information, please see the [Microsoft Defender for Cloud documentation](https://docs.microsoft.com/en-us/azure/defender-for-cloud/how-to-transition-to-built-in).
   - VM vulnerability scanning will be enabled by default at subscription level as there is no cost and it is best practice.
@@ -448,7 +448,7 @@ Yes, the Q2 Policy Refresh has been delayed due to a light past quarter and some
 
 - 🎉 Added new initiative default assignment at the Intermediate Root Management Group for [Resources should be Zone Resilient](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/130fb88f-0fc9-4678-bfe1-31022d71c7d5.html) in Audit mode.
 - Added new default assignment at the Intermediate Root Management Group for [Resource Group and Resource locations should match](https://www.azadvertizer.net/azpolicyadvertizer/0a914e76-4921-4c19-b460-a2d36003525a.html), which will help customers better manage and identify regionally deployed resources and ultimately support improved resilience.
-- We are deprecating MariaDB custom policies. For more information: [ALZ Policies FAQ](./ALZ-Policies-FAQ)
+- We are deprecating MariaDB custom policies. For more information: [ALZ Policies FAQ](./MAF-Policies-FAQ)
 - Fixed a typo in the Private DNS Zones initiative for the policy definition IDs for Databrics (corrected to Databricks). While not a breaking change, it is recommended to redeploy the initiative to ensure the correct policy definition IDs are used if you are using Private DNS Zones for Databricks - specifically if you have configured any exclusions or overrides for the Databricks policy definitions, as these rely on the policy definition ID (which has been updated). You will need to recreate the exclusions or overrides for Databricks if you choose not to redeploy the initiative.
 - Added ['Container Apps environment should disable public network access'](https://www.azadvertizer.net/azpolicyadvertizer/d074ddf8-01a5-4b5e-a2b8-964aed452c0a.html) to ['Deny-PublicPaaSEndpoints'.](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Deny-PublicPaaSEndpoints.html)
 - Added ['Container Apps should only be accessible over HTTPS'](https://www.azadvertizer.net/azpolicyadvertizer/0e80e269-43a4-4ae9-b5bc-178126b8a5cb.html) to this ['Deny or Deploy and append TLS requirements and SSL enforcement on resources without Encryption in transit'.](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-EncryptTransit.html)
@@ -464,8 +464,8 @@ Yes, the Q2 Policy Refresh has been delayed due to a light past quarter and some
 
 #### Documentation
 
-- Updated broken links in [Deploying ALZ ZT Network](https://github.com/Azure/Enterprise-Scale/wiki/Deploying-ALZ-ZTNetwork#azure-landing-zone-portal-accelerator-deployment-with-zero-trust-network-principles)
-- Added wiki document for recommended Resource Providers to register for Subscriptions in ALZ [ALZ Azure Resource Provider Recommendations](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Resource-Provider-Recommendations)
+- Updated broken links in [Deploying ALZ ZT Network](https://github.com/Azure/Enterprise-Scale/wiki/Deploying-MAF-ZTNetwork#azure-landing-zone-portal-accelerator-deployment-with-zero-trust-network-principles)
+- Added wiki document for recommended Resource Providers to register for Subscriptions in ALZ [ALZ Azure Resource Provider Recommendations](https://github.com/Azure/Enterprise-Scale/wiki/MAF-Resource-Provider-Recommendations)
 
 ### December 2023
 
@@ -475,7 +475,7 @@ Yes, the Q2 Policy Refresh has been delayed due to a light past quarter and some
 
 #### Docs
 
-- Added new section to the ALZ Wiki FAQ to provide guidance around Private DNS Zone/Privatelink issues - [read here](ALZ-Policies-FAQ.md#private-dns-zone-issues).
+- Added new section to the ALZ Wiki FAQ to provide guidance around Private DNS Zone/Privatelink issues - [read here](MAF-Policies-FAQ.md#private-dns-zone-issues).
 
 #### Other
 
@@ -493,7 +493,7 @@ Yes, the Q2 Policy Refresh has been delayed due to a light past quarter and some
 #### Docs
 
 - Fixed in ALZ Azure Setup the bash command to assign at root scope _Owner_ role to a Service Principal.
-- Added a new section to describe ALZ Policy Testing Framework for ALZ custom policies [Policies Testing Framework](./ALZ-Policies-Testing).
+- Added a new section to describe ALZ Policy Testing Framework for ALZ custom policies [Policies Testing Framework](./MAF-Policies-Testing).
 
 ### October 2023
 
@@ -648,13 +648,13 @@ Major update in this release: introducing the Policy Testing Framework foundatio
 - Updated wiki documentation to so reflect the removal of the "Platform DevOps and automation" section from ALZ Portal Accelerator
 - Added support for Azure Firewall Basic SKU to Hub & Spoke and Virtual WAN deployments in the ALZ Portal Accelerator
 - Updated wiki documentation towards Subscription Vending approach for Azure foundation (subscription) creation
-- A brand new [ALZ Policy FAQ and Tips](./ALZ-Policies-FAQ) page has been added to the wiki to help answer some of the most common questions and provide some useful tips for working with ALZ policies.
-- Updated [ALZ Contribution Guide](./ALZ-Contribution-Guide) to include new section on how to contribute to ALZ policies resulting in breaking changes, and some minor refactoring to make it more readable.
+- A brand new [ALZ Policy FAQ and Tips](./MAF-Policies-FAQ) page has been added to the wiki to help answer some of the most common questions and provide some useful tips for working with ALZ policies.
+- Updated [ALZ Contribution Guide](./MAF-Contribution-Guide) to include new section on how to contribute to ALZ policies resulting in breaking changes, and some minor refactoring to make it more readable.
 
 #### Tooling
 
-- ALZ Bicep [`v0.14.0`](https://github.com/Azure/ALZ-Bicep/releases/tag/v0.14.0) released
-  - [ALZ Bicep Accelerator (MVP) launched](https://github.com/Azure/ALZ-Bicep/wiki/Accelerator)
+- ALZ Bicep [`v0.14.0`](https://github.com/Azure/MAF-Bicep/releases/tag/v0.14.0) released
+  - [ALZ Bicep Accelerator (MVP) launched](https://github.com/Azure/MAF-Bicep/wiki/Accelerator)
 - ALZ Terraform (`caf-enterprise-scale`) [`v4.0.0`](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases/tag/v4.0.0) released
 - ALZ Portal Accelerator: "Platform DevOps and automation" section removed
 
@@ -668,7 +668,7 @@ We are pleased to announce that we are starting regular Azure Policy reviews for
 
 This update includes many ALZ Azure Policies and Initiatives that have been added or updated to enhance the security, governance, and management of ALZ. As part of our commitment to continuous improvement, we have also enhanced our policy review  process, with a focus on transitioning away from deprecated policies where possible, move from custom to built-in policies providing the same or enhanced functionality, and implementing new policies to keep ALZ as part of the current review cycle. We have also implemented non-compliance messages where supported to provide a better user experience when a policy is non-compliant.
 
-This is the first major review and refresh of Azure Policy since ALZ was GA'd. Since GA many new built-in policies and initiatives have been released which has driven the need for this review. We believe that a regular review cycle will allow us to stay on top of emerging trends and new policies, ensuring that our Azure environment remains secure and compliant. Should you identify policies or initiatives that should be considered for ALZ, kindly submit an [GitHub issue](https://github.com/Azure/Enterprise-Scale/issues). For more information, please refer to the [ALZ Policies](ALZ-Policies.md) or the new [Excel spreadsheet](media/ALZ%20Policy%20Assignments%20v2.xlsx) version.
+This is the first major review and refresh of Azure Policy since ALZ was GA'd. Since GA many new built-in policies and initiatives have been released which has driven the need for this review. We believe that a regular review cycle will allow us to stay on top of emerging trends and new policies, ensuring that our Azure environment remains secure and compliant. Should you identify policies or initiatives that should be considered for ALZ, kindly submit an [GitHub issue](https://github.com/Azure/Enterprise-Scale/issues). For more information, please refer to the [ALZ Policies](MAF-Policies.md) or the new [Excel spreadsheet](media/ALZ%20Policy%20Assignments%20v2.xlsx) version.
 
 We strongly advise staying up-to-date to ensure the best possible security posture for your Azure environment, see [Keep your Azure foundation up to date](https://aka.ms/alz/update). For those with existing deployments or policies, we have provided [Brownfield guidance](https://aka.ms/alz/brownfield) to help you navigate the process of updating to the latest policies. We recognize that there may be breaking changes when upgrading an existing deployment or policies and for details follow our recently released guidance to support you in this process:
 
@@ -780,7 +780,7 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 
 #### Tooling
 
-- Added additional deployment telemetry collection data point for Zero Trust Networking intent as [documented here.](https://github.com/Azure/Enterprise-Scale/wiki/Deploying-ALZ-CustomerUsage#alz-acceleratoreslz-arm-deployment---zero-trust-networking---phase-1--definition)
+- Added additional deployment telemetry collection data point for Zero Trust Networking intent as [documented here.](https://github.com/Azure/Enterprise-Scale/wiki/Deploying-MAF-CustomerUsage#maf-acceleratoreslz-arm-deployment---zero-trust-networking---phase-1--definition)
 - Defaulted Azure Firewall SKU/Tier to `Premium` from `Standard`. SKU/Tier can still be set back to `Standard` if desired
 
 ### February 2023
@@ -816,16 +816,16 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 
 | Original URL                                                                                                                                                         | New URL                                                                                                                          |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| [docs/ESLZ-Policies.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md)                                                                   | [wiki/ALZ-Policies](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies)                                                 |
-| [docs/EnterpriseScale-Architecture.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/EnterpriseScale-Architecture.md)                                     | [wiki/ALZ-Architecture](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Architecture)                                         |
-| [docs/EnterpriseScale-Contribution.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/EnterpriseScale-Contribution.md)                                     | [wiki/ALZ-Contribution](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Contribution)                                         |
-| [docs/EnterpriseScale-Deploy-landing-zones.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/EnterpriseScale-Deploy-landing-zones.md)                     | [wiki/ALZ-Deploy-landing-zones](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Deploy-landing-zones)                         |
-| [docs/EnterpriseScale-Deploy-reference-implentations.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/EnterpriseScale-Deploy-reference-implentations.md) | [wiki/ALZ-Deploy-reference-implementations](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Deploy-reference-implementations) |
-| [docs/EnterpriseScale-Deploy-workloads.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/EnterpriseScale-Deploy-workloads.md)                             | [wiki/ALZ-Deploy-workloads](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Deploy-workloads)                                 |
-| [docs/EnterpriseScale-Known-Issues.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/EnterpriseScale-Known-Issues.md)                                     | [wiki/ALZ-Known-Issues](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Known-Issues)                                         |
-| [docs/EnterpriseScale-Roadmap.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/EnterpriseScale-Roadmap.md)                                               | [wiki/ALZ-Roadmap](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Roadmap)                                                   |
-| [docs/EnterpriseScale-Setup-aad-permissions.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/EnterpriseScale-Setup-aad-permissions.md)                   | [wiki/ALZ-Setup-aad-permissions](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Setup-aad-permissions)                       |
-| [docs/EnterpriseScale-Setup-azure.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/EnterpriseScale-Setup-azure.md)                                       | [wiki/ALZ-Setup-azure](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Setup-azure)                                           |
+| [docs/ESMAF-Policies.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESMAF-Policies.md)                                                                   | [wiki/MAF-Policies](https://github.com/Azure/Enterprise-Scale/wiki/MAF-Policies)                                                 |
+| [docs/EnterpriseScale-Architecture.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/EnterpriseScale-Architecture.md)                                     | [wiki/MAF-Architecture](https://github.com/Azure/Enterprise-Scale/wiki/MAF-Architecture)                                         |
+| [docs/EnterpriseScale-Contribution.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/EnterpriseScale-Contribution.md)                                     | [wiki/MAF-Contribution](https://github.com/Azure/Enterprise-Scale/wiki/MAF-Contribution)                                         |
+| [docs/EnterpriseScale-Deploy-azure-foundations.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/EnterpriseScale-Deploy-azure-foundations.md)                     | [wiki/MAF-Deploy-azure-foundations](https://github.com/Azure/Enterprise-Scale/wiki/MAF-Deploy-azure-foundations)                         |
+| [docs/EnterpriseScale-Deploy-reference-implentations.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/EnterpriseScale-Deploy-reference-implentations.md) | [wiki/MAF-Deploy-reference-implementations](https://github.com/Azure/Enterprise-Scale/wiki/MAF-Deploy-reference-implementations) |
+| [docs/EnterpriseScale-Deploy-workloads.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/EnterpriseScale-Deploy-workloads.md)                             | [wiki/MAF-Deploy-workloads](https://github.com/Azure/Enterprise-Scale/wiki/MAF-Deploy-workloads)                                 |
+| [docs/EnterpriseScale-Known-Issues.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/EnterpriseScale-Known-Issues.md)                                     | [wiki/MAF-Known-Issues](https://github.com/Azure/Enterprise-Scale/wiki/MAF-Known-Issues)                                         |
+| [docs/EnterpriseScale-Roadmap.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/EnterpriseScale-Roadmap.md)                                               | [wiki/MAF-Roadmap](https://github.com/Azure/Enterprise-Scale/wiki/MAF-Roadmap)                                                   |
+| [docs/EnterpriseScale-Setup-aad-permissions.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/EnterpriseScale-Setup-aad-permissions.md)                   | [wiki/MAF-Setup-aad-permissions](https://github.com/Azure/Enterprise-Scale/wiki/MAF-Setup-aad-permissions)                       |
+| [docs/EnterpriseScale-Setup-azure.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/EnterpriseScale-Setup-azure.md)                                       | [wiki/MAF-Setup-azure](https://github.com/Azure/Enterprise-Scale/wiki/MAF-Setup-azure)                                           |
 
 - Updated the guidance for contributing to the [Azure/Enterprise-Scale](https://github.com/Azure/Enterprise-Scale/) repository
 
@@ -850,9 +850,9 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 #### Docs
 
 - Renamed Azure DDoS Standard Protection references to [Azure DDoS Network Protection](https://learn.microsoft.com/azure/ddos-protection/ddos-protection-sku-comparison#ddos-network-protection).
-- Added ALZ deprecated [policies section](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Deprecated-Services#deprecated-policies) to the Wiki.
+- Added ALZ deprecated [policies section](https://github.com/Azure/Enterprise-Scale/wiki/MAF-Deprecated-Services#deprecated-policies) to the Wiki.
 - Included documentation on how to [Migrate ALZ custom policies to Azure builtin policies](migrate-alz-policies-to-builtin.md) to the Wiki.
-- Added links to the superseding policies on the [ALZ Deprecated Services](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Deprecated-Services#deprecated-policies) page.
+- Added links to the superseding policies on the [ALZ Deprecated Services](https://github.com/Azure/Enterprise-Scale/wiki/MAF-Deprecated-Services#deprecated-policies) page.
 - Renamed Azure Security Benchmark references to [Microsoft Cloud Security Benchmark](https://learn.microsoft.com/security/benchmark/azure/introduction).
 
 #### Tooling
@@ -950,10 +950,10 @@ Note that a number of initiatives have been updated that will fail to deploy if 
   - **⚠️This is a breaking change, only if you attempt to redeploy the Azure foundation portal accelerator over the top of an existing Azure foundation portal accelerator deployment that was deployed prior to 12/10/2022 (12th October 2022)⚠️**
     - The outcome if you do this will be that new vNets will be created based on what you input into the Azure foundation portal accelerator form when you fill it out. Even if you input exactly the same inputs and details as the first time you deployed it.
       - However, this is a very uncommon action and if you are impacted [please raise an issue](https://github.com/Azure/Enterprise-Scale/issues) on the repo and we can assist further
-- Release of various [ALZ-Bicep](https://aka.ms/alz/bicep) versions:
-  - [`v0.10.6`](https://github.com/Azure/ALZ-Bicep/releases/tag/v0.10.6)
-  - [`v0.10.5`](https://github.com/Azure/ALZ-Bicep/releases/tag/v0.10.5)
-  - [`v0.10.4`](https://github.com/Azure/ALZ-Bicep/releases/tag/v0.10.4)
+- Release of various [MAF-Bicep](https://aka.ms/alz/bicep) versions:
+  - [`v0.10.6`](https://github.com/Azure/MAF-Bicep/releases/tag/v0.10.6)
+  - [`v0.10.5`](https://github.com/Azure/MAF-Bicep/releases/tag/v0.10.5)
+  - [`v0.10.4`](https://github.com/Azure/MAF-Bicep/releases/tag/v0.10.4)
 - Updated Azure foundation portal accelerator with a note around existing Management Group Name/IDs on "Azure core setup" blade linking to FAQ Q&As
 
 ### Policy
@@ -971,11 +971,11 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 
 - Updated the Enterprise-scale [Wiki](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/) to reflect the latest updates on Azure foundation accelerator.
 
-  - [Deploy Azure foundation portal accelerator](./Deploying-ALZ)
-  - [Deployment guidance for Small Enterprises](./Deploying-ALZ-BasicSetup)
-  - [How to deploy without hybrid connectivity](./Deploying-ALZ-Foundation)
-  - [Deployment with hub and spoke network topology](./Deploying-ALZ-HubAndSpoke)
-  - [Deployment with Azure VWAN network topology](./Deploying-ALZ-VWAN)
+  - [Deploy Azure foundation portal accelerator](./Deploying-MAF)
+  - [Deployment guidance for Small Enterprises](./Deploying-MAF-BasicSetup)
+  - [How to deploy without hybrid connectivity](./Deploying-MAF-Foundation)
+  - [Deployment with hub and spoke network topology](./Deploying-MAF-HubAndSpoke)
+  - [Deployment with Azure VWAN network topology](./Deploying-MAF-VWAN)
 
 #### Tooling
 
@@ -1027,10 +1027,10 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 #### Tooling
 
 - ALZ Terraform module hotfix release [v2.1.2](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases/tag/v2.1.2), for regional private endpoint DNS zones
-- ALZ Bicep modules release [v0.9.2](https://github.com/Azure/ALZ-Bicep/releases/tag/v0.9.1) released
+- ALZ Bicep modules release [v0.9.2](https://github.com/Azure/MAF-Bicep/releases/tag/v0.9.1) released
   - Added Azure Foundation Management Group Children Flexibility
   - Added Policy Assignments for Mooncake (Azure China)
-  - Fixed Azure Backup Private DNS Zone Geo Codes bug, fixing [issue #279](https://github.com/Azure/ALZ-Bicep/issues/279)
+  - Fixed Azure Backup Private DNS Zone Geo Codes bug, fixing [issue #279](https://github.com/Azure/MAF-Bicep/issues/279)
 - ALZ Accelerator (Portal Experience) updated to fix Azure Backup Private DNS Zone Geo Codes, fixing [issue #1004](https://github.com/Azure/Enterprise-Scale/issues/1004)
 
 ### Policy
@@ -1045,7 +1045,7 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 
 #### Docs
 
-- Updated the [Policies included in Enterprise-Scale Azure Foundations](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies) page.
+- Updated the [Policies included in Enterprise-Scale Azure Foundations](https://github.com/Azure/Enterprise-Scale/wiki/MAF-Policies) page.
 - Updated the ALZ Terraform module [Wiki](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/) with new examples and improved coverage of variable configuration.
 
 #### Tooling
@@ -1143,7 +1143,7 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 #### Tooling
 
 - The Bicep version of Mission Azure Foundation (formerly Enterprise-scale) is here! 🥳
-  - Check out the [ALZ-Bicep repo](https://github.com/Azure/ALZ-Bicep) to get started!
+  - Check out the [MAF-Bicep repo](https://github.com/Azure/MAF-Bicep) to get started!
 - Updated accelerator (portal) experience to deploy an Azure Firewall Policy `Premium` SKU instead of `Standard` when `Premium` is selected for the Azure Firewall in a Hub & Spoke VNet Connectivity model.
   - [PR 890](https://github.com/Azure/Enterprise-Scale/pull/890) fixing [issue 889](https://github.com/Azure/Enterprise-Scale/issues/889)
 - Updated accelerator (portal) experience to deploy an Azure Firewall Policy for customers using the Virtual WAN connectivity model.
@@ -1428,11 +1428,11 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 #### Policy
 
 - Updated `Deny-Subnet-Without-UDR` policy, to v1.1.0, to allow exclusion of subnets like the `AzureBastionSubnet` - closing issue [#604](https://github.com/Azure/Enterprise-Scale/issues/604)
-  - Also updated [ESLZ-Policies.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md) with changes
+  - Also updated [ESMAF-Policies.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESMAF-Policies.md) with changes
 - Updated `Deny-Subnet-Without-Nsg` policy, to v1.1.0, to allow exclusion of subnets like the `GatewaySubnet`, `AzureFirewallSubnet` and `AzureFirewallManagementSubnet` - closing issue [#456](https://github.com/Azure/Enterprise-Scale/issues/456)
-  - Also updated [ESLZ-Policies.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md) with changes
+  - Also updated [ESMAF-Policies.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESMAF-Policies.md) with changes
 - Updated `Deny-VNet-Peering` and `Deny-VNET-Peer-Cross-Sub` policies `mode` to `All` from `Indexed`. - closing issue [#583](https://github.com/Azure/Enterprise-Scale/issues/583)
-  - Also updated [ESLZ-Policies.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md) with changes
+  - Also updated [ESMAF-Policies.md](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESMAF-Policies.md) with changes
 
 #### Other
 

@@ -39,7 +39,7 @@ We then work with the Azure Policy and associated engineering teams to continuou
 
 ## Where can I see the policy definitions used by the enterprise-scale Azure foundations reference implementation?
 
-You can find a list of policy definitions here: [Policies included in enterprise-scale Azure foundations reference implementations](./ALZ-Policies)
+You can find a list of policy definitions here: [Policies included in enterprise-scale Azure foundations reference implementations](./MAF-Policies)
 
 We also add changes to our [What's New? wiki page](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new).
 
@@ -74,7 +74,7 @@ The following implementation options are available when you use infrastructure-a
 - The [Azure foundation accelerator](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-accelerator) portal-based experience can integrate and bootstrap a CI/CD pipeline using GitHub with [AzOps](https://github.com/Azure/AzOps) as documented at [Deploying Enterprise Scale](https://github.com/Azure/Enterprise-Scale/wiki/Deploying-Enterprise-Scale).
 - The [Enterprise-scale Do-It-Yourself (DIY) ARM templates](https://github.com/Azure/Enterprise-Scale/tree/main/eslzArm#enterprise-scale-azure-foundations-arm-templates) method
 - The [ALZ Terraform module](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale#terraform-module-for-cloud-adoption-framework-enterprise-scale)
-- The [ALZ Bicep modules](https://github.com/Azure/ALZ-Bicep)
+- The [ALZ Bicep modules](https://github.com/Azure/MAF-Bicep)
 
 ## If we already deployed enterprise-scale architecture without using infrastructure-as-code, do we have to delete everything and start again to use infrastructure-as-code?
 
