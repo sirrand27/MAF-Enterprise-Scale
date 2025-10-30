@@ -1,10 +1,10 @@
 # Introduction
 
-The ALZ Portal Accelerator has recently been enhanced, and starting with the 2024-01-31 release, has removed the legacy MMA agent and now deploys Azure Monitor Agent (AMA) to new environments. With the 2024-06-03 release, there are also updates for User Assigned Managed Identities. Azure Landing Zones has transitioned to using one centralized User Assigned Managed Identity. This consolidation of User Assigned Managed Identity for AMA represents an important improvement in managing deployments at scale more effectively. Please refer to [What’s new](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new) for more information.
+The ALZ Portal Accelerator has recently been enhanced, and starting with the 2024-01-31 release, has removed the legacy MMA agent and now deploys Azure Monitor Agent (AMA) to new environments. With the 2024-06-03 release, there are also updates for User Assigned Managed Identities. Mission Azure Foundation has transitioned to using one centralized User Assigned Managed Identity. This consolidation of User Assigned Managed Identity for AMA represents an important improvement in managing deployments at scale more effectively. Please refer to [What’s new](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new) for more information.
 
-This guide explains the topics and configurations that Azure Landing Zones use, and we discuss many of the common scenarios in the section on assessing the current state. However, this guide does not provide detailed instructions for custom implementations or extra features that are not part of Azure Landing Zones. For those scenarios, we refer to the documentation from the Product teams.
+This guide explains the topics and configurations that Mission Azure Foundation use, and we discuss many of the common scenarios in the section on assessing the current state. However, this guide does not provide detailed instructions for custom implementations or extra features that are not part of Mission Azure Foundation. For those scenarios, we refer to the documentation from the Product teams.
 
-The new [Terraform Platform Landing Zones for Azure Verified Modules](https://aka.ms/alz/tf) offering only deploys the new AMA agent.
+The new [Terraform Platform Azure Foundations for Azure Verified Modules](https://aka.ms/alz/tf) offering only deploys the new AMA agent.
 If you are looking for Terraform guidance for the caf-enterprise-scale module please refer to [\[User Guide\] Upgrade from v5.2.1 to v6.0.0](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BUser-Guide%5D-Upgrade-from-v5.2.1-to-v6.0.0)
 
 And for Bicep guidance refer to: [v0.18.0 Release Notes](https://github.com/Azure/ALZ-Bicep/releases/tag/v0.18.0)
@@ -24,14 +24,14 @@ All Defender for Servers features and capabilities will be provided through a si
 ## This guide covers the following topics
 
 - **Assess current state:** Identify and determine the steps required to migrate to AMA.
-- **Update Azure Landing Zones:** Guidance and automation to update your Azure Landing Zones components. Automation helps configure the following tasks:
+- **Update Mission Azure Foundation:** Guidance and automation to update your Mission Azure Foundation components. Automation helps configure the following tasks:
   - Deploy User Assigned Managed Identity
   - Deploy Data Collection Rules
   - Update Policy and Initiative definitions
   - Remove Legacy Policy Assignments
   - Remove Legacy Solutions
   - Assigning new Policies and Initiatives
-  - Assign permissions to Landing Zones managed identity
+  - Assign permissions to Azure Foundations managed identity
   - Policy remediation
 - **Removing MMA and additional steps:** Depending on the discoveries during the initial assessment you may need to run additional steps before you can remove MMA. Please refer to the tooling and guidance provided by the product team:
   - Configure additional Data collection Rules (DCR Config Generator)
@@ -60,7 +60,7 @@ All Defender for Servers features and capabilities will be provided through a si
 
 ## Assess current state
 
-Although this guidance is concentrated on managing resources within Azure Landing Zones, it is crucial to be aware of other settings in your environment that may necessitate further considerations and steps when planning to migrate.
+Although this guidance is concentrated on managing resources within Mission Azure Foundation, it is crucial to be aware of other settings in your environment that may necessitate further considerations and steps when planning to migrate.
 
 It's advisable to evaluate and record the information listed below, each of these points will be covered in more detail:
 
@@ -93,7 +93,7 @@ This guide assumes the default configuration, if you have changed the settings f
 
 ### Azure Update Manager
 
-Azure Landing Zones assigns policies that enable periodic assessments in Azure Update Manager. If you require to migrate additional configurated like schedules please consult [Move from Automation Update Management to Azure Update Manager](https://learn.microsoft.com/en-us/azure/update-manager/guidance-migration-automation-update-management-azure-update-manager?tabs=update-mgmt#step-1-migration-of-machines-and-schedules)
+Mission Azure Foundation assigns policies that enable periodic assessments in Azure Update Manager. If you require to migrate additional configurated like schedules please consult [Move from Automation Update Management to Azure Update Manager](https://learn.microsoft.com/en-us/azure/update-manager/guidance-migration-automation-update-management-azure-update-manager?tabs=update-mgmt#step-1-migration-of-machines-and-schedules)
 
 ### Migrate additional services and features
 
@@ -174,12 +174,12 @@ ConfigurationData
 
 Agent-based (V1) Hybrid Runbook Workers rely on the Log Analytics agent reporting to an Azure Monitor Log Analytics workspace. To discover the Hybrid Workers running the V1 configuration review the automation account information **Automation Accounts > Process Automation > Hybrid worker groups**.
 
-## Update Azure Landing Zones
+## Update Mission Azure Foundation
 
 > [!CAUTION]
-> This script intended for Azure Landing Zone Portal Accelerator deployments only. It is not for Terraform and Bicep deployments of ALZ.
+> This script intended for Mission Azure Foundation Portal Accelerator deployments only. It is not for Terraform and Bicep deployments of ALZ.
 >
-> IMPORTANT: THIS SCRIPT WILL DEPLOY, UNASSIGN AND REMOVE RESOURCES! We recommend that you have carefully assessed your current state and followed the guidance from both the Azure Landing Zones documentation and the public documentation that it references. Use the -WhatIf parameter to see what the changes will do before you apply them.
+> IMPORTANT: THIS SCRIPT WILL DEPLOY, UNASSIGN AND REMOVE RESOURCES! We recommend that you have carefully assessed your current state and followed the guidance from both the Mission Azure Foundation documentation and the public documentation that it references. Use the -WhatIf parameter to see what the changes will do before you apply them.
 
 1. Start PowerShell
 1. Clone the Enterprise-Scale repository <br><br>
@@ -290,9 +290,9 @@ The Azure Tenant Security Solution (AzTS) MMA Discovery and Removal Utility prov
 # Update to latest AMA release
 
 > [!CAUTION]
-> This script intended for Azure Landing Zone Portal Accelerator deployments only. It is not for Terraform and Bicep deployments of ALZ.
+> This script intended for Mission Azure Foundation Portal Accelerator deployments only. It is not for Terraform and Bicep deployments of ALZ.
 >
-> IMPORTANT: THIS SCRIPT WILL DEPLOY, UNASSIGN AND REMOVE RESOURCES! We recommend that you have carefully assessed your current state and followed the guidance from both the Azure Landing Zones documentation and the public documentation that it references. Use the -WhatIf parameter to see what the changes will do before you apply them.
+> IMPORTANT: THIS SCRIPT WILL DEPLOY, UNASSIGN AND REMOVE RESOURCES! We recommend that you have carefully assessed your current state and followed the guidance from both the Mission Azure Foundation documentation and the public documentation that it references. Use the -WhatIf parameter to see what the changes will do before you apply them.
 
 1. Start PowerShell
 1. Clone the Enterprise-Scale repository <br><br>

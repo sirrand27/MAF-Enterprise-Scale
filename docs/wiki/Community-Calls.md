@@ -16,7 +16,7 @@
 
 ---
 
-On this page you will find the meeting recordings and PowerPoint slides from previous Azure Landing Zone External Community Calls. To sign-up to the next Azure Landing Zone External Community Call, head to: [aka.ms/alz/communitycall](https://aka.ms/alz/communitycall)
+On this page you will find the meeting recordings and PowerPoint slides from previous Mission Azure Foundation External Community Calls. To sign-up to the next Mission Azure Foundation External Community Call, head to: [aka.ms/alz/communitycall](https://aka.ms/alz/communitycall)
 
 > Short link to this page is [aka.ms/alz/community](https://aka.ms/alz/community)
 
@@ -24,7 +24,7 @@ On this page you will find the meeting recordings and PowerPoint slides from pre
 
 ### Recording
 
-[![Screenshot of Azure Landing Zones Community Call from May 2025 recording on YouTube](./media/community-calls/may-2025/youtube-thumb.png)](https://youtu.be/Dc95Nx3HsPw?si=ncl0jrc67desWnik)
+[![Screenshot of Mission Azure Foundation Community Call from May 2025 recording on YouTube](./media/community-calls/may-2025/youtube-thumb.png)](https://youtu.be/Dc95Nx3HsPw?si=ncl0jrc67desWnik)
 
 ### Slides
 
@@ -34,7 +34,7 @@ A PDF of the PowerPoint slides are available [here.](./media/community-calls/may
 
 ### Recording
 
-[![Screenshot of Azure Landing Zones Community Call from January 2025 recording on YouTube](./media/community-calls/jan-2025/youtube-thumb.png)](https://youtu.be/XKrlhbQ9Jaw?si=-QG4CN-6n-9zk7pY)
+[![Screenshot of Mission Azure Foundation Community Call from January 2025 recording on YouTube](./media/community-calls/jan-2025/youtube-thumb.png)](https://youtu.be/XKrlhbQ9Jaw?si=-QG4CN-6n-9zk7pY)
 
 ### Slides
 
@@ -44,7 +44,7 @@ A PDF of the PowerPoint slides are available [here.](./media/community-calls/jan
 
 ### Recording
 
-[![Screenshot of Azure Landing Zones Community Call from September 2024 recording on YouTube](./media/community-calls/sept-2024/youtube-thumbnail.png)](https://youtu.be/eta4v9ETDl4?si=DJl93_95uEVWK8NC)
+[![Screenshot of Mission Azure Foundation Community Call from September 2024 recording on YouTube](./media/community-calls/sept-2024/youtube-thumbnail.png)](https://youtu.be/eta4v9ETDl4?si=DJl93_95uEVWK8NC)
 
 ### Slides
 
@@ -54,7 +54,7 @@ A PDF of the PowerPoint slides are available [here.](./media/community-calls/sep
 
 ### Recording
 
-[![Screenshot of Azure Landing Zones Community Call from June 2024 recording on YouTube](./media/community-calls/june-2024/youtube-thumbnail.png)](https://youtu.be/m4_peeUdZoY?si=PNS8ySiC-bWCSs83)
+[![Screenshot of Mission Azure Foundation Community Call from June 2024 recording on YouTube](./media/community-calls/june-2024/youtube-thumbnail.png)](https://youtu.be/m4_peeUdZoY?si=PNS8ySiC-bWCSs83)
 
 ### Slides
 
@@ -64,7 +64,7 @@ A PDF of the PowerPoint slides is available [here.](./media/community-calls/june
 
 ### Recording
 
-[![Screenshot of Azure Landing Zones Community Call from March 2024 recording on YouTube](./media/community-calls/march-2024/youtube-thumbnail.png)](https://youtu.be/KNJ0J4jkD7M?si=iOSrP-_uLoB0VW0t)
+[![Screenshot of Mission Azure Foundation Community Call from March 2024 recording on YouTube](./media/community-calls/march-2024/youtube-thumbnail.png)](https://youtu.be/KNJ0J4jkD7M?si=iOSrP-_uLoB0VW0t)
 
 ### Slides
 
@@ -74,7 +74,7 @@ A PDF of the PowerPoint slides is available [here.](./media/community-calls/marc
 
 ### Recording
 
-[![Screenshot of Azure Landing Zones Community Call from December 2023 recording on YouTube](./media/community-calls/dec-2023/youtube-screenshot.png)](https://youtu.be/E3Pz_VcefZ4?si=3tx8ZZUfFq9-WyF0)
+[![Screenshot of Mission Azure Foundation Community Call from December 2023 recording on YouTube](./media/community-calls/dec-2023/youtube-screenshot.png)](https://youtu.be/E3Pz_VcefZ4?si=3tx8ZZUfFq9-WyF0)
 
 ### Slides
 
@@ -84,7 +84,7 @@ A PDF of the PowerPoint slides is available [here.](./media/community-calls/dec-
 
 ### Recording
 
-[![Screenshot of Azure Landing Zones Community Call from September 2023 recording on YouTube](./media/community-calls/sept-2023/youtube-screenshot.png)](https://youtu.be/z8Ez1wt66FE)
+[![Screenshot of Mission Azure Foundation Community Call from September 2023 recording on YouTube](./media/community-calls/sept-2023/youtube-screenshot.png)](https://youtu.be/z8Ez1wt66FE)
 
 ### Slides
 
@@ -94,7 +94,7 @@ A PDF of the PowerPoint slides is available [here.](./media/community-calls/sept
 
 ### Recording
 
-[![Screenshot of Azure Landing Zones Community Call from April 2023 recording on YouTube](./media/community-calls/april-2023/alz-april-2023-youtube-screenshot.png)](https://youtu.be/gtKMOefcliQ)
+[![Screenshot of Mission Azure Foundation Community Call from April 2023 recording on YouTube](./media/community-calls/april-2023/alz-april-2023-youtube-screenshot.png)](https://youtu.be/gtKMOefcliQ)
 
 ### Slides
 
@@ -104,7 +104,7 @@ A PDF of the PowerPoint slides is available [here.](./media/community-calls/apri
 
 ### Recording
 
-[![Screenshot of Azure Landing Zones Community Call from January 2023 recording on YouTube](./media/community-calls/jan-2023/alz-jan-2023-youtube-screenshot.png)](https://youtu.be/l5P6lc6C59U)
+[![Screenshot of Mission Azure Foundation Community Call from January 2023 recording on YouTube](./media/community-calls/jan-2023/alz-jan-2023-youtube-screenshot.png)](https://youtu.be/l5P6lc6C59U)
 
 ### Slides
 
@@ -114,7 +114,7 @@ A PDF of the PowerPoint slides is available [here.](./media/community-calls/jan-
 
 ### Recording
 
-[![Screenshot of Azure Landing Zones Community Call from May 2022 recording on YouTube](./media/community-calls/may-2022/alz-may-2022-youtube-screenshot.png)](https://youtu.be/DL2Vb9oitDw)
+[![Screenshot of Mission Azure Foundation Community Call from May 2022 recording on YouTube](./media/community-calls/may-2022/alz-may-2022-youtube-screenshot.png)](https://youtu.be/DL2Vb9oitDw)
 
 ### Slides
 

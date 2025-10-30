@@ -1,6 +1,6 @@
 # Information relating to `customRoleDefinitions.json`
 
-The `customRoleDefinitions.json` deployment template provides a unified deployment experience for creating all Role Definitions as recommended for the Azure landing zone reference implementation.
+The `customRoleDefinitions.json` deployment template provides a unified deployment experience for creating all Role Definitions as recommended for the Azure foundation reference implementation.
 
 This template is designed to work across the following clouds, ensuring the supported combination of roles are created in the customer environment:
 

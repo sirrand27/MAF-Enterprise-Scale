@@ -1,4 +1,4 @@
-# Azure Landing Zone Policy Testing Framework
+# Mission Azure Foundation Policy Testing Framework
 
 ## Overview
 
@@ -15,7 +15,7 @@ For authoring tests we standardized on using Az PowerShell native commands as mu
 ### Prerequisites
 
 - An empty (dedicated) Azure subscription
-  - If following the same process as outlined below, you will also need to ensure this subscription is added to the "Corp" management group in the Azure Landing Zone
+  - If following the same process as outlined below, you will also need to ensure this subscription is added to the "Corp" management group in the Mission Azure Foundation
 - [Pester](https://pester.dev/docs/introduction/installation)
 - [Az PowerShell Module](https://learn.microsoft.com/en-us/powershell/azure/install-azure-powershell?view=azps-11.0.0&viewFallbackFrom=azps-6.2.0)
 - [Invoke-AzRestMethod](https://learn.microsoft.com/en-us/powershell/module/az.accounts/invoke-azrestmethod?view=azps-11.0.0)
@@ -69,8 +69,8 @@ For the purposes of this guide, we'll focus on the Policy test for `Deny-MgmtPor
 
 The policy tests are designed to run in an empty subscription(s) to ensure that the policy is evaluated in isolation and not impacted by other policies or resources in the subscription.
 
-> **_NOTE:_** Because we are testing Azure policies in the context of Azure Landing Zone, we are using a dedicated subscription in the "Corp" landing zone that is added under the Corp management group, where we retrieve the deployed policy definition ID and create a new policy assignment to test the policy (because we do not assign all policies by default, and some get assigned to different scopes).
-> You can extend this methodology to test policies outside of Azure Landing Zone by deploying the policy you want to test and assigning it to the scope you want to test (e.g. subscription, resource group, etc.
+> **_NOTE:_** Because we are testing Azure policies in the context of Mission Azure Foundation, we are using a dedicated subscription in the "Corp" Azure foundation that is added under the Corp management group, where we retrieve the deployed policy definition ID and create a new policy assignment to test the policy (because we do not assign all policies by default, and some get assigned to different scopes).
+> You can extend this methodology to test policies outside of Mission Azure Foundation by deploying the policy you want to test and assigning it to the scope you want to test (e.g. subscription, resource group, etc.
 
 The policy test has 4 main sections (aligned with how Pester works):
 
@@ -95,7 +95,7 @@ The policy test has 4 main sections (aligned with how Pester works):
         }
 ```
 
-As part of the setup before running the test, we need to ensure we have the correct Azure context set, and that the policy is assigned to the correct scope. Because these steps are running as part of Azure Landing Zone pull request testing, the policies we want to test get deployed prior to running these test. In this case, we retrieve the policy definition and assign it to the management group scope, passing in the policy parameters to ensure the policy is evaluated correctly.
+As part of the setup before running the test, we need to ensure we have the correct Azure context set, and that the policy is assigned to the correct scope. Because these steps are running as part of Mission Azure Foundation pull request testing, the policies we want to test get deployed prior to running these test. In this case, we retrieve the policy definition and assign it to the management group scope, passing in the policy parameters to ensure the policy is evaluated correctly.
 
 If you want to extend this methodology to test policies independent of deploying ALZ, you could extend this section to also deploy the policy you want to test, and then do the policy assignment.
 

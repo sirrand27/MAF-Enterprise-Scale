@@ -1,6 +1,6 @@
 # Information relating to `policies.json` and `initiatives.json`
 
-The `policies.json` and `initiatives.json` deployment templates provides a unified deployment experience for creating all Policy Definitions and Policy Set Definitions (Initiatives) as recommended for the Azure landing zone reference implementation.
+The `policies.json` and `initiatives.json` deployment templates provides a unified deployment experience for creating all Policy Definitions and Policy Set Definitions (Initiatives) as recommended for the Azure foundation reference implementation.
 
 This templates are designed to work across the following clouds, ensuring the supported combination of policies are created in the customer environment:
 

@@ -1,4 +1,4 @@
-# Example ARM templates for Enterprise-scale landing zones
+# Example ARM templates for Enterprise-scale Azure foundations
 
 This isn't yet another example ARM template library. This folder contains **only** ARM templates for organizations to deploy platform resources using infrastructure-as-code. 
 
@@ -18,5 +18,5 @@ Further; platform resource in the context of Enterprise-scale are deployed prima
 How-to documentation to deploy these templates using a platform CI/CD pipeline AzOps:  
 
 - [Deploy your own ARM templates with AzOps GitHub Actions](https://github.com/azure/azops/wiki/deployments)
-- [Enable Service Principal to create landing zones](https://github.com/Azure/Enterprise-Scale/wiki/Create-Landingzones#enable-service-principal-to-create-landing-zones)
-- [Landing zone creation](./landing-zones)
+- [Enable Service Principal to create Azure foundations](https://github.com/Azure/Enterprise-Scale/wiki/Create-Landingzones#enable-service-principal-to-create-landing-zones)
+- [Azure foundation creation](./landing-zones)

@@ -1,6 +1,6 @@
-# Policies included in Azure landing zones reference implementations
+# Policies included in Azure foundations reference implementations
 
-Azure Policy and deployIfNotExist enables autonomy in the platform, and reduces operational burden as you scale your deployments and subscriptions in the Azure landing zone architecture. The primary purpose is to ensure that subscriptions and resources are compliant, while empowering application teams to use their own preferred tools/clients to deploy.
+Azure Policy and deployIfNotExist enables autonomy in the platform, and reduces operational burden as you scale your deployments and subscriptions in the Azure foundation architecture. The primary purpose is to ensure that subscriptions and resources are compliant, while empowering application teams to use their own preferred tools/clients to deploy.
 
 > Please refer to [Policy Driven Governance](https://learn.microsoft.com/en-gb/azure/cloud-adoption-framework/ready/landing-zone/design-principles#policy-driven-governance) for further information.
 
@@ -10,19 +10,19 @@ Azure Policy and deployIfNotExist enables autonomy in the platform, and reduces 
 
    We have added a dedicated [ALZ Policy FAQ and Tips](./ALZ-Policies-FAQ) based on common issues raised or questions asked by customers and partners.
 
-## Why are there custom policy definitions as part of Azure landing zones?
+## Why are there custom policy definitions as part of Azure foundations?
 
-We work with - and learn from our customers and partners to ensure that we evolve and enhance the reference implementations to meet customer requirements. The primary approach of the policies as part of Azure landing zones is to be proactive (deployIfNotExist, and modify), and preventive (deny). We are continuously moving these policies to built-ins.
+We work with - and learn from our customers and partners to ensure that we evolve and enhance the reference implementations to meet customer requirements. The primary approach of the policies as part of Azure foundations is to be proactive (deployIfNotExist, and modify), and preventive (deny). We are continuously moving these policies to built-ins.
 
-## What Azure Policies does Azure landing zone provide additionally to those already built-in?
+## What Azure Policies does Azure foundation provide additionally to those already built-in?
 
-There are around 114 custom Azure Policy Definitions included and around 12 Custom Azure Policy Initiatives included as part of the Azure Landing Zones implementation that add on to those already built-in within each Azure customers tenant.
+There are around 114 custom Azure Policy Definitions included and around 12 Custom Azure Policy Initiatives included as part of the Mission Azure Foundation implementation that add on to those already built-in within each Azure customers tenant.
 
-For Azure landing zones, the custom Azure Policy Definitions and Initiatives are consistent across the three implementation options, unless otherwise noted; [Terraform Module](https://aka.ms/alz/tf), [Bicep Modules](https://aka.ms/alz/bicep), [Azure landing zone portal accelerator](https://aka.ms/alz#azure-landing-zone-accelerator).
+For Azure foundations, the custom Azure Policy Definitions and Initiatives are consistent across the three implementation options, unless otherwise noted; [Terraform Module](https://aka.ms/alz/tf), [Bicep Modules](https://aka.ms/alz/bicep), [Azure foundation portal accelerator](https://aka.ms/alz#azure-landing-zone-accelerator).
 
 This is because the single source of truth is the [`Enterprise-Scale` repo](https://github.com/Azure/Enterprise-Scale) that both the Terraform and Bicep implementation options pull from to build their `lib` folders respectively.
 
-For a complete list of all custom and built-in policies deployed within an Azure landing zone deployment, please refer to the following [section](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies#what-policy-definitions-are-assigned-within-the-azure-landing-zones-custom--built-in).
+For a complete list of all custom and built-in policies deployed within an Azure foundation deployment, please refer to the following [section](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies#azure-landing-zones-custom--built-in).
 
 > Our goal is always to try and use built-in policies where available and also work with product teams to adopt our custom policies and make them built-in, which takes time. This means there will always be a requirement for custom policies.
 
@@ -32,7 +32,7 @@ Managed Identities provide an alternative way to access Azure resources without 
 
 ## AzAdvertizer Integration
 
-We have worked with the creator of [AzAdvertizer](https://www.azadvertizer.net) to integrate all of the custom Azure Policy Definitions and Initiatives as part of Azure landing zones into it to help customers use the tool to look at the policies further in an easy to use tool that is popular in the community.
+We have worked with the creator of [AzAdvertizer](https://www.azadvertizer.net) to integrate all of the custom Azure Policy Definitions and Initiatives as part of Azure foundations into it to help customers use the tool to look at the policies further in an easy to use tool that is popular in the community.
 
 On either the [Policy](https://www.azadvertizer.net/azpolicyadvertizer_all.html#%7B%22col_10%22%3A%7B%22flt%22%3A%22ESLZ%22%7D%7D) or [Initiative](https://www.azadvertizer.net/azpolicyinitiativesadvertizer_all.html) section of the site, set the 'Type' column drop down (last one on the right hand side) to 'ALZ' and you will see all the policies as mentioned above in the tool for you to investigate further.
 
@@ -40,9 +40,9 @@ AzAdvertizer also updates once per day!
 
 ![AzAdvertizer ALZ Integration Slide](./media/alzPolicyAzAdvertizer.png)
 
-## What policy definitions are assigned within the Azure landing zones (Custom & Built-in)?
+## What policy definitions are assigned within the Azure foundations (Custom & Built-in)?
 
-As part of a default deployment configuration, policy and policy set definitions are deployed at multiple levels within the Azure landing zone Management Group hierarchy as depicted within the below diagram.
+As part of a default deployment configuration, policy and policy set definitions are deployed at multiple levels within the Azure foundation Management Group hierarchy as depicted within the below diagram.
 
 > [!IMPORTANT]
 > As part of the ALZ portal deployment/configuration, policy and policy set definitions are created only at the intermediate management group, e.g. `contoso` that is a child of the tenant root management group, created during the ALZ deployment. Our automation does not assign any policies to the tenant root management group scope, only the ALZ hierarchy it deploys and its children, e.g. `contoso` and below. This approach aligns with the Cloud Adoption Framework's best practices for Azure Policy assignment, ensuring clear delineation of policy application and avoiding unintended policy inheritance across the entire tenant. By placing policies only at the intermediary root and its child management groups, we maintain compliance, flexibility, and alignment with organizational governance requirements. And also allow multiple management groups hierarchies to exist in a single tenant such as the [canary approach](https://aka.ms/alz/canary#example-scenarios-and-outcomes)
@@ -57,7 +57,7 @@ The subsequent sections will provide a summary of policy sets and policy set def
 
 ### Intermediate Root
 
-This management group is a parent to all the other management groups created within the default Azure landing zone configuration. Policy assignment is predominantly focused on assignment of security and monitoring best practices to ensure compliance and reduced operational overhead.
+This management group is a parent to all the other management groups created within the default Azure foundation configuration. Policy assignment is predominantly focused on assignment of security and monitoring best practices to ensure compliance and reduced operational overhead.
 
 <table>
 <tr><th>Management Group </th><th>Policy Configuration</th></tr>
@@ -236,9 +236,9 @@ The table below provides the specific **Custom** and **Built-in** **policy defin
 | **Configure backup on virtual machines without a given tag to a new recovery services vault with a default policy** | **Configure backup on virtual machines without a given tag to a new recovery services vault with a default policy** | `Policy Definition`, **Built-in**   | Enforce backup for all virtual machines by deploying a recovery services vault in the same location and resource group as the virtual machine.                                   | DeployIfNotExists |
 | **Deploy Azure Monitor Baseline Alerts for Identity**                                                               | **Deploy Azure Monitor Baseline Alerts for Identity**                                                               | `Policy Definition Set`, **Custom** | Deploys alerting for identity related resources. For more detail on policies included please refer to https://aka.ms/amba/alz/wiki under Policy Initiatives/Identity initiative. | DeployIfNotExists |
 
-### Landing Zones
+### Azure Foundations
 
-This is the parent management group for all the landing zone child management groups. Policy assignment is predominantly focused on ensuring workloads residing under this hierarchy are secure and compliant.
+This is the parent management group for all the Azure foundation child management groups. Policy assignment is predominantly focused on ensuring workloads residing under this hierarchy are secure and compliant.
 
 <table>
 <tr><th>Management Group </th><th>Policy Configuration</th></tr>
@@ -256,7 +256,7 @@ This is the parent management group for all the landing zone child management gr
 
 </td></tr> </table>
 
-The table below provides the specific **Custom** and **Built-in** **policy definitions** and **policy definitions sets** assigned at the **Landing Zones Management Group**.
+The table below provides the specific **Custom** and **Built-in** **policy definitions** and **policy definitions sets** assigned at the **Azure Foundations Management Group**.
 
 | Assignment Name                                                                                                          | Definition Name                                                                                                                  | Policy Type                           | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Effect(s)                                        |
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
@@ -300,7 +300,7 @@ The table below provides the specific **Custom** and **Built-in** **policy defin
 
 ### Corp
 
-This management group is for corporate landing zones. This group is for workloads that require connectivity or hybrid connectivity with the corporate network via the hub in the connectivity subscription. Policy assignment is predominantly focused on ensuring workloads residing under this hierarchy are secure and compliant.
+This management group is for corporate Azure foundations. This group is for workloads that require connectivity or hybrid connectivity with the corporate network via the hub in the connectivity subscription. Policy assignment is predominantly focused on ensuring workloads residing under this hierarchy are secure and compliant.
 
 <table>
 <tr><th>Management Group </th><th>Policy Configuration</th></tr>
@@ -324,12 +324,12 @@ The table below provides the specific **Custom** and **Built-in** **policy defin
 | **Public network access should be disabled for PaaS services** | **Public network access should be disabled for PaaS services** | `Policy Definition Set`, **Custom** | This policy initiative is a group of policies that prevents creation of Azure PaaS services with exposed public endpoints                       | Deny              |
 | **Configure Azure PaaS services to use private DNS zones**     | **Configure Azure PaaS services to use private DNS zones**     | `Policy Definition Set`, **Custom** | This policy initiative is a group of policies that ensures private endpoints to Azure PaaS services are integrated with Azure Private DNS zones | DeployIfNotExists |
 | **Deny network interfaces having a public IP associated**      | **Network interfaces should not have public IPs**              | `Policy Definition`, **Built-in**   | This policy denies network interfaces from having a public IP associated to it under the assigned scope.                                        | Deny              |
-| **Deny the deployment of vWAN/ER/VPN gateway resources**       | **Not allowed resource types**                                 | `Policy Definition`, **Built-in**   | Denies deployment of vWAN/ER/VPN gateway resources in the Corp landing zone.                                                                    | Deny              |
-| **Audit Private Link Private DNS Zone resources**              | **Audit the creation of Private Link Private DNS Zones**       | `Policy Definition`, **Custom**     | Audits the deployment of Private Link Private DNS Zone resources in the Corp landing zone.                                                      | Audit             |
+| **Deny the deployment of vWAN/ER/VPN gateway resources**       | **Not allowed resource types**                                 | `Policy Definition`, **Built-in**   | Denies deployment of vWAN/ER/VPN gateway resources in the Corp Azure foundation.                                                                    | Deny              |
+| **Audit Private Link Private DNS Zone resources**              | **Audit the creation of Private Link Private DNS Zones**       | `Policy Definition`, **Custom**     | Audits the deployment of Private Link Private DNS Zone resources in the Corp Azure foundation.                                                      | Audit             |
 
 ### Online
 
-This management group is for online landing zones. This group is for workloads that might require direct internet inbound/outbound connectivity or for workloads that might not require a virtual network. There are currently no policies assigned at this management group.
+This management group is for online Azure foundations. This group is for workloads that might require direct internet inbound/outbound connectivity or for workloads that might not require a virtual network. There are currently no policies assigned at this management group.
 
 <table>
 <tr><th>Management Group </th><th>Policy Configuration</th></tr>
@@ -348,7 +348,7 @@ This management group is for online landing zones. This group is for workloads t
 
 ### Decommissioned
 
-This management group is for landing zones that are being cancelled. Cancelled landing zones will be moved to this management group before deletion by Azure after 30-60 days.
+This management group is for Azure foundations that are being cancelled. Cancelled Azure foundations will be moved to this management group before deletion by Azure after 30-60 days.
 
 <table>
 <tr><th>Management Group </th><th>Policy Configuration</th></tr>
@@ -367,11 +367,11 @@ This management group is for landing zones that are being cancelled. Cancelled l
 
 | Assignment Name                           | Definition Name                                         | Policy Type                         | Description                                                                                                                                                                                                                                                                                         | Effect(s) |
 | ----------------------------------------- | ------------------------------------------------------- | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| **Enforce ALZ Decommissioned Guardrails** | **Enforce policies in the Decommissioned Landing Zone** | `Policy Definition Set`, **Custom** | This initiative will help enforce and govern subscriptions that are placed within the decommissioned Management Group as part of your Subscription decommissioning process.  Policies included: <ul><li>Deny the deployment of new resources<li>Deploy an auto VM shutdown policy at UTC 00:00</ul> | Enforce   |
+| **Enforce ALZ Decommissioned Guardrails** | **Enforce policies in the Decommissioned Azure Foundation** | `Policy Definition Set`, **Custom** | This initiative will help enforce and govern subscriptions that are placed within the decommissioned Management Group as part of your Subscription decommissioning process.  Policies included: <ul><li>Deny the deployment of new resources<li>Deploy an auto VM shutdown policy at UTC 00:00</ul> | Enforce   |
 
 ### Sandbox
 
-This management group is for subscriptions that will only be used for testing and exploration by an organization. These subscriptions will be securely disconnected from the corporate and online landing zones. Sandboxes also have a less restrictive set of policies assigned to enable testing, exploration, and configuration of Azure services.
+This management group is for subscriptions that will only be used for testing and exploration by an organization. These subscriptions will be securely disconnected from the corporate and online Azure foundations. Sandboxes also have a less restrictive set of policies assigned to enable testing, exploration, and configuration of Azure services.
 
 <table>
 <tr><th>Management Group </th><th>Policy Configuration</th></tr>
@@ -390,7 +390,7 @@ This management group is for subscriptions that will only be used for testing an
 
 | Assignment Name                    | Definition Name                                  | Policy Type                         | Description                                                                                                                                                                                                                            | Effect(s) |
 | ---------------------------------- | ------------------------------------------------ | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| **Enforce ALZ Sandbox Guardrails** | **Enforce policies in the Sandbox Landing Zone** | `Policy Definition Set`, **Custom** | This initiative will help enforce and govern subscriptions that are placed within the Sandobx Management Group. Policies included: <ul><li>Deny vNET peering across subscriptions<li>Deny the deployment of vWAN/ER/VPN gateways.</ul> | Enforce   |
+| **Enforce ALZ Sandbox Guardrails** | **Enforce policies in the Sandbox Azure Foundation** | `Policy Definition Set`, **Custom** | This initiative will help enforce and govern subscriptions that are placed within the Sandobx Management Group. Policies included: <ul><li>Deny vNET peering across subscriptions<li>Deny the deployment of vWAN/ER/VPN gateways.</ul> | Enforce   |
 
 ### Versioning
 

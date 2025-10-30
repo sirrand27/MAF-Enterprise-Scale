@@ -1,4 +1,4 @@
-# ARM templates for landing zones (subscriptions)
+# ARM templates for Azure foundations (subscriptions)
 
 This folder contains example ARM templates for organizations to create new subscriptions into management groups.
 

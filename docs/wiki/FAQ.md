@@ -2,16 +2,16 @@
 
 - [How long does enterprise-scale architecture take to deploy?](#how-long-does-enterprise-scale-architecture-take-to-deploy)
 - [Why are there custom policy definitions as part of enterprise-scale architecture?](#why-are-there-custom-policy-definitions-as-part-of-enterprise-scale-reference-implementation)
-- [Where can I see the policy definitions used by enterprise-scale landing zones reference implementation?](#where-can-i-see-the-policy-definitions-used-by-the-enterprise-scale-landing-zones-reference-implementation)
+- [Where can I see the policy definitions used by enterprise-scale Azure foundations reference implementation?](#where-can-i-see-the-policy-definitions-used-by-the-enterprise-scale-azure-foundations-reference-implementation)
 - [Why does enterprise-scale architecture require permission at tenant root '/' scope?](#why-does-the-enterprise-scale-reference-implementation-require-permission-at-tenant-root--scope)
-- [The Azure landing zone accelerator portal-based deployment doesn't display all subscriptions in the drop-down lists?](#the-enterprise-scale-also-known-as-the-azure-landing-zone-accelerator-portal-based-deployment-doesnt-display-all-subscriptions-in-the-drop-down-lists)
+- [The Azure foundation accelerator portal-based deployment doesn't display all subscriptions in the drop-down lists?](#the-enterprise-scale-also-known-as-the-azure-foundation-accelerator-portal-based-deployment-doesnt-display-all-subscriptions-in-the-drop-down-lists)
 - [Can we use and customize the ARM templates for enterprise-scale architecture and check them into our repository and deploy it from there?](#can-we-use-and-customize-the-arm-templates-for-enterprise-scale-architecture-and-check-them-into-our-repository-and-deploy-it-from-there)
-- [What if we can't deploy by using the Azure landing zone accelerator portal-based experience, but can deploy via infrastructure-as-code?](#what-if-we-cant-deploy-by-using-the-azure-landing-zone-accelerator-portal-based-experience-but-can-deploy-via-infrastructure-as-code)
+- [What if we can't deploy by using the Azure foundation accelerator portal-based experience, but can deploy via infrastructure-as-code?](#what-if-we-cant-deploy-by-using-the-azure-foundation-accelerator-portal-based-experience-but-can-deploy-via-infrastructure-as-code)
 - [If we already deployed enterprise-scale architecture without using infrastructure-as-code, do we have to delete everything and start again to use infrastructure-as-code?](#if-we-already-deployed-enterprise-scale-architecture-without-using-infrastructure-as-code-do-we-have-to-delete-everything-and-start-again-to-use-infrastructure-as-code)
 - [The `AzureDiagnostics` table in my Log Analytics Workspace has hit the 500 column limit, what should I do?](#the-azurediagnostics-table-in-my-log-analytics-workspace-has-hit-the-500-column-limit-what-should-i-do)
 - [What happens if I have existing Management Groups that have the same Name/IDs as ones that will be deployed in the ALZ Portal Accelerator?](#what-happens-if-i-have-existing-management-groups-that-have-the-same-nameids-as-ones-that-will-be-deployed-in-the-alz-portal-accelerator)
 - [What are the ALZ Portal Accelerator Management Group Name/IDs that are created?](#what-are-the-alz-portal-accelerator-management-group-nameids-that-are-created)
-- [Why hasn't Azure landing zones migrated to the Azure Monitor Agent yet?](#why-hasnt-azure-landing-zones-migrated-to-the-azure-monitor-agent-yet)
+- [Why hasn't Azure foundations migrated to the Azure Monitor Agent yet?](#why-hasnt-azure-foundations-migrated-to-the-azure-monitor-agent-yet)
 - [What is the impact of GitHub Releases and ALZ?](#what-is-the-impact-of-github-releases-and-alz)
 
 ---
@@ -37,9 +37,9 @@ We work with and learn from our customers and partners. This collaboration helps
 
 We then work with the Azure Policy and associated engineering teams to continuously transition the new custom policy definitions into built-in policy definitions.
 
-## Where can I see the policy definitions used by the enterprise-scale landing zones reference implementation?
+## Where can I see the policy definitions used by the enterprise-scale Azure foundations reference implementation?
 
-You can find a list of policy definitions here: [Policies included in enterprise-scale landing zones reference implementations](./ALZ-Policies)
+You can find a list of policy definitions here: [Policies included in enterprise-scale Azure foundations reference implementations](./ALZ-Policies)
 
 We also add changes to our [What's New? wiki page](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new).
 
@@ -53,32 +53,32 @@ To establish the management group hierarchy and create subscriptions and place t
 
 For more information about tenant-level deployments in Azure, see [Deploy resources to tenant](https://learn.microsoft.com/azure/azure-resource-manager/templates/deploy-to-tenant).
 
-## The enterprise-scale (also known as the Azure landing zone accelerator) portal-based deployment doesn't display all subscriptions in the drop-down lists?
+## The enterprise-scale (also known as the Azure foundation accelerator) portal-based deployment doesn't display all subscriptions in the drop-down lists?
 
-When you deploy enterprise-scale via the portal-based deployment (also known as the Azure landing zone accelerator), the portal lists subscriptions to be selected for deployment from the platform subscriptions (management, connectivity, identity) and the landing zones (corp and online).
+When you deploy enterprise-scale via the portal-based deployment (also known as the Azure foundation accelerator), the portal lists subscriptions to be selected for deployment from the platform subscriptions (management, connectivity, identity) and the Azure foundations (corp and online).
 
 We updated our Subscription selection method in [October 2022](./Whats-new.md#october-2022) to increase the limit from 50 to 1,000. If you have more than 1,000 subscriptions, the API may still not be able to display all of them in the drop-down list. If this causes you a problem, please let us know via the [issues](https://github.com/Azure/Enterprise-Scale/issues).
 
 ## Can we use and customize the ARM templates for enterprise-scale architecture and check them into our repository and deploy it from there?
 
-All of the ARM templates for enterprise-scale architecture are developed and optimized for the Azure landing zone accelerator portal-based experience. We don't recommend or support customization of these templates because they're complex. To handle all of the options and variations we provide for the Azure landing zone accelerator portal-based experience, ARM template expressions would need numerous logical operators and conditions. ARM deployments (nested templates) need to deploy in a specific order to be successful.
+All of the ARM templates for enterprise-scale architecture are developed and optimized for the Azure foundation accelerator portal-based experience. We don't recommend or support customization of these templates because they're complex. To handle all of the options and variations we provide for the Azure foundation accelerator portal-based experience, ARM template expressions would need numerous logical operators and conditions. ARM deployments (nested templates) need to deploy in a specific order to be successful.
 
 Finally, taking the same templates for future operations requires you to redeploy to the entire tenant for any change, and also requires permanent owner role-based access control assignment on the tenant root "`/`" scope.
 
-However, if you want to deploy and manage enterprise-scale architecture via infrastructure-as-code, see [What if we can't deploy using the Azure landing zone accelerator portal-based experience, but want to deploy via infrastructure-as-code?](#what-if-we-cant-deploy-by-using-the-azure-landing-zone-accelerator-portal-based-experience-but-can-deploy-via-infrastructure-as-code).
+However, if you want to deploy and manage enterprise-scale architecture via infrastructure-as-code, see [What if we can't deploy using the Azure foundation accelerator portal-based experience, but want to deploy via infrastructure-as-code?](#what-if-we-cant-deploy-by-using-the-azure-foundation-accelerator-portal-based-experience-but-can-deploy-via-infrastructure-as-code).
 
-## What if we can't deploy by using the Azure landing zone accelerator portal-based experience, but can deploy via infrastructure-as-code?
+## What if we can't deploy by using the Azure foundation accelerator portal-based experience, but can deploy via infrastructure-as-code?
 
 The following implementation options are available when you use infrastructure-as-code:
 
-- The [Azure landing zone accelerator](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-accelerator) portal-based experience can integrate and bootstrap a CI/CD pipeline using GitHub with [AzOps](https://github.com/Azure/AzOps) as documented at [Deploying Enterprise Scale](https://github.com/Azure/Enterprise-Scale/wiki/Deploying-Enterprise-Scale).
-- The [Enterprise-scale Do-It-Yourself (DIY) ARM templates](https://github.com/Azure/Enterprise-Scale/tree/main/eslzArm#enterprise-scale-landing-zones-arm-templates) method
+- The [Azure foundation accelerator](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-accelerator) portal-based experience can integrate and bootstrap a CI/CD pipeline using GitHub with [AzOps](https://github.com/Azure/AzOps) as documented at [Deploying Enterprise Scale](https://github.com/Azure/Enterprise-Scale/wiki/Deploying-Enterprise-Scale).
+- The [Enterprise-scale Do-It-Yourself (DIY) ARM templates](https://github.com/Azure/Enterprise-Scale/tree/main/eslzArm#enterprise-scale-azure-foundations-arm-templates) method
 - The [ALZ Terraform module](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale#terraform-module-for-cloud-adoption-framework-enterprise-scale)
 - The [ALZ Bicep modules](https://github.com/Azure/ALZ-Bicep)
 
 ## If we already deployed enterprise-scale architecture without using infrastructure-as-code, do we have to delete everything and start again to use infrastructure-as-code?
 
-If you used the Azure landing zone accelerator portal-based experience to deploy enterprise-scale architecture into your Azure tenant, see the guidance for the infrastructure-as-code tooling you want to use.
+If you used the Azure foundation accelerator portal-based experience to deploy enterprise-scale architecture into your Azure tenant, see the guidance for the infrastructure-as-code tooling you want to use.
 
 ### ARM Templates
 
@@ -86,7 +86,7 @@ To use ARM templates to deploy, manage, and operate your enterprise-scale deploy
 
 Once configured, AzOps connects to your Azure tenant, scans it, and then pulls individual ARM templates into your repository in a structure that represents the [four Azure scopes](https://learn.microsoft.com/azure/azure-resource-manager/management/overview#understand-scope).
 
-To see a demo of AzOps being used, check out this YouTube video on the Microsoft DevRadio channel: [Enterprise-scale landing zones DevOps and automation step by step](https://www.youtube.com/watch?v=wWLxxj-uMsY)
+To see a demo of AzOps being used, check out this YouTube video on the Microsoft DevRadio channel: [Enterprise-scale Azure foundations DevOps and automation step by step](https://www.youtube.com/watch?v=wWLxxj-uMsY)
 
 ### Bicep
 
@@ -98,9 +98,9 @@ Leave us feedback via [GitHub issues on the AzOps repository](https://github.com
 
 Terraform builds its own [state](https://www.terraform.io/docs/language/state/index.html) file to track and configure resources. If you already deployed enterprise-scale architecture to your Azure tenant, [import](https://www.terraform.io/docs/cli/import/index.html) each resource into the state file to learn what it manages as part of your Terraform code. Then you can deploy, manage, and operate your enterprise-scale deployment via Terraform.
 
-Terraform import is currently done on a per resource basis and can be time consuming and complex to do at scale. It's often easier to delete and redeploy via Terraform than to import everything that's been deployed by the Azure landing zone accelerator portal-based experience. Most customers know from the start that they want to use Terraform to manage their Azure tenant, so this scenario is uncommon.
+Terraform import is currently done on a per resource basis and can be time consuming and complex to do at scale. It's often easier to delete and redeploy via Terraform than to import everything that's been deployed by the Azure foundation accelerator portal-based experience. Most customers know from the start that they want to use Terraform to manage their Azure tenant, so this scenario is uncommon.
 
-To deploy enterprise-scale architecture by using Terraform, you might want to use the Terraform module we provide. It deploys everything that the Azure landing zone accelerator portal-based experience does. The module, [Terraform Module for Cloud Adoption Framework Enterprise-scale](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/0.0.4-preview), is available from the Terraform Registry page.
+To deploy enterprise-scale architecture by using Terraform, you might want to use the Terraform module we provide. It deploys everything that the Azure foundation accelerator portal-based experience does. The module, [Terraform Module for Cloud Adoption Framework Enterprise-scale](https://registry.terraform.io/modules/Azure/caf-enterprise-scale/azurerm/0.0.4-preview), is available from the Terraform Registry page.
 
 To see a demo of Terraform being used, check out this YouTube video on the Microsoft DevRadio channel: [Terraform Module for Cloud Adoption Framework Enterprise-scale Walkthrough](https://www.youtube.com/watch?v=5pJxM1O4bys)
 
@@ -161,13 +161,13 @@ The Management Group Names/IDs created via the ALZ Portal Accelerator Deployment
 
 The log analytics agent (MMA) has retired as documented [here]( https://azure.microsoft.com/updates/were-retiring-the-log-analytics-agent-in-azure-monitor-on-31-august-2024/). Cloud ingestion services will gradually reduce support for MMA agents, which may result in compatibility issues over time. Ingestion for MMA will remain unchanged until February 1, 2025. You need to complete the migration to the Azure Monitor Agent before that date. 
 
-## Where do I find more information about the Azure Monitor Baseline Alerts initiative included in the Azure landing zones Portal Accelerator?
+## Where do I find more information about the Azure Monitor Baseline Alerts initiative included in the Azure foundations Portal Accelerator?
 
-Great question! As this is maintained in a repository outside of the Azure landing zones repository please refer to [Azure Monitor Baseline Alerts wiki](https://azure.github.io/azure-monitor-baseline-alerts/patterns/alz) for more details.
+Great question! As this is maintained in a repository outside of the Azure foundations repository please refer to [Azure Monitor Baseline Alerts wiki](https://azure.github.io/azure-monitor-baseline-alerts/patterns/alz) for more details.
 
 ## What is the impact of GitHub Releases and ALZ?
 
-As you may have noticed, as of end September 2023, Azure Landing Zone has started publishing GitHub Releases after significant changes are merged into the `main` branch. The ALZ team uses the GitHub Releases to publish the latest version of the Azure Landing Zone and Portal Accelerator, enabling the tracking and pinning of release versions to a specific date. This is a common practice for many open source projects and we are excited to be able to provide this capability to our customers and partners.
+As you may have noticed, as of end September 2023, Mission Azure Foundation has started publishing GitHub Releases after significant changes are merged into the `main` branch. The ALZ team uses the GitHub Releases to publish the latest version of the Mission Azure Foundation and Portal Accelerator, enabling the tracking and pinning of release versions to a specific date. This is a common practice for many open source projects and we are excited to be able to provide this capability to our customers and partners.
 
 There are two significant benefits to enabling GitHub Releases:
 
@@ -213,4 +213,4 @@ If you want to monitor a resource that is non-compliant by design, you may use a
 
 ### When can I deploy ALZ to new Azure Regions?
 
-As new Azure regions come online, they are rolled out in a phased approach and whilst the region may be available for use, not all features may be available during the early period. For Azure landing zones this means that you may experience unexpected deployment failures where certain components may not be available. As ALZ provides different options and selections no 2 deployments may be the same and therefore deployment outcomes can differ. Should you experience an issue deploying ALZ to a new region please raise a support ticket for review.
+As new Azure regions come online, they are rolled out in a phased approach and whilst the region may be available for use, not all features may be available during the early period. For Azure foundations this means that you may experience unexpected deployment failures where certain components may not be available. As ALZ provides different options and selections no 2 deployments may be the same and therefore deployment outcomes can differ. Should you experience an issue deploying ALZ to a new region please raise a support ticket for review.

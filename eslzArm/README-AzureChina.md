@@ -5,14 +5,14 @@ In Azure China Cloud, tenant-level permissions are restricted preventing the abi
 As such, we recommend you confirm that you have the ability to create Management Groups in your tenant and have `Owner` permissions to all required Subscriptions before proceeding with the following steps.
 
 ```powershell
-# Do-It-Yourself instructions for deploying Azure landing zones in Azure China
+# Do-It-Yourself instructions for deploying Azure foundations in Azure China
 
 # Connect to the AzureChinaCloud tenant.
 
 Connect-AzAccount -Environment AzureChinaCloud
 
 # Change the variables below to contain the right values for your tenant, subscription, address space etc.
-# $Location determines the region where the metadata regarding the ARM deployment is stored, not where management groups, Azure Policies and Azure RBAC are stored because these resource are not deployed to a particular region. See https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/faq#why-are-we-asked-to-specify-azure-regions-during-the-azure-landing-zone-accelerator-deployment-and-what-are-they-used-for
+# $Location determines the region where the metadata regarding the ARM deployment is stored, not where management groups, Azure Policies and Azure RBAC are stored because these resource are not deployed to a particular region. See https://docs.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/faq#why-are-we-asked-to-specify-azure-regions-during-the-azure-Azure Foundation-accelerator-deployment-and-what-are-they-used-for
 
 $AlzPrefix = "alz"
 $Location = "chinaeast2"
@@ -31,7 +31,7 @@ $OnlineLandingZoneSubscriptionId = "<replace me>"
 
 New-AzManagementGroup -GroupName $AlzPrefix -ParentId "/providers/Microsoft.Management/managementGroups/$TenantRootGroupId"
 
-# Deploying management group structure for Azure landing zones
+# Deploying management group structure for Azure foundations
 # Note: You may need to refresh your credentials using `Connect-AzAccount -Environment AzureChinaCloud` before proceeding with the next step
 
 New-AzManagementGroupDeployment -Name $DeploymentName `
@@ -227,7 +227,7 @@ New-AzManagementGroupDeployment -Name "$($DeploymentName)-subnet-nsg" `
                                 -topLevelManagementGroupPrefix $AlzPrefix `
                                 -Verbose
 
-# Assign Azure Policy to deny IP forwarding on the landing zones management group
+# Assign Azure Policy to deny IP forwarding on the Azure foundations management group
 
 New-AzManagementGroupDeployment -Name "$($DeploymentName)-ip-fwd" `
                                 -Location $Location `
@@ -235,7 +235,7 @@ New-AzManagementGroupDeployment -Name "$($DeploymentName)-ip-fwd" `
                                 -TemplateFile .\eslzArm\managementGroupTemplates\policyAssignments\DENY-IPForwardingPolicyAssignment.json `
                                 -Verbose
 
-# Assign Azure Policy to deny IP deny subnets without NSG on the landing zones management group
+# Assign Azure Policy to deny IP deny subnets without NSG on the Azure foundations management group
 
 New-AzManagementGroupDeployment -Name "$($DeploymentName)-lz-subnet-nsg" `
                                 -Location $Location `
@@ -244,7 +244,7 @@ New-AzManagementGroupDeployment -Name "$($DeploymentName)-lz-subnet-nsg" `
                                 -topLevelManagementGroupPrefix $AlzPrefix `
                                 -Verbose
 
-# Assign Azure Policy to deny RDP access from internet into VMs on the landing zones management group
+# Assign Azure Policy to deny RDP access from internet into VMs on the Azure foundations management group
 
 New-AzManagementGroupDeployment -Name "$($DeploymentName)-lz-vm-rdp" `
                                 -Location $Location `
@@ -253,7 +253,7 @@ New-AzManagementGroupDeployment -Name "$($DeploymentName)-lz-vm-rdp" `
                                 -topLevelManagementGroupPrefix $AlzPrefix `
                                 -Verbose
                                 
-# Assign Azure Policy to deny usage of storage accounts over http on the landing zones management group
+# Assign Azure Policy to deny usage of storage accounts over http on the Azure foundations management group
 
 New-AzManagementGroupDeployment -Name "$($DeploymentName)-storage-https" `
                                 -Location $Location `
@@ -261,7 +261,7 @@ New-AzManagementGroupDeployment -Name "$($DeploymentName)-storage-https" `
                                 -TemplateFile .\eslzArm\managementGroupTemplates\policyAssignments\DENY-StorageWithoutHttpsPolicyAssignment.json `
                                 -Verbose
 
-# Assign Azure Policy to enforce AKS policy add-on on the landing zones management group
+# Assign Azure Policy to enforce AKS policy add-on on the Azure foundations management group
 
 New-AzManagementGroupDeployment -Name "$($DeploymentName)-aks-policy" `
                                 -Location $Location `
@@ -270,7 +270,7 @@ New-AzManagementGroupDeployment -Name "$($DeploymentName)-aks-policy" `
                                 -topLevelManagementGroupPrefix $AlzPrefix `
                                 -Verbose
                                 
-# Assign Azure Policy to enforce SQL auditing on the landing zones management group
+# Assign Azure Policy to enforce SQL auditing on the Azure foundations management group
 
 New-AzManagementGroupDeployment -Name "$($DeploymentName)-sql-auditing" `
                                 -Location $Location `
@@ -279,7 +279,7 @@ New-AzManagementGroupDeployment -Name "$($DeploymentName)-sql-auditing" `
                                 -topLevelManagementGroupPrefix $AlzPrefix `
                                 -Verbose
 
-# Assign Azure Policy to enforce VM Backup on VMs on the landing zones management group
+# Assign Azure Policy to enforce VM Backup on VMs on the Azure foundations management group
 
 New-AzManagementGroupDeployment -Name "$($DeploymentName)-vm-lz-backup" `
                                 -Location $Location `
@@ -288,7 +288,7 @@ New-AzManagementGroupDeployment -Name "$($DeploymentName)-vm-lz-backup" `
                                 -topLevelManagementGroupPrefix "lzVmBackup" `
                                 -Verbose
 
-# Assign Azure Policy to enforce TLS/SSL on the landing zones management group
+# Assign Azure Policy to enforce TLS/SSL on the Azure foundations management group
 
 New-AzManagementGroupDeployment -Name "$($DeploymentName)-tls-ssl" `
                                 -Location $Location `
@@ -297,7 +297,7 @@ New-AzManagementGroupDeployment -Name "$($DeploymentName)-tls-ssl" `
                                 -topLevelManagementGroupPrefix $AlzPrefix `
                                 -Verbose
                                 
-# Assign Azure Policy to enforce AKS clusters to not allow container priv escalation on the landing zones management group
+# Assign Azure Policy to enforce AKS clusters to not allow container priv escalation on the Azure foundations management group
 
 New-AzManagementGroupDeployment -Name "$($DeploymentName)-aks-priv-esc" `
                                 -Location $Location `
@@ -305,7 +305,7 @@ New-AzManagementGroupDeployment -Name "$($DeploymentName)-aks-priv-esc" `
                                 -TemplateFile .\eslzArm\managementGroupTemplates\policyAssignments\DENY-AksPrivEscalationPolicyAssignment.json `
                                 -Verbose
 
-# Assign Azure Policy to enforce AKS clusters to not allow privileged containers on the landing zones management group
+# Assign Azure Policy to enforce AKS clusters to not allow privileged containers on the Azure foundations management group
 
 New-AzManagementGroupDeployment -Name "$($DeploymentName)-aks-priv-con" `
                                 -Location $Location `
@@ -313,7 +313,7 @@ New-AzManagementGroupDeployment -Name "$($DeploymentName)-aks-priv-con" `
                                 -TemplateFile .\eslzArm\managementGroupTemplates\policyAssignments\DENY-AksPrivilegedPolicyAssignment.json `
                                 -Verbose
                                 
-# Assign Azure Policy to enforce AKS clusters to not allow traffic over http on the landing zones management group
+# Assign Azure Policy to enforce AKS clusters to not allow traffic over http on the Azure foundations management group
 
 New-AzManagementGroupDeployment -Name "$($DeploymentName)-aks-priv-https" `
                                 -Location $Location `
@@ -321,7 +321,7 @@ New-AzManagementGroupDeployment -Name "$($DeploymentName)-aks-priv-https" `
                                 -TemplateFile .\eslzArm\managementGroupTemplates\policyAssignments\DENY-AksWithoutHttpsPolicyAssignment.json `
                                 -Verbose
                                 
-# Assign Azure Policy to prevent usage of public endpoint for Azure PaaS services on the corp landing zone management group
+# Assign Azure Policy to prevent usage of public endpoint for Azure PaaS services on the corp Azure foundation management group
 
 New-AzManagementGroupDeployment -Name "$($DeploymentName)-paas-endpoint" `
                                 -Location $Location `
@@ -330,7 +330,7 @@ New-AzManagementGroupDeployment -Name "$($DeploymentName)-paas-endpoint" `
                                 -topLevelManagementGroupPrefix $AlzPrefix `
                                 -Verbose
 
-# Add the first corp connected landing zone subscription to Corp management group
+# Add the first corp connected Azure foundation subscription to Corp management group
 
 New-AzManagementGroupDeployment -Name "$($DeploymentName)-corp1" `
                                 -ManagementGroupId "$($AlzPrefix)-corp" `
@@ -340,7 +340,7 @@ New-AzManagementGroupDeployment -Name "$($DeploymentName)-corp1" `
                                 -subscriptionId $CorpConnectedLandingZoneSubscriptionId `
                                 -Verbose
 
-# Add the first online connected landing zone subscription to Online management group
+# Add the first online connected Azure foundation subscription to Online management group
 
 New-AzManagementGroupDeployment -Name "$($DeploymentName)-online1" `
                                 -ManagementGroupId "$($AlzPrefix)-online" `

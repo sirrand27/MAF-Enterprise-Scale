@@ -1,3 +1,3 @@
 # This page has moved
 
-Please refer to [Deploy Azure landing zone portal accelerator](./Deploying-ALZ)
+Please refer to [Deploy Azure foundation portal accelerator](./Deploying-ALZ)

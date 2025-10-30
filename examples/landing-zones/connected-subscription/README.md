@@ -4,21 +4,21 @@ The ARM template provided in this folder can be used to create new, connected su
 
 ## Pre-requisites
 
-This ARM template takes a dependency on the 'Deploy-VNET-HubSpoke' policy provided by Enterprise-Scale reference implementations, and will invoke the template deployment in the policyDefinition as part of assigning the policy to the newly created landing zone (subscription).
+This ARM template takes a dependency on the 'Deploy-VNET-HubSpoke' policy provided by Enterprise-Scale reference implementations, and will invoke the template deployment in the policyDefinition as part of assigning the policy to the newly created Azure foundation (subscription).
 When deploying the Enterprise-Scale reference implementations, the definition will be located at the top level management group, and the resource Id will be "/providers/Microsoft.Management/managementGroups/<prefixProvidedDuringSetup>/Microsoft.Authorization/policyDefinitions/Deploy-VNET-HubSpoke"
 
-Also, a connectivity subscription must exist in the <prefix>-connectivity management group containing the virtual network hub you will connect the corp connected landing zones (subscriptions) to.
+Also, a connectivity subscription must exist in the <prefix>-connectivity management group containing the virtual network hub you will connect the corp connected Azure foundations (subscriptions) to.
 
 ## Policy Driven Governance
 
-One of the design principles of Enterprise-Scale is to use Policy Driven Governance to ensure autonomy and a secure, compliant goal state for the Azure platform and the landing zones (subscriptions). This template will ensure that the virtual network is created in the landing zone and also subject to continuous compliance by Azure Policy, so organizations can ensure their corp connected landing zones are connected to the connectivity hub through the life-cycle of the landing zone.
+One of the design principles of Enterprise-Scale is to use Policy Driven Governance to ensure autonomy and a secure, compliant goal state for the Azure platform and the Azure foundations (subscriptions). This template will ensure that the virtual network is created in the Azure foundation and also subject to continuous compliance by Azure Policy, so organizations can ensure their corp connected Azure foundations are connected to the connectivity hub through the life-cycle of the Azure foundation.
 
 ## Parameters
 
 - "subscriptionAliasName": It is recommended that the subscription alias name is the same as the displayName to ensure easier manageability
 - "billingAccountId": Provide the full resourceId for the enrollmentAccount. E.g., "/providers/Microsoft.Billing/billingAccounts/{billingAccountName}/enrollmentAccounts/{enrollmentAccountName}"
 - "targetManagementGroup" Provide the last segment of the management group resourceId for the target management group in order to place the subscription directly under a management group. E.g., "/providers/Microsoft.Management/managementGroups/{mgmtGroupId}" where "mgmtGroupId" is the expected input.
-- "lzVnetCidr": Provide the CIDR for the landing zone vNet that will be created
+- "lzVnetCidr": Provide the CIDR for the Azure foundation vNet that will be created
 - "lzVnetRegion": Provide the region for where the virtual network will be created
 - "esConnectivityHubId": Provide the resourceId of the existing virtual network in the connectivity subscription
 
@@ -58,7 +58,7 @@ One of the design principles of Enterprise-Scale is to use Policy Driven Governa
         "esConnectivityHubId": {
             "type": "string",
             "metadata": {
-                "description": "Provide the resourceId of the virtual network in the connectivity hub where you will connect the landing zone VNet to."
+                "description": "Provide the resourceId of the virtual network in the connectivity hub where you will connect the Azure foundation VNet to."
             }
         }
     },

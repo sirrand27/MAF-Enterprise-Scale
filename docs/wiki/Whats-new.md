@@ -36,7 +36,7 @@
 
 ---
 
-Enterprise Scale/Azure Landing Zones is updated regularly. This page is where you'll find out about the latest updates to Enterprise Scale/Azure Landing Zones for:
+Enterprise Scale/Mission Azure Foundation is updated regularly. This page is where you'll find out about the latest updates to Enterprise Scale/Mission Azure Foundation for:
 
 - [CAF (Cloud Adoption Framework) Documentation](https://aka.ms/alz) Updates
   - Check out the CAF specific [What's new in the Microsoft Cloud Adoption Framework for Azure](https://learn.microsoft.com/azure/cloud-adoption-framework/get-started/whats-new) page
@@ -52,13 +52,13 @@ Enterprise Scale/Azure Landing Zones is updated regularly. This page is where yo
 
 > **Note:** Please check the latest release notes for each of the tools, as these will contain more detailed notes relating to changes in each of the tools.
 
-This article will be updated as and when changes are made to the above and anything else of relevance for Enterprise Scale/Azure Landing Zones. Make sure to check back here often to keep up with new updates and changes.
+This article will be updated as and when changes are made to the above and anything else of relevance for Enterprise Scale/Mission Azure Foundation. Make sure to check back here often to keep up with new updates and changes.
 
 > **Important:** Previous changes to the above in relation to Enterprise Scale will not be listed here. However going forward, this page will be updated.
 
 ## Updates
 
-Here's what's changed in Enterprise Scale/Azure Landing Zones:
+Here's what's changed in Enterprise Scale/Mission Azure Foundation:
 
 ### October 2025
 
@@ -70,7 +70,7 @@ Here's what's changed in Enterprise Scale/Azure Landing Zones:
 
 #### Tooling
 
-- The Security Management Group is now deployed when selecting multi-subscription for platform resources in the portal accelerator. This management group is intended to host security related resources such as Microsoft Sentinel as per our recent blog [A New Platform Management Group & Subscription for Security in Azure landing zone (ALZ)](https://techcommunity.microsoft.com/blog/azuregovernanceandmanagementblog/a-new-platform-management-group--subscription-for-security-in-azure-landing-zone/4433287)
+- The Security Management Group is now deployed when selecting multi-subscription for platform resources in the portal accelerator. This management group is intended to host security related resources such as Microsoft Sentinel as per our recent blog [A New Platform Management Group & Subscription for Security in Azure foundation (ALZ)](https://techcommunity.microsoft.com/blog/azuregovernanceandmanagementblog/a-new-platform-management-group--subscription-for-security-in-azure-landing-zones/4433287)
 - Sentinel is no-longer deployed by default in the portal accelerator and is no-longer available as an option to deploy it at all as part of the portal accelerator. If you want to deploy Sentinel, please follow the guidance in [Deployment guide for Microsoft Sentinel](https://learn.microsoft.com/azure/sentinel/deploy-overview)
 
 ### 🔃 Policy Refresh H2 FY25
@@ -85,7 +85,7 @@ Here's what's changed in Enterprise Scale/Azure Landing Zones:
   - While still in preview, with the significant adoption of AI technologies in Azure, the ALZ team have agreed to enable this capability in Defender for Cloud (should customers enable it) as part of their ALZ deployment. While in preview, there is no additional cost associated with this capability, however, once it is GA, there may be a cost associated with the use of this capability. The ALZ team will continue to monitor this and provide updates as needed.
   - Added new built-in policy [Configure Microsoft Defender threat protection for AI workloads](https://www.azadvertizer.net/azpolicyadvertizer/359a48a3-351a-4618-bb32-f1628645694b.html) to the [Deploy-MDFC-Config_20240319](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Deploy-MDFC-Config_20240319.html) initiative.
   - Updated the default portal accelerator deployment to enable Defender for AI workloads on subscriptions directly.
-- Added new initiative [Configure prerequisites to enable Guest Attestation on Trusted Launch enabled VMs](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/281d9e47-d14d-4f05-b8eb-18f2c4a034ff.html) to enhance virtual machine security leveraging enhanced features of Trusted Launch- for more information: [https://aka.ms/trustedlaunch](https://aka.ms/trustedlaunch). This initiative is assigned by default at the Platform and Landing Zones management groups scope.
+- Added new initiative [Configure prerequisites to enable Guest Attestation on Trusted Launch enabled VMs](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/281d9e47-d14d-4f05-b8eb-18f2c4a034ff.html) to enhance virtual machine security leveraging enhanced features of Trusted Launch- for more information: [https://aka.ms/trustedlaunch](https://aka.ms/trustedlaunch). This initiative is assigned by default at the Platform and Azure Foundations management groups scope.
   - NOTE: for environments using NSGs or Firewalls to manage traffic, you may need to create rules to facilitate service communication, details: https://learn.microsoft.com/en-us/azure/virtual-machines/boot-integrity-monitoring-overview?tabs=portal#troubleshooting-guide-for-guest-attestation-extension-installation
 - Added default policy assignment at the intermediate root management group scope for the [Service Health built-in policy](https://www.azadvertizer.net/azpolicyadvertizer/98903777-a9f6-47f5-90a9-acaf62ab01a8.html) and changed AMBA ALZ Service Health policy assignment default to no, as replaced with built-in policy.
 - Updated and cleaned up the Excel Policy Assignments file available in the wiki https://github.com/Azure/Enterprise-Scale/wiki/media/ALZ%20Policy%20Assignments%20v2.xlsx
@@ -101,7 +101,7 @@ Here's what's changed in Enterprise Scale/Azure Landing Zones:
 
 #### Tooling
 
-- Updated the portal accelerator to remove sovereign cloud options as the ALZ team are unable to validate portal deployments in those environments. The only supported environment for Azure Landing Zones via the portal accelerator is Azure Public Cloud.
+- Updated the portal accelerator to remove sovereign cloud options as the ALZ team are unable to validate portal deployments in those environments. The only supported environment for Mission Azure Foundation via the portal accelerator is Azure Public Cloud.
 - Updated the ***Baseline alerts and monitoring*** integration section in the portal accelerator to deploy the latest release of AMBA (2025-06-03). To read more on the changes, see the [What's new](https://aka.ms/amba/alz/whatsnew) page in the AMBA documentation.
 
 ### May 2025
@@ -196,9 +196,9 @@ Here's what's changed in Enterprise Scale/Azure Landing Zones:
 - Updated ALZ custom policies enforcing minimum TLS versions to properly evaluate the minimum TLS version, ensuring services configured to deploy TLS 1.3 will successfully evaluate.
 - Updated the initiative [Deploy-MDFC-Config_20240319](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Deploy-MDFC-Config_20240319.html) to the the newer version of DCSPM: [Configure Microsoft Defender CSPM plan](https://www.azadvertizer.net/azpolicyadvertizer/72f8cee7-2937-403d-84a1-a4e3e57f3c21.html)
 - Updated [Deploy-Private-DNS-Generic](https://www.azadvertizer.net/azpolicyadvertizer/Deploy-Private-DNS-Generic.html) policy to include the ability to configure the location/region.
-- Removed duplicate assignment and portal option of [Deploy Azure Policy Add-on to Azure Kubernetes Service clusters](https://www.azadvertizer.net/azpolicyadvertizer/a8eff44f-8c92-45c3-a3fb-9880802d67a7.html) at Landing Zones scope, as this policy is assigned in the initiative [Deploy Microsoft Defender for Cloud configuration](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Deploy-MDFC-Config_20240319.html) at Intermediate Root scope.
+- Removed duplicate assignment and portal option of [Deploy Azure Policy Add-on to Azure Kubernetes Service clusters](https://www.azadvertizer.net/azpolicyadvertizer/a8eff44f-8c92-45c3-a3fb-9880802d67a7.html) at Azure Foundations scope, as this policy is assigned in the initiative [Deploy Microsoft Defender for Cloud configuration](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Deploy-MDFC-Config_20240319.html) at Intermediate Root scope.
 - Updated the Deny-vNet-Peer-Cross-Sub.json definition policy to include a parameter for allowed virtual networks (vNets) in other subscriptions. For vNets to be permitted to peer, both vNet IDs must be added to the allowed list.
-- Added new built-in policy assignment and portal option for [Subnets should be private](https://www.azadvertizer.net/azpolicyadvertizer/7bca8353-aa3b-429b-904a-9229c4385837.html) assigned at Platform and Landing Zones management groups. This policy's assignment effect is defaulted to "Audit" in this release, giving the community time to adopt the good practice and address subnet compliance. We will default to the "Deny" effect as part of the next Policy Refresh.
+- Added new built-in policy assignment and portal option for [Subnets should be private](https://www.azadvertizer.net/azpolicyadvertizer/7bca8353-aa3b-429b-904a-9229c4385837.html) assigned at Platform and Azure Foundations management groups. This policy's assignment effect is defaulted to "Audit" in this release, giving the community time to adopt the good practice and address subnet compliance. We will default to the "Deny" effect as part of the next Policy Refresh.
 - Added option to select Diagnostic Settings category for logging to Log Analytics in the portal experience. You can now select between the recommended "All Logs" which covers almost all Azure resources, or "Audit Only" which is limited to resources that support this category.
 - Added additional built-in policies to initiatives for the following Azure AI Services:
   - Azure OpenAI
@@ -225,7 +225,7 @@ Here's what's changed in Enterprise Scale/Azure Landing Zones:
 
 #### Documentation
 
-- The [ALZ Policies](./ALZ-Policies) and [ALZ Deprecated Services](./ALZ-Deprecated-Services) documentation has been updated to reflect changes in AMBA. To provide more flexibility for future growth AMBA is transitioning from a single Landing Zone policy initiative and instead is adopting a modular approach by splitting the Landing Zone initiative into the following distinct components (initiatives):
+- The [ALZ Policies](./ALZ-Policies) and [ALZ Deprecated Services](./ALZ-Deprecated-Services) documentation has been updated to reflect changes in AMBA. To provide more flexibility for future growth AMBA is transitioning from a single Azure Foundation policy initiative and instead is adopting a modular approach by splitting the Azure Foundation initiative into the following distinct components (initiatives):
   - Key Management
   - Load Balancing
   - Network Changes
@@ -272,7 +272,7 @@ Here's what's changed in Enterprise Scale/Azure Landing Zones:
 #### Documentation
 
 - As the Log Analytics agent is set to be retired on August 31, 2024, it is crucial for users to plan their migration to avoid any disruption in their monitoring services. The migration involves understanding the current setup, including agents, workspaces, solutions, insights, and data collections, and then configuring the new data collections to ensure a smooth transition. Tools like the AMA Migration Helper and DCR Config Generator can assist in automating and tracking the migration process. We've now made available [migration guidance](./ALZ-AMA-Migration-Guidance) to assist in the process.
-- Developed a script to facilitate the transition from Microsoft Monitoring Agent (MMA) to Azure Monitor Agent (AMA) within Azure landing zones. Review the [migration guidance](./ALZ-AMA-Migration-Guidance) for additional information on how the script can be used.
+- Developed a script to facilitate the transition from Microsoft Monitoring Agent (MMA) to Azure Monitor Agent (AMA) within Azure foundations. Review the [migration guidance](./ALZ-AMA-Migration-Guidance) for additional information on how the script can be used.
 - General update AMA documentation [ALZ AMA Update](./ALZ-AMA-Update)
 
 #### Policy
@@ -307,12 +307,12 @@ Key updates include:
 
   | Assignment Name          | Display Name                                                                                                                 | Scope of Assignment                                         |
   | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-  | Deploy-MDFC-DefenSQL-AMA | Configure SQL VMs and Arc-enabled SQL Servers to install Microsoft Defender for SQL and AMA with a user-defined LA workspace | Platform Management Group<br>Landing Zones Management Group |
-  | Deploy-UAMI-VMInsights   | Deploy User Assigned Managed Identity for VM Insights                                                                        | Landing Zones Management Group                              |
+  | Deploy-MDFC-DefenSQL-AMA | Configure SQL VMs and Arc-enabled SQL Servers to install Microsoft Defender for SQL and AMA with a user-defined LA workspace | Platform Management Group<br>Azure Foundations Management Group |
+  | Deploy-UAMI-VMInsights   | Deploy User Assigned Managed Identity for VM Insights                                                                        | Azure Foundations Management Group                              |
 
 ### 🔃 Policy Refresh H2 FY24
 
-We've missed Q3 timelines completely, but for good reason. We've held back this cycle of Policy Refresh in order to address some key initiatives that we feel are critical to the success of our customers. This is the single largest update to the ALZ Policy since the inception of the project. We're excited to share these updates with you, and we're confident that they will provide significant value to your deployments and the compliance of your Azure Landing Zones.
+We've missed Q3 timelines completely, but for good reason. We've held back this cycle of Policy Refresh in order to address some key initiatives that we feel are critical to the success of our customers. This is the single largest update to the ALZ Policy since the inception of the project. We're excited to share these updates with you, and we're confident that they will provide significant value to your deployments and the compliance of your Mission Azure Foundation.
 
 - 📌Major Update: New "Workload Specific Compliance" section added to ALZ Portal accelerator. This will allow you to apply compliance policies to specific workloads, such as SQL, Storage, and more. These additional compliance controls are frequently required by highly regulated industries like financial services, healthcare, etc. Note: they are not assigned by default, you are required to select the workload and management group scope to apply assignments. For more information review [ALZ Policy - Extra](./ALZ-Policies-Extra)
 This release includes:
@@ -340,7 +340,7 @@ This release includes:
 - Added the [Configure a private DNS Zone ID for table_secondary groupID](https://www.azadvertizer.net/azpolicyadvertizer/c1d634a5-f73d-4cdd-889f-2cc7006eb47f.html) built-in policy to the "Deploy-Private-DNS-Zones" initiative and assignment.
 - Removed Defender for Cloud for DNS, as this is now deprecated and is included in Defender for Servers. Deprecated [Deploy-MDFC-Config](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Deploy-MDFC-Config.html) initiative, and superseded with [Deploy-MDFC-Config_20240319](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Deploy-MDFC-Config_20240319.html) to minimize breaking change impact on existing deployments.
 - Removed Defender for Cloud for APIs, as this is now deprecated due to plan changes for this service. Deprecated [Deploy-MDFC-Config](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Deploy-MDFC-Config.html) initiative, and superseded with [Deploy-MDFC-Config_20240319](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Deploy-MDFC-Config_20240319.html) to minimize breaking change impact on existing deployments.
-- Added new initiative and default assignment for [Enforce-Backup](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Backup.html) scoped to the Landing Zones and Platform management groups in Audit mode:
+- Added new initiative and default assignment for [Enforce-Backup](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Backup.html) scoped to the Azure Foundations and Platform management groups in Audit mode:
   - Added the [[Preview]: Immutability must be enabled for backup vaults](https://www.azadvertizer.net/azpolicyadvertizer/2514263b-bc0d-4b06-ac3e-f262c0979018.html) built-in policy
   - Added the [[Preview]: Immutability must be enabled for Recovery Services vaults](https://www.azadvertizer.net/azpolicyadvertizer/d6f6f560-14b7-49a4-9fc8-d2c3a9807868.html) built-in policy
   - Added the [[Preview]: Soft delete should be enabled for Backup Vaults](https://www.azadvertizer.net/azpolicyadvertizer/9798d31d-6028-4dee-8643-46102185c016.html) built-in policy
@@ -363,14 +363,14 @@ Special Note: Existing consumers of ALZ will notice that some "assigned by defau
 | Initiative | Display Name | Original Assignment Name | New Assignment Name | Scope of Assignment |
 | --- | --- | --- | --- | --- |
 | Deploy-MDFC-Deploy | Deploy Microsoft Defender for Cloud configuration | Deploy-MDFC-Deploy | Deploy-MDFC-Config-H224 | Intermediate Root Management Group |
-| Deploy-EncryptTransit | Deny or Deploy and append TLS requirements and SSL enforcement on resources without Encryption in transit | Enforce-TLS-SSL | Enforce-TLS-SSL-H224 | Landing Zones Management Group |
+| Deploy-EncryptTransit | Deny or Deploy and append TLS requirements and SSL enforcement on resources without Encryption in transit | Enforce-TLS-SSL | Enforce-TLS-SSL-H224 | Azure Foundations Management Group |
 | Deploy-Diagnostics-LogAnalytics | Deploy Diagnostic Settings to Azure Services | Deploy-Resource-Diag | Deploy-Diag-Logs | Intermediate Root Management Group |
 
 ### May 2024
 
 #### Documentation
 
-- Archived the readme content in the eslzArm folder as it is no longer relevant. Please refer to the [ALZ Wiki](https://aka.ms/alz/wiki) for the latest information on how to deploy Enterprise-Scale Landing Zones. To view the content that was previously here, refer to the [archive](https://github.com/Azure/Enterprise-Scale/blob/45d5c2bd8c1a9e19b1a46a3a0dabb311e5320b64/eslzArm/README.md).
+- Archived the readme content in the eslzArm folder as it is no longer relevant. Please refer to the [ALZ Wiki](https://aka.ms/alz/wiki) for the latest information on how to deploy Enterprise-Scale Azure Foundations. To view the content that was previously here, refer to the [archive](https://github.com/Azure/Enterprise-Scale/blob/45d5c2bd8c1a9e19b1a46a3a0dabb311e5320b64/eslzArm/README.md).
 - Added new instructions for deploying hub and spoke network topology in [multiple regions](./Deploying-ALZ-HubAndSpoke#deploying-networking-resources-in-an-additional-region).
 - Added new instructions for deploying additional vWAN hubs in [multiple regions](./Deploying-ALZ-HubAndSpoke#deploying-networking-resources-in-an-additional-region).
 
@@ -402,8 +402,8 @@ Special Note: Existing consumers of ALZ will notice that some "assigned by defau
 - Added ARM template to enable Microsoft Defender for Cloud as part of the deployment. Policies will still remediate additional subscriptions added to ALZ after deployment.
 - Resolved an issue that prevented the policy remediation from working properly for VM Insights, Change Tracking, Azure Update Manager policies. The root cause was a too restrictive access configuration for the Managed Identity that performs the remediation tasks.
   - **New deployments will now:**
-    - Add an additional role assignment for VMInsights Policies that are assigned at Landing Zone management group scope, granting the Managed Identity the Reader role on the Platform management group.
-    - Add an additional role assignment for ChangeTracking Policies that are assigned at Landing Zone management group scope, granting the Managed Identity the Reader role on the Platform management group.
+    - Add an additional role assignment for VMInsights Policies that are assigned at Azure Foundation management group scope, granting the Managed Identity the Reader role on the Platform management group.
+    - Add an additional role assignment for ChangeTracking Policies that are assigned at Azure Foundation management group scope, granting the Managed Identity the Reader role on the Platform management group.
     - Add an additional role assignment to Azure Update Manger Policies, granting Managed Identity Operator at the same scope as the assignment.
   - **To update an existing deployment:**
     - This script [Set-RBACAmaPolicyAssignment.ps1](https://github.com/Azure/Enterprise-Scale/blob/main/src/scripts/Set-RBACAmaPolicyAssignment.ps1) will update the required role assignments. The `enterpriseScaleCompanyPrefix` parameter is required for running the script and should contain the intermediate root management group name.
@@ -419,7 +419,7 @@ Special Note: Existing consumers of ALZ will notice that some "assigned by defau
 - Disabled a Policy in the Microsoft Defender for SQL initiative. As it is not required at this stage. See [ALZ AMA FAQ](./ALZ-AMA-FAQ) for more details.
 - Changed enforcementMode of the assignment of Policy "Deploy-UserAssignedManagedIdentity-VMInsights" to Default. This is to ensure that a Resource Group and a User Assigned Managed Identity are created on new subscriptions (subscriptions that are added after the initial deployment).
 - Bug fix for Portal Accelerator. userAssignedIdentityResourceGroup has been added as output for the Portal UI, this fixes deploying the Resource Group with a custom name.
-- Bug fix for Portal Accelerator. `subscriptionIds` now uses lambda function to obtain the subscription IDs from `corpConnectedLzSubscriptionId`. This fixes the Invalid Template error when selecting a corp connected landing zone deployment.
+- Bug fix for Portal Accelerator. `subscriptionIds` now uses lambda function to obtain the subscription IDs from `corpConnectedLzSubscriptionId`. This fixes the Invalid Template error when selecting a corp connected Azure foundation deployment.
 - Bug fix for Portal Accelerator. `connectivitySubscriptionId` is now skipped when no networking components are deployed. This fixes an InvalidTemplateDeployment error deploying the Resource Group for UAMI.
 - From Portal Accelerator: removed the options to select VM vulnerability assessment provider and to select Defender for Cloud for DNS. These are now default to the recommended settings.
 
@@ -538,14 +538,14 @@ Yes, the Q2 Policy Refresh has been delayed due to a light past quarter and some
   - Deploy-AzActivity-Log (Management Group: Intermediate Root)
   - Deploy-AKS-Policy (added additional required role)
   - Deploy-Resource-Diag (Management Group: Intermediate Root)
-  - Deploy-SQL-TDE (Management Group: Landing Zone)
-  - Deploy-VM-Backup (Management Group: Landing Zone)
+  - Deploy-SQL-TDE (Management Group: Azure Foundation)
+  - Deploy-VM-Backup (Management Group: Azure Foundation)
   - Deploy-VM-Monitoring (Management Group: Intermediate Root)
   - Deploy-VMSS-Monitoring (Management Group: Intermediate Root)
 
 #### Other
 
-- [Azure Landing Zone External Community Call - September 2023 - Hosted & Published](https://github.com/Azure/Enterprise-Scale/wiki/Community-Calls#25th-september-2023-25092023)
+- [Mission Azure Foundation External Community Call - September 2023 - Hosted & Published](https://github.com/Azure/Enterprise-Scale/wiki/Community-Calls#25th-september-2023-25092023)
 
 ### August 2023
 
@@ -572,7 +572,7 @@ Major update in this release: introducing the Policy Testing Framework foundatio
 
 #### Policy
 
-- Added additional initiative assignment for [Enforce-Guardrails-KeyVault](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-KeyVault.html) to the Platform Management Group to improve security coverage. Initially this assignment was only applied to the Landing Zone Management Group.
+- Added additional initiative assignment for [Enforce-Guardrails-KeyVault](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-KeyVault.html) to the Platform Management Group to improve security coverage. Initially this assignment was only applied to the Azure Foundation Management Group.
   - Update Portal RI to include the new assignment option for the Key Vault initiative under Platform Management.
 - Added new custom policy to audit Virtual Machines not using Azure Hybrid Benefit (Audit-AzureHybridBenefit)
 - Fixing bug in [Deploy-Sql-vulnerabilityAssessments](https://www.azadvertizer.net/azpolicyadvertizer/Deploy-Sql-vulnerabilityAssessments.html) to achieve compliance if successfully remediated. NOTE: Due to the need to change parameters, this is a breaking change. The original policy will remain in place but will be deprecated and a new policy will be deployed for the fix [Deploy-Sql-vulnerabilityAssessments_20230706](https://www.azadvertizer.net/azpolicyadvertizer/Deploy-Sql-vulnerabilityAssessments_20230706.html) - please update assignments accordingly - many thanks @Matt-FFFFFF.
@@ -643,11 +643,11 @@ Major update in this release: introducing the Policy Testing Framework foundatio
 - Updated ALZ Policies wiki to make the link to the Excel spreadsheet more prominent.
 - Updated ALZ Policies wiki images to reflect policy initiative assignments now included for Decommissioned and Sandbox management groups.
 - Updated the ALZ Policy Assignments Excel spreadsheet to include a release version column so users can track when those policies last changed and verified all assignments have a relevant AzAdvertizer link for policy details.
-- [Azure Enablement Show: Updating your Azure landing zones](https://www.youtube.com/watch?v=VvZDftlF20w) published
+- [Azure Enablement Show: Updating your Azure foundations](https://www.youtube.com/watch?v=VvZDftlF20w) published
 - [Tech Community Blog: Azure Monitor Baseline Alerts (Preview)](https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-monitor-baseline-alerts-preview/ba-p/3810463) published
 - Updated wiki documentation to so reflect the removal of the "Platform DevOps and automation" section from ALZ Portal Accelerator
 - Added support for Azure Firewall Basic SKU to Hub & Spoke and Virtual WAN deployments in the ALZ Portal Accelerator
-- Updated wiki documentation towards Subscription Vending approach for landing zone (subscription) creation
+- Updated wiki documentation towards Subscription Vending approach for Azure foundation (subscription) creation
 - A brand new [ALZ Policy FAQ and Tips](./ALZ-Policies-FAQ) page has been added to the wiki to help answer some of the most common questions and provide some useful tips for working with ALZ policies.
 - Updated [ALZ Contribution Guide](./ALZ-Contribution-Guide) to include new section on how to contribute to ALZ policies resulting in breaking changes, and some minor refactoring to make it more readable.
 
@@ -660,20 +660,20 @@ Major update in this release: introducing the Policy Testing Framework foundatio
 
 #### Other
 
-- Removed resources from `workloads` folder and redirected to Azure Architectures Center page of [Deploy Azure landing zones](https://aka.ms/alz/aac)
+- Removed resources from `workloads` folder and redirected to Azure Architectures Center page of [Deploy Azure foundations](https://aka.ms/alz/aac)
 
 ### April 2023
 
-We are pleased to announce that we are starting regular Azure Policy reviews for Azure Landing Zone. This includes a review of new built-in policies released and their suitability for ALZ, built-in policies that can replace custom ALZ policies, built-in policies that have been deprecated and addition of new ALZ custom policies and initiatives as identified based on best practices, issues raised and customer feedback. Most importantly, we have also provided default assignments for all the new policies at the appropriate ALZ Management Group level. This will ensure that all new policies are automatically assigned to the appropriate scope and will be in compliance with the ALZ baseline. This will also ensure that the ALZ is always up to date with the latest Azure Policy definitions.
+We are pleased to announce that we are starting regular Azure Policy reviews for Mission Azure Foundation. This includes a review of new built-in policies released and their suitability for ALZ, built-in policies that can replace custom ALZ policies, built-in policies that have been deprecated and addition of new ALZ custom policies and initiatives as identified based on best practices, issues raised and customer feedback. Most importantly, we have also provided default assignments for all the new policies at the appropriate ALZ Management Group level. This will ensure that all new policies are automatically assigned to the appropriate scope and will be in compliance with the ALZ baseline. This will also ensure that the ALZ is always up to date with the latest Azure Policy definitions.
 
 This update includes many ALZ Azure Policies and Initiatives that have been added or updated to enhance the security, governance, and management of ALZ. As part of our commitment to continuous improvement, we have also enhanced our policy review  process, with a focus on transitioning away from deprecated policies where possible, move from custom to built-in policies providing the same or enhanced functionality, and implementing new policies to keep ALZ as part of the current review cycle. We have also implemented non-compliance messages where supported to provide a better user experience when a policy is non-compliant.
 
 This is the first major review and refresh of Azure Policy since ALZ was GA'd. Since GA many new built-in policies and initiatives have been released which has driven the need for this review. We believe that a regular review cycle will allow us to stay on top of emerging trends and new policies, ensuring that our Azure environment remains secure and compliant. Should you identify policies or initiatives that should be considered for ALZ, kindly submit an [GitHub issue](https://github.com/Azure/Enterprise-Scale/issues). For more information, please refer to the [ALZ Policies](ALZ-Policies.md) or the new [Excel spreadsheet](media/ALZ%20Policy%20Assignments%20v2.xlsx) version.
 
-We strongly advise staying up-to-date to ensure the best possible security posture for your Azure environment, see [Keep your Azure landing zone up to date](https://aka.ms/alz/update). For those with existing deployments or policies, we have provided [Brownfield guidance](https://aka.ms/alz/brownfield) to help you navigate the process of updating to the latest policies. We recognize that there may be breaking changes when upgrading an existing deployment or policies and for details follow our recently released guidance to support you in this process:
+We strongly advise staying up-to-date to ensure the best possible security posture for your Azure environment, see [Keep your Azure foundation up to date](https://aka.ms/alz/update). For those with existing deployments or policies, we have provided [Brownfield guidance](https://aka.ms/alz/brownfield) to help you navigate the process of updating to the latest policies. We recognize that there may be breaking changes when upgrading an existing deployment or policies and for details follow our recently released guidance to support you in this process:
 
-- [Update Azure landing zone custom policies](https://aka.ms/alz/update/custom)
-- [Migrate Azure landing zone policies to Azure built-in policies](https://aka.ms/alz/update/builtin)
+- [Update Azure foundation custom policies](https://aka.ms/alz/update/custom)
+- [Migrate Azure foundation policies to Azure built-in policies](https://aka.ms/alz/update/builtin)
 
 > **Please note** that, in some cases, moving to the new Built-In Policy definitions, deploying changes to existing custom policies or removing deprecated policies will require a new Policy Assignment and removing the previous Policy Assignment, which will mean compliance history for the Policy Assignment will be lost. However, if you have configured your Activity Logs and Security Center to export to a Log Analytics Workspace, Policy Assignment historic data will be stored here as per the retention duration configured. Thank you for your cooperation, and we look forward to continuing to work with you to ensure the security and compliance of our Azure environment.
 > While we've made every effort to test the stability of this release, should you have any issues and the guidance provided does not resolve your issue, please open a [GitHub issue](https://github.com/Azure/Enterprise-Scale/issues) so we can do our best to support you and document the fix for others.
@@ -702,7 +702,7 @@ Note that a number of initiatives have been updated that will fail to deploy if 
     - Portal accelerator updated with additional tab and options to enable this initiative.
 - Added initiative assignment [[Preview]: Deploy Microsoft Defender for Endpoint agent](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/e20d08c5-6d64-656d-6465-ce9e37fd0ebc.html) to 'Intermediate Root' Management Group.
 - Added assignment of [Network interfaces should not have public IPs](https://www.azadvertizer.net/azpolicyadvertizer/83a86a26-fd1f-447c-b59d-e51f44264114.html) built-in Policy to the 'Corp' Management Group.
-- Added new initiative and assignment to implement recommended guardrails for Azure Key Vault at the landing zones management group
+- Added new initiative and assignment to implement recommended guardrails for Azure Key Vault at the Azure foundations management group
   - Initiative name: `ENFORCE-Guardrails-KeyVault`
   - Policies included: [ALZ Polices](https://aka.ms/alz/policies)
   - Portal accelerator updated
@@ -729,8 +729,8 @@ Note that a number of initiatives have been updated that will fail to deploy if 
   - **BREAKING CHANGE** (parameters changed):
     - Delete assignment [Deny or Deploy and append TLS requirements and SSL enforcement on resources without Encryption in transit (azadvertizer.net)](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-EncryptTransit.html).
     - Delete custom initiative prior to applying updates as parameters have changed, then re-assign.
-    - Delete orphaned indentity on Landing Zone scope.
-    - Deploy new initiative on Landing Zone scope.
+    - Delete orphaned indentity on Azure Foundation scope.
+    - Deploy new initiative on Azure Foundation scope.
 - Updated initiative [Deny or Audit resources without Encryption with a customer-managed key (CMK) (azadvertizer.net)](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Encryption-CMK.html) deprecated policy [[Deprecated]: SQL servers should use customer-managed keys to encrypt data at rest](https://www.azadvertizer.net/azpolicyadvertizer/0d134df8-db83-46fb-ad72-fe0c9428c8dd.html) to new policy [Azure Policy definition SQL servers should use customer-managed keys to encrypt data at rest](https://www.azadvertizer.net/azpolicyadvertizer/0a370ff3-6cab-4e85-8995-295fd854c5b8.html)
 - Updated initiative and assignment [Deploy Microsoft Defender for Cloud configuration](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Deploy-MDFC-Config.html) to include the new policies:
   - [[Preview]: Configure Microsoft Defender for APIs should be enabled](https://www.azadvertizer.net/azpolicyadvertizer/e54d2be9-5f2e-4d65-98e4-4f0e670b23d6.html)
@@ -738,7 +738,7 @@ Note that a number of initiatives have been updated that will fail to deploy if 
   - [Configure machines to receive a vulnerability assessment provider](https://www.azadvertizer.net/azpolicyadvertizer/13ce0167-8ca6-4048-8e6b-f996402e3c1b.html)
   - [Deploy Azure Policy Add-on to Azure Kubernetes Service clusters](https://www.azadvertizer.net/azpolicyadvertizer/a8eff44f-8c92-45c3-a3fb-9880802d67a7.html)
   - [Configure Azure Kubernetes Service clusters to enable Defender profile](https://www.azadvertizer.net/azpolicyadvertizer/64def556-fbad-4622-930e-72d1d5589bf5.html)
-- Replaced policy assignment "Auditing on SQL server should be enabled" with "Configure SQL servers to have auditing enabled to Log Analytics workspace" on `Landing Zones` Management Group, to suitably assign respective DINE policy definition, instead of AINE
+- Replaced policy assignment "Auditing on SQL server should be enabled" with "Configure SQL servers to have auditing enabled to Log Analytics workspace" on `Azure Foundations` Management Group, to suitably assign respective DINE policy definition, instead of AINE
 - Deprecated `Deny-RDP-From-Internet` and added new policy `Deny-MgmtPorts-From-Internet` which is more flexible and blocks port 22 and 3389 by default
 - Updated the initiative `Deny-PublicPaaSEndpoints` to include additional policies available to block public access for PaaS services
   - Updated [storage](https://www.azadvertizer.net/azpolicyadvertizer/b2982f36-99f2-4db5-8eff-283140c09693.html) and [Key Vault](https://www.azadvertizer.net/azpolicyadvertizer/405c5871-3e91-4644-8a63-58e19d68ff5b.html) to use new policies using the `/publicNetworkAccess` alias
@@ -769,14 +769,14 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 
 #### Other
 
-- [Azure Landing Zone External Community Call - April 2023 - Hosted & Published](https://github.com/Azure/Enterprise-Scale/wiki/Community-Calls#27th-april-2023-27042023)
+- [Mission Azure Foundation External Community Call - April 2023 - Hosted & Published](https://github.com/Azure/Enterprise-Scale/wiki/Community-Calls#27th-april-2023-27042023)
 
 ### March 2023
 
 #### Docs
 
-- Added new question and answer to FAQ for ["Why hasn't Azure landing zones migrated to the Azure Monitor Agent yet?"](https://github.com/Azure/Enterprise-Scale/wiki/FAQ#why-hasnt-azure-landing-zones-migrated-to-the-azure-monitor-agent-yet)
-- Published new CAF docs for Azure landing zones and multiple Microsoft Entra tenants - [aka.ms/ALZ/MultiTenant](https://aka.ms/ALZ/MultiTenant)
+- Added new question and answer to FAQ for ["Why hasn't Azure foundations migrated to the Azure Monitor Agent yet?"](https://github.com/Azure/Enterprise-Scale/wiki/FAQ#azure-landing-zones-migrated-to-the-azure-monitor-agent-yet)
+- Published new CAF docs for Azure foundations and multiple Microsoft Entra tenants - [aka.ms/ALZ/MultiTenant](https://aka.ms/ALZ/MultiTenant)
 
 #### Tooling
 
@@ -831,7 +831,7 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 
 #### Tooling
 
-- Added ALZ Custom RBAC Role Definitions, as listed [here](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access-landing-zones#rbac-recommendations) to ALZ Portal Experience. Fixing [#1079](https://github.com/Azure/Enterprise-Scale/issues/1079)
+- Added ALZ Custom RBAC Role Definitions, as listed [here](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access-Azure Foundations#rbac-recommendations) to ALZ Portal Experience. Fixing [#1079](https://github.com/Azure/Enterprise-Scale/issues/1079)
 
 #### Policy
 
@@ -936,10 +936,10 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 
 #### Tooling
 
-- Release [`v2.4.1`](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases/tag/v2.4.1) of the Azure landing zones Terraform module adds a new diagnostic category for Azure Firewall, as reported in issue [#1063](https://github.com/Azure/Enterprise-Scale/issues/1063)
-- Update the Azure landing zone portal accelerator to use Resource Graph with a generic drop down UI element to improve user experience for subscription selection.
-- Update the Azure landing zone portal accelerator to have more unique naming for deployment names in same tenant, using `utcNow()` function in `deploymentSuffix` variable - fixes [#1077](https://github.com/Azure/Enterprise-Scale/issues/1077)
-- Update the Azure landing zone portal accelerator to have more unique naming for vNet names - fixes [#881](https://github.com/Azure/Enterprise-Scale/issues/881)
+- Release [`v2.4.1`](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases/tag/v2.4.1) of the Azure foundations Terraform module adds a new diagnostic category for Azure Firewall, as reported in issue [#1063](https://github.com/Azure/Enterprise-Scale/issues/1063)
+- Update the Azure foundation portal accelerator to use Resource Graph with a generic drop down UI element to improve user experience for subscription selection.
+- Update the Azure foundation portal accelerator to have more unique naming for deployment names in same tenant, using `utcNow()` function in `deploymentSuffix` variable - fixes [#1077](https://github.com/Azure/Enterprise-Scale/issues/1077)
+- Update the Azure foundation portal accelerator to have more unique naming for vNet names - fixes [#881](https://github.com/Azure/Enterprise-Scale/issues/881)
   - vNet naming pattern changed:
     - **From:**
       - Identity vNet: `<Subscription ID>-<Root ID Prefix>-vnet-<Region Short Name>`
@@ -947,14 +947,14 @@ Note that a number of initiatives have been updated that will fail to deploy if 
     - **To:**
       - Identity vNet: `<Root ID Prefix>-vnet-<Region Short Name>-<Subscription ID>` (then trimmed to 64 characters, using `take()` function, starting at front - so Subscription ID will get trimmed)
       - Corp vNets: `<Root ID Prefix>-vnet-<Region Short Name>-<Subscription ID>` (then trimmed to 64 characters, using `take()` function, starting at front - so Subscription ID will get trimmed)
-  - **⚠️This is a breaking change, only if you attempt to redeploy the Azure landing zone portal accelerator over the top of an existing Azure landing zone portal accelerator deployment that was deployed prior to 12/10/2022 (12th October 2022)⚠️**
-    - The outcome if you do this will be that new vNets will be created based on what you input into the Azure landing zone portal accelerator form when you fill it out. Even if you input exactly the same inputs and details as the first time you deployed it.
+  - **⚠️This is a breaking change, only if you attempt to redeploy the Azure foundation portal accelerator over the top of an existing Azure foundation portal accelerator deployment that was deployed prior to 12/10/2022 (12th October 2022)⚠️**
+    - The outcome if you do this will be that new vNets will be created based on what you input into the Azure foundation portal accelerator form when you fill it out. Even if you input exactly the same inputs and details as the first time you deployed it.
       - However, this is a very uncommon action and if you are impacted [please raise an issue](https://github.com/Azure/Enterprise-Scale/issues) on the repo and we can assist further
 - Release of various [ALZ-Bicep](https://aka.ms/alz/bicep) versions:
   - [`v0.10.6`](https://github.com/Azure/ALZ-Bicep/releases/tag/v0.10.6)
   - [`v0.10.5`](https://github.com/Azure/ALZ-Bicep/releases/tag/v0.10.5)
   - [`v0.10.4`](https://github.com/Azure/ALZ-Bicep/releases/tag/v0.10.4)
-- Updated Azure landing zone portal accelerator with a note around existing Management Group Name/IDs on "Azure core setup" blade linking to FAQ Q&As
+- Updated Azure foundation portal accelerator with a note around existing Management Group Name/IDs on "Azure core setup" blade linking to FAQ Q&As
 
 ### Policy
 
@@ -969,9 +969,9 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 
 #### Docs
 
-- Updated the Enterprise-scale [Wiki](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/) to reflect the latest updates on Azure landing zone accelerator.
+- Updated the Enterprise-scale [Wiki](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/) to reflect the latest updates on Azure foundation accelerator.
 
-  - [Deploy Azure landing zone portal accelerator](./Deploying-ALZ)
+  - [Deploy Azure foundation portal accelerator](./Deploying-ALZ)
   - [Deployment guidance for Small Enterprises](./Deploying-ALZ-BasicSetup)
   - [How to deploy without hybrid connectivity](./Deploying-ALZ-Foundation)
   - [Deployment with hub and spoke network topology](./Deploying-ALZ-HubAndSpoke)
@@ -979,7 +979,7 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 
 #### Tooling
 
-- Release [`v2.4.0`](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases/tag/v2.4.0) of the Azure landing zones Terraform module
+- Release [`v2.4.0`](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases/tag/v2.4.0) of the Azure foundations Terraform module
 - Updated [Automation Account region mapping](https://learn.microsoft.com/azure/automation/how-to/region-mappings) in the Terraform implementation option
 
 ### Policy
@@ -1028,7 +1028,7 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 
 - ALZ Terraform module hotfix release [v2.1.2](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases/tag/v2.1.2), for regional private endpoint DNS zones
 - ALZ Bicep modules release [v0.9.2](https://github.com/Azure/ALZ-Bicep/releases/tag/v0.9.1) released
-  - Added Landing Zone Management Group Children Flexibility
+  - Added Azure Foundation Management Group Children Flexibility
   - Added Policy Assignments for Mooncake (Azure China)
   - Fixed Azure Backup Private DNS Zone Geo Codes bug, fixing [issue #279](https://github.com/Azure/ALZ-Bicep/issues/279)
 - ALZ Accelerator (Portal Experience) updated to fix Azure Backup Private DNS Zone Geo Codes, fixing [issue #1004](https://github.com/Azure/Enterprise-Scale/issues/1004)
@@ -1045,12 +1045,12 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 
 #### Docs
 
-- Updated the [Policies included in Enterprise-Scale Landing Zones](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies) page.
+- Updated the [Policies included in Enterprise-Scale Azure Foundations](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies) page.
 - Updated the ALZ Terraform module [Wiki](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/) with new examples and improved coverage of variable configuration.
 
 #### Tooling
 
-- Fixed [issue #979](https://github.com/Azure/Enterprise-Scale/issues/979) by adding support for the additional Log Analytics Solutions of `SQLVulnerabilityAssessment` and `SQLAdvancedThreatProtection` to the Azure Landing Zone Accelerator (portal experience)
+- Fixed [issue #979](https://github.com/Azure/Enterprise-Scale/issues/979) by adding support for the additional Log Analytics Solutions of `SQLVulnerabilityAssessment` and `SQLAdvancedThreatProtection` to the Mission Azure Foundation Accelerator (portal experience)
 - ALZ Terraform module minor release [v2.1.0](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases/tag/v2.1.0), to provide feature parity on the fix for [issue #979](https://github.com/Azure/Enterprise-Scale/issues/979)
 - ALZ Terraform module hotfix release [v2.1.1](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases/tag/v2.1.1) (see release notes for more information).
 
@@ -1079,9 +1079,9 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 
 #### Docs
 
-- Updated the [What is an Azure landing zone?](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/) page
-- Updated the [Azure landing zone - design principles](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-principles) page
-- Updated the [Azure landing zone design areas](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-areas) overview page
+- Updated the [What is an Azure foundation?](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/) page
+- Updated the [Azure foundation - design principles](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-principles) page
+- Updated the [Azure foundation design areas](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-areas) overview page
 - Updated the [Landing zone implementation options](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/implementation-options) page
 
 #### Tooling
@@ -1095,7 +1095,7 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 
 ### Other
 
-- Published resources from the third Azure Landing Zones Community Call - held on the 2nd May 2022
+- Published resources from the third Mission Azure Foundation Community Call - held on the 2nd May 2022
   - Meeting recording and PowerPoint slides [published in Wiki](https://github.com/Azure/Enterprise-Scale/wiki/Community-Calls)
   - See [issue #949](https://github.com/Azure/Enterprise-Scale/issues/949) for meeting details
 
@@ -1104,15 +1104,15 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 #### Docs
 
 - New CAF document [Plan for virtual machine remote access](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-virtual-machine-remote-access)
-- New CAF document [Use Terraform to deploy Azure landing zones](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/deploy-landing-zones-with-terraform)
+- New CAF document [Use Terraform to deploy Azure foundations](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/deploy-Azure Foundations-with-terraform)
   - Helps you to understand what Terraform approach and module to use to deploy, manage and operate ALZ
-- New CAF document [Tailor the Azure landing zone architecture to meet requirements](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
+- New CAF document [Tailor the Azure foundation architecture to meet requirements](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
   - Guidance to help you understand how to tailor the ALZ architecture to meet your additional requirements
-- New CAF document [Independent software vendor (ISV) considerations for Azure landing zones](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/isv-landing-zone)
+- New CAF document [Independent software vendor (ISV) considerations for Azure foundations](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/isv-Azure Foundation)
 
 #### Tooling
 
-- [Azure Landing Zones Terraform Module](https://aka.ms/alz/tf) v2.0.0 released 🥳
+- [Mission Azure Foundation Terraform Module](https://aka.ms/alz/tf) v2.0.0 released 🥳
   - Adds support for Virtual WAN plus much more
   - Checkout [release notes](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases/tag/v2.0.0) for details on all the changes and fixes
   - Checkout [upgrade guide](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BUser-Guide%5D-Upgrade-from-v1.1.4-to-v2.0.0) for details on how to upgrade to the latest release
@@ -1127,7 +1127,7 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 ### Policy
 
 - Added new custom policy definition called `Deny vNet peering to non-approved vNets`
-  - This is useful in scenarios where you only want to allow vNet peering to say a central hub vNet and not allow other vNet peerings between landing zones to be enabled.
+  - This is useful in scenarios where you only want to allow vNet peering to say a central hub vNet and not allow other vNet peerings between Azure foundations to be enabled.
 
 ### Other
 
@@ -1142,7 +1142,7 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 
 #### Tooling
 
-- The Bicep version of Azure Landing Zone (formerly Enterprise-scale) is here! 🥳
+- The Bicep version of Mission Azure Foundation (formerly Enterprise-scale) is here! 🥳
   - Check out the [ALZ-Bicep repo](https://github.com/Azure/ALZ-Bicep) to get started!
 - Updated accelerator (portal) experience to deploy an Azure Firewall Policy `Premium` SKU instead of `Standard` when `Premium` is selected for the Azure Firewall in a Hub & Spoke VNet Connectivity model.
   - [PR 890](https://github.com/Azure/Enterprise-Scale/pull/890) fixing [issue 889](https://github.com/Azure/Enterprise-Scale/issues/889)
@@ -1188,9 +1188,9 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 
 #### Docs
 
-- CAF ready lots of doc updates relating to Azure Landing Zones/Enterprise Scale
+- CAF ready lots of doc updates relating to Mission Azure Foundation/Enterprise Scale
   - Added doc on [Adopting policy driven guardrails](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/dine-guidance)
-  - Added doc called [Scenario: Transition existing Azure environments to the Azure landing zone conceptual architecture](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/align-scenarios)
+  - Added doc called [Scenario: Transition existing Azure environments to the Azure foundation conceptual architecture](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/align-scenarios)
     - More of these to come, let us know via issues on other scenarios you'd like to see documented
   - [Design Areas](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-areas) updated and reorganized in TOC (navigation pane)
 
@@ -1199,7 +1199,7 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 - Updated [DIY instructions](https://github.com/Azure/Enterprise-Scale/blob/main/eslzArm/README-AzureChina.md) for deploying Enterprise-Scale in Azure China with:
   - Additional details of some deployment steps
   - Microsoft Defender for Cloud configuration policy set definition and policy assignment specific to Azure China
-  - Differentiate between Az VM Backup policy assignment for identity management group, and landing zone management group in the DIY guidance
+  - Differentiate between Az VM Backup policy assignment for identity management group, and Azure foundation management group in the DIY guidance
 
 ### Policy
 
@@ -1275,7 +1275,7 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 
 - Added Option to select Azure Firewall SKU ([https://github.com/Azure/Enterprise-Scale/pull/793](https://github.com/Azure/Enterprise-Scale/pull/793))
 - [AzOps release v1.5.0](https://github.com/Azure/AzOps/releases/tag/1.5.0)
-- Enabled support for Enterprise-Scale landing zones deployments to Azure gov ([https://github.com/Azure/Enterprise-Scale/pull/820](https://github.com/Azure/Enterprise-Scale/pull/820))
+- Enabled support for Enterprise-Scale Azure foundations deployments to Azure gov ([https://github.com/Azure/Enterprise-Scale/pull/820](https://github.com/Azure/Enterprise-Scale/pull/820))
 
 ### Policy
 
@@ -1302,7 +1302,7 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 #### Tooling
 
 - [Terraform Module for Cloud Adoption Framework Enterprise-scale release v0.4.0](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/releases/tag/v0.4.0)
-  - Brings support for Hub Connectivity & Identity landing zone peering - read more in the release notes linked above
+  - Brings support for Hub Connectivity & Identity Azure foundation peering - read more in the release notes linked above
 - [Do-It-Yourself deployment instructions for Enterprise-Scale using Azure PowerShell released](https://github.com/Azure/Enterprise-Scale/tree/main/eslzArm)
 - Update subscription filter in reference implementation UI experience. Subscriptions with state != "Enabled" will be excluded from the list of available subscriptions.
 - Removed old codebase for the different reference implementations, and converged to a single [ARM codebase](https://github.com/Azure/Enterprise-Scale/tree/main/eslzArm)
@@ -1330,7 +1330,7 @@ Note that a number of initiatives have been updated that will fail to deploy if 
 - Updated [Contoso](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/contoso/Readme.md), [Adventure Works](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/adventureworks/README.md) & [Wingtip Toys](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/wingtip/README.md) reference implementations with new Deploy To Azure buttons for new portal experience
   - Also updated guidance and option availability for each of them respectively
 - [User Guide](https://github.com/Azure/Enterprise-Scale/wiki) updated to reflect latest release and new portal experience
-- New Article to [Deploy Azure Red Hat OpenShift (ARO) in enterprise-scale landing zones](https://github.com/Azure/Enterprise-Scale/tree/main/workloads/ARO)
+- New Article to [Deploy Azure Red Hat OpenShift (ARO) in enterprise-scale Azure foundations](https://github.com/Azure/Enterprise-Scale/tree/main/workloads/ARO)
 
 #### Tooling
 
@@ -1338,7 +1338,7 @@ Note that a number of initiatives have been updated that will fail to deploy if 
   - Merged Contoso, AdventureWorks, and Wingtip into one ESLZ deployment experience via first-party deployment in the portal ("Deploy To Azure" button) experience
     - Support "N" network topologies in same experience (Hub and Spoke, Virtual WAN, Hub and Spoke with NVA)
     - Added option for VNET Peering the Identity subscription's VNET to the Connectivity subscription's Hub VNET
-    - Added option for VNET peering Landing Zones to Connectivity subscription when Hub & Spoke is the selected topology (Virtual WAN is excluded due to concurrency issues, at this time) - closing issue [#517](https://github.com/Azure/Enterprise-Scale/issues/517)
+    - Added option for VNET peering Azure Foundations to Connectivity subscription when Hub & Spoke is the selected topology (Virtual WAN is excluded due to concurrency issues, at this time) - closing issue [#517](https://github.com/Azure/Enterprise-Scale/issues/517)
     - Navigate policy assignment for identity, when using single vs dedicated subscriptions for platform purposes
     - Optimized the execution graph
 - Re-structured the ARM templates for all resource deployments

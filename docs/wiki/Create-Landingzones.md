@@ -1,11 +1,11 @@
-## Create landing zones (subscriptions) via Subscription Vending
+## Create Azure foundations (subscriptions) via Subscription Vending
 
 The approach of "Subscription Vending", materializes and standardizes the ALZ "Subscription Democratization" Design Principle, by formulating a process for requesting, deploying and governing Azure Subscriptions, and by doing so enabling the Applications Teams to onboard their workloads in a fast, yet deterministic way.
 
 For further details, one can look into the following articles:
 
-- [Deploy Azure landing zones (Subscription Vending)](https://learn.microsoft.com/azure/architecture/landing-zones/landing-zone-deploy#subscription-vending)
-- [Subscription vending implementation guidance](https://learn.microsoft.com/azure/architecture/landing-zones/subscription-vending)
+- [Deploy Azure foundations (Subscription Vending)](https://learn.microsoft.com/azure/architecture/Azure Foundations/Azure Foundation-deploy#subscription-vending)
+- [Subscription vending implementation guidance](https://learn.microsoft.com/azure/architecture/Azure Foundations/subscription-vending)
 
 The respective Bicep and Terraform automation / IaC Modules for Subscription Vending, can be found in:
 

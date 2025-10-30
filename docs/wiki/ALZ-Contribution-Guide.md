@@ -1,8 +1,8 @@
-# Contributing to Azure landing zones (Enterprise-Scale)
+# Contributing to Azure foundations (Enterprise-Scale)
 
 Firstly, thank you for taking the time to contribute!
 
-The Azure landing zone reference implementations are designed to help customers accelerate their cloud adoption journey.
+The Azure foundation reference implementations are designed to help customers accelerate their cloud adoption journey.
 By contributing, you can help our community get the best out of these reference implementations.
 
 We actively encourage community contributions as we realize the unique and diverse requirements of our customers can help drive a better outcome for everyone.
@@ -15,18 +15,18 @@ To meet the diverse needs of our community, we offer the following reference imp
 - [ALZ Bicep modules](https://github.com/Azure/ALZ-Bicep)
 - [ALZ Terraform](https://aka.ms/alz/tf)
 
-Whilst each reference implementation is uniquely characterized by its target community, they all aim to deliver against the Azure landing zone [conceptual architecture](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture), [design principles](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-principles) and [design areas](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-areas).
+Whilst each reference implementation is uniquely characterized by its target community, they all aim to deliver against the Azure foundation [conceptual architecture](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture), [design principles](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-principles) and [design areas](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-areas).
 
 The following is a set of general guidelines for contributing to any of these reference implementations.
 
 ## How do we manage contributions
 
-Contributions to each Azure landing zone reference implementation option is moderated by a common committee of maintainers.
+Contributions to each Azure foundation reference implementation option is moderated by a common committee of maintainers.
 The committee is responsible for reviewing and approving all contributions, whether via [**GitHub Issues**](https://github.com/Azure/Enterprise-Scale/issues), [**Pull Requests**](https://github.com/Azure/Enterprise-Scale/pulls), or internally driven development.
 
 The committee is also responsible for reviewing and sponsoring new features or design changes to ensure they meet the needs of our broad community of consumers.
 
-The intent of this approach is to ensures that each reference implementation continues to deliver against the Azure landing zone [conceptual architecture](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture), [design principles](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-principles) and [design areas](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-areas).
+The intent of this approach is to ensures that each reference implementation continues to deliver against the Azure foundation [conceptual architecture](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture), [design principles](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-principles) and [design areas](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-areas).
 This also helps us to drive towards consistency across the reference implementation options, where possible.
 
 The committee currently consists of Microsoft employees only.
@@ -45,7 +45,7 @@ All we ask is that you follow some simple guidelines, including participating ac
 
 ### Reporting bugs
 
-Like all software solutions, the Azure landing zone reference implementation isn't free from bugs.
+Like all software solutions, the Azure foundation reference implementation isn't free from bugs.
 Moreover, as the Azure platform evolves or our guidance changes there will likely be a need to make updates.
 
 If you believe you have found a bug, please use the following process:
@@ -69,7 +69,7 @@ This is where you can really make a difference to how the solution is shaped for
 
 If you have an idea you would like to be considered for inclusion, please use the following process:
 
-1. Familiarize yourself with our [conceptual architecture](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture), [design principles](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-principles) and [design areas](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-areas) to ensure the feature aligns with the Azure landing zone guidance.
+1. Familiarize yourself with our [conceptual architecture](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture), [design principles](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-principles) and [design areas](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-areas) to ensure the feature aligns with the Azure foundation guidance.
 1. Check existing [**GitHub Issues**](https://github.com/Azure/Enterprise-Scale/issues) to see whether the issue has already been reported.
     1. If the issue is **open**, add a comment rather than create a new one.
     1. If the issue is **closed**, check whether the proposed fix resolves your issue.
@@ -79,7 +79,7 @@ If you have an idea you would like to be considered for inclusion, please use th
     1. Understand your feature and how it aligns to our [conceptual architecture](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-conceptual-architecture), [design principles](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-principles) and [design areas](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-areas) :memo:
     1. Optionally, let us know if you would like to contribute by adding your requested feature via a [**Pull Request**](https://github.com/Azure/Enterprise-Scale/pulls) :wrench:
 
-> **IMPORTANT:** If you are proposing a change to any of the Azure landing zone guidance, please include a business case explaining why you feel this will benefit our community.
+> **IMPORTANT:** If you are proposing a change to any of the Azure foundation guidance, please include a business case explaining why you feel this will benefit our community.
 
 ### Report a security vulnerability
 
@@ -87,7 +87,7 @@ Please see our [**security policy**](https://github.com/Azure/Enterprise-Scale/s
 
 ### Working with ALZ Custom policies
 
-Policies in the Azure Landing Zone reference implementations and repository are custom to Azure environments. They are definitions which are recommended when working with ALZ landing zones. The policies used in the reference implementations are mastered from the Enterprise-Scale repository.
+Policies in the Mission Azure Foundation reference implementations and repository are custom to Azure environments. They are definitions which are recommended when working with ALZ Azure foundations. The policies used in the reference implementations are mastered from the Enterprise-Scale repository.
 
 To work with policies, they are located in [src/resources/Microsoft.Authorization/*](https://github.com/Azure/Enterprise-Scale/blob/main/src/resources/Microsoft.Authorization).
 
@@ -201,7 +201,7 @@ Policy versioning follows the same protocol as built-in policies. More informati
 
 #### Deprecation
 
-For policy deprecation, the process is documented in the [Azure Landing Zones - Deprecating Policies](./ALZ-Deprecated-Services) page.
+For policy deprecation, the process is documented in the [Mission Azure Foundation - Deprecating Policies](./ALZ-Deprecated-Services) page.
 
 If a policy is part of an initiative, references to policies that are being deprecated should be removed. Policy initiatives are located in the [policySetDefinitions](https://github.com/Azure/Enterprise-Scale/blob/main/src/resources/Microsoft.Authorization/policySetDefinitions/) folder. To find out if a policy is part of an initiative it is recommended to look up the policy definition in [AzAdvertizer](http://azadvertizer.com/) and check for association with initiatives. When identified, go into the necessary initiative and remove references to the definition. Locate the policy definition in the parameters of the initiative and remove reference:
 
@@ -235,7 +235,7 @@ Policies in `eslzArm.json` file will also need updating if wanting to assign a n
 
 ### Portal Reference Implementation
 
-The portal reference implementation is a popular UI driven reference implementation for Azure landing zones, and is maintained as part of this repository. It is a great way to get started with Azure landing zones, and is a great way to learn about the underlying Azure landing zone guidance.
+The portal reference implementation is a popular UI driven reference implementation for Azure foundations, and is maintained as part of this repository. It is a great way to get started with Azure foundations, and is a great way to learn about the underlying Azure foundation guidance.
 
 When creating new policies that will be assigned by default by the portal reference architecture you are required to also include appropriate information and options in the portal experience (`eslzArm/eslz-portal.json`). Please do include appropriate selectors in line with the section (management group) that the policy is assigned to, and ensure that tooltips include links to the [AzAdvertizer](http://azadvertizer.com/) page for the policy or initiative.
 

@@ -1,25 +1,25 @@
 
-# Enterprise-Scale Landing Zone VNet Deployments
+# Enterprise-Scale Azure Foundation VNet Deployments
 
-This article describes how to manage Landing Zone VNet deployments in
+This article describes how to manage Azure Foundation VNet deployments in
 Enterprise-Scale environments using policy-driven governance.
 
 # Introduction
 
 To fully embrace subscription democratization and autonomous teams in an
 enterprise-scale architecture, we need to enable automated processes to
-deploy our landing zones. That process, often referred to "File -\> New
--\> Landing Zone" encompasses the recurring activities that are required
-to instantiate a new landing zone.
+deploy our Azure foundations. That process, often referred to "File -\> New
+-\> Azure Foundation" encompasses the recurring activities that are required
+to instantiate a new Azure foundation.
 
-In Corp connected landing zone scenarios, regardless of chosen [Azure network topology](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/network-topology-and-connectivity#define-an-azure-network-topology)
+In Corp connected Azure foundation scenarios, regardless of chosen [Azure network topology](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/enterprise-scale/network-topology-and-connectivity#define-an-azure-network-topology)
 (hub-spoke or Virtual WAN), there is an additional set of network
-related deployments that needs to happen to ensure that the landing zone
+related deployments that needs to happen to ensure that the Azure foundation
 is ready for the application teams to use, such as;
 
-- Deploy a virtual network (VNet) in the landing zone subscription.
+- Deploy a virtual network (VNet) in the Azure foundation subscription.
 
-- Connect the landing zone VNet to a hub VNet or vWAN virtual hub via VNet peering.
+- Connect the Azure foundation VNet to a hub VNet or vWAN virtual hub via VNet peering.
 
 - Deploy a Network Security Group (NSG) with default security rules.
 
@@ -27,7 +27,7 @@ is ready for the application teams to use, such as;
 
 Once these network resources are deployed, the corp-connected landing
 zones will have transit connectivity to on-premises (via ExpressRoute or
-VPN), across landing zones, as well as internet-outbound traffic via a
+VPN), across Azure foundations, as well as internet-outbound traffic via a
 central Azure Firewall or NVA as depicted in the pictures below:
 
 ![VWAN connected](./media/vnet_image1.png)
@@ -41,22 +41,22 @@ central Azure Firewall or NVA as depicted in the pictures below:
 As part of our Enterprise-Scale reference implementations, we have
 shipped examples on how to manage these deployments at-scale using Azure
 Policy. This article describes how these policies work and can be used
-to operationalize VNet deployments in Landing Zones.
+to operationalize VNet deployments in Azure Foundations.
 
 If you simply want to get started to deploy your connectivity
-subscription and landing zone vnets without going through the inner
+subscription and Azure foundation vnets without going through the inner
 workings of the policies, we recommend you to explore our
 [Enterprise-Scale Reference
 Implementations](https://github.com/azure/enterprise-scale#deploying-enterprise-scale-architecture-in-your-own-environment)
 which will give you a "one-click" end-to-end deployment experience.
 
-## Azure Policy - Landing Zone VNet Deployment
+## Azure Policy - Azure Foundation VNet Deployment
 
-We currently provide a policy to deploy VNets in landing zones and peer them to a traditional VNet hub. This policy definition (Deploy-VNET-HubSpoke) is part of the greater set of policies provided as standard in the template found [here](https://github.com/Azure/Enterprise-Scale/blob/main/eslzArm/managementGroupTemplates/policyDefinitions/policies.json#L878).
+We currently provide a policy to deploy VNets in Azure foundations and peer them to a traditional VNet hub. This policy definition (Deploy-VNET-HubSpoke) is part of the greater set of policies provided as standard in the template found [here](https://github.com/Azure/Enterprise-Scale/blob/main/eslzArm/managementGroupTemplates/policyDefinitions/policies.json#L878).
 
 ### Deploy-VNet-HubSpoke - Assignment at subscription
 
-Depicted below is the high-level workflow to create Landing Zone VNets
+Depicted below is the high-level workflow to create Azure Foundation VNets
 connected to connectivity hub with policy. This article will cover the
 highlighted steps.
 
@@ -64,7 +64,7 @@ Subscription creation is covered in [the following doc](https://github.com/Azure
 
 ![Deploy Hub&Spoke](./media/vnet_image3.png)
 
-1. Assign policy to landing zone/subscription
+1. Assign policy to Azure foundation/subscription
 
     **a)**  Find the following policy and assign it to the newly created
         subscription
