@@ -1,8 +1,8 @@
-# Azure Landing Zones Deprecated Notices
+# Mission Azure Foundation Deprecated Notices
 
 ## In this section
 
-- [Azure Landing Zones Deprecated Notices](#azure-landing-zones-deprecated-notices)
+- [Mission Azure Foundation Deprecated Notices](#azure-Azure Foundations-deprecated-notices)
   - [In this section](#in-this-section)
   - [Overview](#overview)
   - [Deprecated policies](#deprecated-policies)
@@ -11,11 +11,11 @@
 
 ## Overview
 
-As policies and services are further developed by Microsoft, one or more Azure Landing Zone (ALZ) components may be superseded and need to be deprecated. This article provides details as to those items and supporting documentation to help you remain up to date.
+As policies and services are further developed by Microsoft, one or more Mission Azure Foundation (ALZ) components may be superseded and need to be deprecated. This article provides details as to those items and supporting documentation to help you remain up to date.
 
 ## Deprecated policies
 
-New Azure Policies are being developed and created by product groups that support their services and are typically of the `built-in` type. These new policies often replace legacy policies which get deprecated and usually provide guidance on which policy to use instead. Azure Landing Zones (ALZ) policies are not exempt from this, and over time some policies will be updated to leverage new `built-in` policies instead of ALZ `custom` policies. Through this process, `custom` ALZ policies will be deprecated when new `built-in` policies are available that provide the same capability, which ultimately reduces maintenance overhead for `custom` policies.
+New Azure Policies are being developed and created by product groups that support their services and are typically of the `built-in` type. These new policies often replace legacy policies which get deprecated and usually provide guidance on which policy to use instead. Mission Azure Foundation (ALZ) policies are not exempt from this, and over time some policies will be updated to leverage new `built-in` policies instead of ALZ `custom` policies. Through this process, `custom` ALZ policies will be deprecated when new `built-in` policies are available that provide the same capability, which ultimately reduces maintenance overhead for `custom` policies.
 
 Policies being deprecated:
 
@@ -42,11 +42,11 @@ Policies being deprecated:
 | Configure SQL Virtual Machines to automatically install Azure Monitor Agent<br>ID: `Deploy-MDFC-SQL-AMA` | [`f91991d1-5383-4c95-8ee5-5ac423dd8bb1`](https://www.azadvertizer.net/azpolicyadvertizer/f91991d1-5383-4c95-8ee5-5ac423dd8bb1.html) | Custom policy replaced by built-in requires less administration overhead |
 | Configure Arc-enabled SQL Servers to auto install Microsoft Defender for SQL and DCR with a user-defined LAW<br>ID: `Deploy-MDFC-Arc-Sql-DefenderSQL-DCR` | [`63d03cbd-47fd-4ee1-8a1c-9ddf07303de0`](https://www.azadvertizer.net/azpolicyadvertizer/63d03cbd-47fd-4ee1-8a1c-9ddf07303de0.html) | Custom policy replaced by built-in requires less administration overhead |
 | Configure Arc-enabled SQL Servers with DCR Association to Microsoft Defender for SQL user-defined DCR<br>ID: `Deploy-MDFC-Arc-SQL-DCR-Association` | [`2227e1f1-23dd-4c3a-85a9-7024a401d8b2`](https://www.azadvertizer.net/azpolicyadvertizer/2227e1f1-23dd-4c3a-85a9-7024a401d8b2.html) | Custom policy replaced by built-in requires less administration overhead |
-| Deploy User Assigned Managed Identity for VM Insights<br>ID: `Deploy-UserAssignedManagedIdentity-VMInsights` | Deprecating as it's no longer required | User-Assigned Management Identity is now centralized and deployed by Azure Landing Zones to the Management Subscription. |
-| Deploy Azure Monitor Baseline Alerts for Landing Zone<br>ID: `Alerting-LandingZone` | [`Alerting-KeyManagement`](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Alerting-KeyManagement)<br>[`Alerting-LoadBalancing`](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Alerting-LoadBalancing)<br>[`Alerting-NetworkChanges`](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Alerting-NetworkChanges)<br>[`Alerting-RecoveryServices`](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Alerting-RecoveryServices)<br>[`Alerting-Storage`](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Alerting-Storage)<br>[`Alerting-VM`](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Alerting-VM)<br>[`Alerting-Web`](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Alerting-Web) | To provide more flexibility for future growth we are transitioning from a single Landing Zone policy initiative and instead we are adopting a modular approach by splitting the Landing Zone initiative into distinct components (initiatives) |
+| Deploy User Assigned Managed Identity for VM Insights<br>ID: `Deploy-UserAssignedManagedIdentity-VMInsights` | Deprecating as it's no longer required | User-Assigned Management Identity is now centralized and deployed by Mission Azure Foundation to the Management Subscription. |
+| Deploy Azure Monitor Baseline Alerts for Azure Foundation<br>ID: `Alerting-LandingZone` | [`Alerting-KeyManagement`](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Alerting-KeyManagement)<br>[`Alerting-LoadBalancing`](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Alerting-LoadBalancing)<br>[`Alerting-NetworkChanges`](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Alerting-NetworkChanges)<br>[`Alerting-RecoveryServices`](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Alerting-RecoveryServices)<br>[`Alerting-Storage`](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Alerting-Storage)<br>[`Alerting-VM`](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Alerting-VM)<br>[`Alerting-Web`](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Alerting-Web) | To provide more flexibility for future growth we are transitioning from a single Azure Foundation policy initiative and instead we are adopting a modular approach by splitting the Azure Foundation initiative into distinct components (initiatives) |
 | Deny or Audit resources without Encryption with a customer-managed key (CMK)<br>ID: `Enforce-Encryption-CMK` | [`Enforce-Encryption-CMK_20250218`](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Encryption-CMK_20250218.html) | The policy definition [Azure AI Search services should use customer-managed keys to encrypt data at rest](https://www.azadvertizer.net/azpolicyadvertizer/76a56461-9dc0-40f0-82f5-2453283afa2f.html) has been updated to version 2.0.0. This changes the default effect value from "Deny" to "AuditIfNotExists" while removing "Deny" from allowedValues, therefore we needed to adopt this change in our initiative. |
 
->IMPORTANT: note that we have deprecated ALL ALZ custom Diagnostic Setting features as part of Azure Landing Zones, which includes the initiatives and all 53 policies. These are being deprecated in favor of using (and assigning) the built-in initiative [Enable allLogs category group resource logging for supported resources to Log Analytics](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/0884adba-2312-4468-abeb-5422caed1038.html)
+>IMPORTANT: note that we have deprecated ALL ALZ custom Diagnostic Setting features as part of Mission Azure Foundation, which includes the initiatives and all 53 policies. These are being deprecated in favor of using (and assigning) the built-in initiative [Enable allLogs category group resource logging for supported resources to Log Analytics](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/0884adba-2312-4468-abeb-5422caed1038.html)
 
 ### More Information
 

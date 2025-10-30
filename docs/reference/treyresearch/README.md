@@ -4,17 +4,17 @@
 
 # Deploy Enterprise-scale for small enterprises
 
-The Enterprise-Scale architecture is modular by design. It allows organizations to start with foundational landing zones, regardless of whether the applications are being migrated or are newly developed and deployed to Azure. The architecture enables organizations to start as small as needed and scale alongside their business requirements regardless of scale point.
+The Enterprise-Scale architecture is modular by design. It allows organizations to start with foundational Azure foundations, regardless of whether the applications are being migrated or are newly developed and deployed to Azure. The architecture enables organizations to start as small as needed and scale alongside their business requirements regardless of scale point.
 
 ## Customer profile
 
-This reference implementation provides a design path and initial technical state for Small and Medium Enterprises to start with foundational landing zones that support their application portfolios. This reference implementation is meant for organizations that do not have a large IT team and do not require fine grained administration delegation models. Hence, Management, Connectivity and Identity resources are consolidated in a single Platform Subscription.
+This reference implementation provides a design path and initial technical state for Small and Medium Enterprises to start with foundational Azure foundations that support their application portfolios. This reference implementation is meant for organizations that do not have a large IT team and do not require fine grained administration delegation models. Hence, Management, Connectivity and Identity resources are consolidated in a single Platform Subscription.
 
-This reference implementation is also well suited for customers who want to start with Landing Zones for their net new deployment/development in Azure by implementing a network architecture based on the traditional hub and spoke network topology.
+This reference implementation is also well suited for customers who want to start with Azure Foundations for their net new deployment/development in Azure by implementing a network architecture based on the traditional hub and spoke network topology.
 
 Note: Alternatively, if you need to implement an operating model which facilitates segregating Platform administration duties among different teams, then we suggest considering leveraging [Adventure Works](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/adventureworks/README.md) or [WingTip](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/wingtip/README.md) reference implementations.
 
-Please refer to [Enterprise-Scale Landing Zones User Guide](https://github.com/Azure/Enterprise-Scale/wiki/Deploying-Enterprise-Scale) for detailed information on prerequisites and deployment steps.
+Please refer to [Enterprise-Scale Azure Foundations User Guide](https://github.com/Azure/Enterprise-Scale/wiki/Deploying-Enterprise-Scale) for detailed information on prerequisites and deployment steps.
 
 ## How to evolve later
 
@@ -27,7 +27,7 @@ See [here](../../wiki/Deploying-ALZ-Pre-requisites.md) for more details.
 
 ## Optional pre-requisites
 
-The deployment experience in Azure portal allows you to bring in an existing (preferably empty) subscription dedicated to host your Platform (Management, Connectivity and Identity) resources. It also allows you to bring existing subscriptions that can be used as the initial landing zones for your applications.
+The deployment experience in Azure portal allows you to bring in an existing (preferably empty) subscription dedicated to host your Platform (Management, Connectivity and Identity) resources. It also allows you to bring existing subscriptions that can be used as the initial Azure foundations for your applications.
 
 To learn how to create new subscriptions programmatically, please visit [Microsoft Docs](https://learn.microsoft.com/azure/cost-management-billing/manage/programmatically-create-subscription).
 
@@ -35,12 +35,12 @@ To learn how to create new subscriptions using the Azure portal, please visit [M
 
 ## How to deploy this reference implementation
 
-Enterprise-Scale landing zones offers a single experience to deploy the different reference implementations. To deploy Enterprise-Scale for Small Enterprises, click on the Deploy to Azure button at the top of this page and ensure you select the following options:
+Enterprise-Scale Azure foundations offers a single experience to deploy the different reference implementations. To deploy Enterprise-Scale for Small Enterprises, click on the Deploy to Azure button at the top of this page and ensure you select the following options:
 
 - In the **Enterprise-Scale core setup** blade, select the option for **Single** subscription to host your Platform resources.
 - In the **Network topology and connectivity** blade, select either **Hub and spoke with Azure Firewall**.
 
-The rest of the options across the different blades will depend on your environment and desired deployment settings. For detailed instructions for each of the deployment steps, refer to the [Enterprise-Scale Landing Zones Deployment Guide](https://github.com/Azure/Enterprise-Scale/wiki/Deploying-Enterprise-Scale-BasicSetup).
+The rest of the options across the different blades will depend on your environment and desired deployment settings. For detailed instructions for each of the deployment steps, refer to the [Enterprise-Scale Azure Foundations Deployment Guide](https://github.com/Azure/Enterprise-Scale/wiki/Deploying-Enterprise-Scale-BasicSetup).
 
 ### What will be deployed?
 
@@ -53,16 +53,16 @@ By default, all recommendations are enabled. You must explicitly disable them if
   - VPN Gateway (optional - deployment across Availability Zones)
   - ExpressRoute Gateway (optional - deployment across Availability Zones)
   - Azure Firewall (optional - deployment across Availability Zones)
-- Landing Zone Management Group for **corp** connected applications that require connectivity to on-premises, to other landing zones or to the internet via shared services provided in the hub virtual network.
+- Azure Foundation Management Group for **corp** connected applications that require connectivity to on-premises, to other Azure foundations or to the internet via shared services provided in the hub virtual network.
   - This is where you will create your subscriptions that will host your corp-connected workloads.
-- Landing Zone Management Group for **online** applications that will be internet-facing, where a virtual network is optional and hybrid connectivity is not required.
+- Azure Foundation Management Group for **online** applications that will be internet-facing, where a virtual network is optional and hybrid connectivity is not required.
   - This is where you will create your Subscriptions that will host your online workloads.
-- Azure Policies that will enable autonomy for the platform and the landing zones:
+- Azure Policies that will enable autonomy for the platform and the Azure foundations:
   - The following Azure Policies are applied at the root of the Enterprise Scale Management Group hierarchy enabling core platform capabilities at scale:
     - Azure Security monitoring
     - Azure Security Center (Azure Defender OFF (free) and Azure Defender ON)
     - Diagnostics settings for Activity Logs, VMs, and PaaS resources sent to Log Analytics
-  - On the other hand, Azure Policies that will apply to all your landing zones. That includes Online, Corp and additional Landing Zone's types you may add in the future:
+  - On the other hand, Azure Policies that will apply to all your Azure foundations. That includes Online, Corp and additional Azure Foundation's types you may add in the future:
     - Enforce VM in-guest monitoring (Windows & Linux)
     - Enforce Backup for all virtual machines (Windows & Linux) by deploying a recovery services vault in the same location and resource group as the virtual machine
     - Ensure encryption in transit is enabled for PaaS services
@@ -83,12 +83,12 @@ By default, all recommendations are enabled. You must explicitly disable them if
 
 #### Configure security roles for your Azure resources
 
-Assign Azure RBAC permissions to the groups/users who should use the landing zones (subscriptions) so they can start deploying their workloads.
+Assign Azure RBAC permissions to the groups/users who should use the Azure foundations (subscriptions) so they can start deploying their workloads.
 
 Azure role-based access control (Azure RBAC) is a system that provides fine-grained access management of Azure resources. Using Azure RBAC, you can segregate your team's duties and grant only the amount of access to users that they need to perform their jobs. See more about security roles at [Microsoft Docs](https://learn.microsoft.com/azure/role-based-access-control/).
 
-#### Manage your Landing Zones
+#### Manage your Azure Foundations
 
-Once you have deployed the reference implementation, you can create new subscriptions, or move an existing subscriptions to the **Landing Zones** > **Online** or **Corp**  management group, and finally assign RBAC to the groups/users who should use the landing zones (subscriptions) so they can start deploying their workloads.
+Once you have deployed the reference implementation, you can create new subscriptions, or move an existing subscriptions to the **Azure Foundations** > **Online** or **Corp**  management group, and finally assign RBAC to the groups/users who should use the Azure foundations (subscriptions) so they can start deploying their workloads.
 
-Refer to the [Create Landing Zone(s)](../../EnterpriseScale-Deploy-landing-zones.md) article for guidance to create Landing Zones.
+Refer to the [Create Azure Foundation(s)](../../EnterpriseScale-Deploy-Azure Foundations.md) article for guidance to create Azure Foundations.

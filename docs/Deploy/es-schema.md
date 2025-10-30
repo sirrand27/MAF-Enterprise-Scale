@@ -44,7 +44,7 @@ The following ARM Resource types and deployment scopes are relevant for the Ente
 | Microsoft.Authorization/roleDefinitions          |Management Group, Subscription|Role-based access control definition, containing actions, notActions, dataActions, dataNotActions|
 | Microsoft.Authorization/roleAssignments          |Management Group, Subscription|RoleAssignments will manifests the runtime representation of a roleDefinition at the given scope|
 
->Note: The Enterprise-Scale architecture that enables a policy driven governance and management will ensure that Resource deployments to Resource Group scope from a platform perspective, such as virtual WAN, Log Analytics, diagnostics settings and more, are deployed using Azure Policy (policyDefinitions) with the **deployIfNotExists** effect. With regards to application teams; they can use any preferred method, tool, and interface when deploying their applications into the Landing Zones (Subscriptions) that are constructed by the Enterprise-Scale platform architecture.
+>Note: The Enterprise-Scale architecture that enables a policy driven governance and management will ensure that Resource deployments to Resource Group scope from a platform perspective, such as virtual WAN, Log Analytics, diagnostics settings and more, are deployed using Azure Policy (policyDefinitions) with the **deployIfNotExists** effect. With regards to application teams; they can use any preferred method, tool, and interface when deploying their applications into the Azure Foundations (Subscriptions) that are constructed by the Enterprise-Scale platform architecture.
 
 ## Deployment sequencing for Enterprise-Scale ARM template
 

@@ -1,6 +1,6 @@
-# How does Azure Policies in Enterprise-scale Landing Zone help?
+# How does Azure Policies in Enterprise-scale Azure Foundation help?
 
-Azure Policy makes it possible to *codify* enterprise governance requirements. Enterprise Scale Landing Zone (referred as ESLZ hereafter) implementation extensively uses Azure Policies to make it easy to put into practice various guard rail measures necessary to meet operational and management requirements.  Most common enterprise governance requirements and how they can be set up using Azure Policies in ESLZ is discussed below.
+Azure Policy makes it possible to *codify* enterprise governance requirements. Enterprise Scale Azure Foundation (referred as ESLZ hereafter) implementation extensively uses Azure Policies to make it easy to put into practice various guard rail measures necessary to meet operational and management requirements.  Most common enterprise governance requirements and how they can be set up using Azure Policies in ESLZ is discussed below.
 
 ## Prevent Public IP based services
 
@@ -87,7 +87,7 @@ IP forwarding enables Azure VM to route traffic it receives to other destination
 
 Azure provides an option to configure IP forwarding on Virtual Machines (VMs). This enables specialized softwares such as firewalls, load balancers, etc. to be deployed via Azure Marketplace. Any application that may need to use these services, can use them via Azure Marketplace transaction.
 
-However, outside of specific needs, IP forwarding on VMs may become a security liability. ESLZ deploys a custom policy to prevent VMs acting as IP forwarding routers. This policy is explicitly applied at landing zone scope. VMs in landing zone should be final destinations for user requests. Any routing should be implemented in the connectivity subscriptions.
+However, outside of specific needs, IP forwarding on VMs may become a security liability. ESLZ deploys a custom policy to prevent VMs acting as IP forwarding routers. This policy is explicitly applied at Azure foundation scope. VMs in Azure foundation should be final destinations for user requests. Any routing should be implemented in the connectivity subscriptions.
 
 ## Enforce centralized DNS record management
 

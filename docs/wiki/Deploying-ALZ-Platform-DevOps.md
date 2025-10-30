@@ -1,4 +1,4 @@
-## Azure landing zone portal deployment for Platform DevOps and Automation
+## Azure foundation portal deployment for Platform DevOps and Automation
 
 ### Important Notice
 

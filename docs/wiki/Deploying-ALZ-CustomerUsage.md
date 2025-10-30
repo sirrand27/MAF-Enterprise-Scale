@@ -55,5 +55,5 @@ The following conditions and their values must be met for the telemetry point to
 - Enable DDOS Protection is `true` in Hub and Spoke or Virtual WAN topologies
 - Deploy Azure Firewall is `True` in Hub and Spoke or Virtual WAN topologies
 - Azure Firewall Tier is `Premium` in Hub and Spoke or Virtual WAN topologies
-- Ensure subnets are associated with NSG is `true` in both Landing Zones & Identity Management Groups
-- Ensure secure connections to storage accounts (https) is `true` in the Landing Zones Management Group
+- Ensure subnets are associated with NSG is `true` in both Azure Foundations & Identity Management Groups
+- Ensure secure connections to storage accounts (https) is `true` in the Azure Foundations Management Group

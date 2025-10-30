@@ -1,12 +1,12 @@
-## Azure landing zone portal accelerator deployment with Zero Trust network principles
+## Azure foundation portal accelerator deployment with Zero Trust network principles
 
-This guide will review how to deploy the Azure landing zone portal accelerator with a jump start on Zero Trust Networking Principles for Azure landing zones. If you are looking for a complete walkthrough of the Azure landing zones portal accelerator select one of the deployment guides in the wiki navigation on the right of this page under "Deploying Enterprise-Scale". For more information on Zero Trust security model and principles visit [What is Zero Trust?](https://learn.microsoft.com/security/zero-trust/zero-trust-overview) in the [Zero Trust Guidance Center](https://learn.microsoft.com/security/zero-trust/).
+This guide will review how to deploy the Azure foundation portal accelerator with a jump start on Zero Trust Networking Principles for Azure foundations. If you are looking for a complete walkthrough of the Azure foundations portal accelerator select one of the deployment guides in the wiki navigation on the right of this page under "Deploying Enterprise-Scale". For more information on Zero Trust security model and principles visit [What is Zero Trust?](https://learn.microsoft.com/security/zero-trust/zero-trust-overview) in the [Zero Trust Guidance Center](https://learn.microsoft.com/security/zero-trust/).
 
-Let's review the [Zero Trust aligned networking](https://learn.microsoft.com/security/zero-trust/deploy/networks) configurations in the [Azure landing zone portal accelerator](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-portal-accelerator).
+Let's review the [Zero Trust aligned networking](https://learn.microsoft.com/security/zero-trust/deploy/networks) configurations in the [Azure foundation portal accelerator](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/Azure Foundation/#azure-Azure Foundation-portal-accelerator).
 
 ## Platform management, security, and governance
 
-On the "Platform management, security, and governance" section of the Azure landing zone portal accelerator keep the following defaults:
+On the "Platform management, security, and governance" section of the Azure foundation portal accelerator keep the following defaults:
 
 - Enable Defender for Cloud for DNS
 
@@ -14,7 +14,7 @@ On the "Platform management, security, and governance" section of the Azure land
 
 ## Deploy networking topology and Connectivity
 
-On the "Network Topology and Connectivity" section of the Azure landing zone portal accelerator select "Hub and spoke with Azure Firewall" radio button. Next, Select the platform connectivity subscription from the drop down. Confirm or update the address space and first networking hub region, in this case East US.
+On the "Network Topology and Connectivity" section of the Azure foundation portal accelerator select "Hub and spoke with Azure Firewall" radio button. Next, Select the platform connectivity subscription from the drop down. Confirm or update the address space and first networking hub region, in this case East US.
 
 ![Zero Trust Network Topology](./media/zt1.png)
 
@@ -45,23 +45,23 @@ In addition, we are preventing the deployment of public IPs to the identity subs
 
 When you later go to subnet the vnet to plan for deployment, you will also deploy the necessary route tables.
 
-## Secure Application landing zones
+## Secure Application Azure foundations
 
-On the "landing zones configuration" section ensure the default (Yes) is selected on:
+On the "Azure foundations configuration" section ensure the default (Yes) is selected on:
 
 "Enable DDoS Network Protection"
 
-"Prevent usage of Public Endpoints for Azure PaaS services in the corp connected landing zones"
+"Prevent usage of Public Endpoints for Azure PaaS services in the corp connected Azure foundations"
 
-![Zero Trust enable secure application landing zones](./media/zt4.png)
+![Zero Trust enable secure application Azure foundations](./media/zt4.png)
 
 "Ensure encryption in transit is enabled for PaaS services"
 
-![Zero Trust enable secure application landing zones](./media/zt8.png)
+![Zero Trust enable secure application Azure foundations](./media/zt8.png)
 
 "Ensure HTTPS Ingress is enforced in Kubernetes clusters"
 
-![Zero Trust enable secure application landing zones](./media/zt9.png)
+![Zero Trust enable secure application Azure foundations](./media/zt9.png)
 
 "PRevent inbound management ports from the internet"
 
@@ -69,10 +69,10 @@ On the "landing zones configuration" section ensure the default (Yes) is selecte
 
 "Prevent IP forwarding"
 
-![Zero Trust enable secure application landing zones](./media/zt5-2.png)
+![Zero Trust enable secure application Azure foundations](./media/zt5-2.png)
 
 "Ensure secure connections (HTTPS) to storage accounts"
 
-![Zero Trust enable secure application landing zones](./media/zt6.png)
+![Zero Trust enable secure application Azure foundations](./media/zt6.png)
 
 These configurations ensure that the spokes in your topology that are hosting applications start following zero trust networking principles and practices to enhance and improve their security posture.

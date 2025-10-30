@@ -4,4 +4,4 @@
 
 ## Next steps
 
-Once you have deployed new policy assignments, you can start [deploy Landing Zones](../EnterpriseScale-Deploy-landing-zones.md)
+Once you have deployed new policy assignments, you can start [deploy Azure Foundations](../EnterpriseScale-Deploy-Azure Foundations.md)

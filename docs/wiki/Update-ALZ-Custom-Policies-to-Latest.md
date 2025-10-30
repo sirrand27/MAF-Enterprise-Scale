@@ -2,7 +2,7 @@
 
 This article describes how to update ALZ custom policies and policy initiatives to latest versions of ALZ custom policies. The guidance provided in this document describes manual steps for performing the update, based on a set of specific policies and initiatives, with PowerShell.
 
-> Note: If you are already managing Azure Policies through Infrastructure as Code (IaC), you may not want to be updating your Azure Policies outside of your pipeline. This article assumes a manual approach to updating Azure landing zone (ALZ) policies.
+> Note: If you are already managing Azure Policies through Infrastructure as Code (IaC), you may not want to be updating your Azure Policies outside of your pipeline. This article assumes a manual approach to updating Azure foundation (ALZ) policies.
 
 > Important: To carry out the instructions below, the operator will require Resource Policy Contributor permissions at the root of the ALZ management group hierarchy.
 
@@ -10,7 +10,7 @@ This article describes how to update ALZ custom policies and policy initiatives 
 
 1. To determine if there has been updates to ALZ your first reference should be [What's New](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new). Any updates to policies or other ALZ related artifacts will be reflected here upon release. An example of what that will look like can be seen [here](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new#policy).
 
-2. Alternatively, [Azure Governance Visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) can be run in your environment and reveal information about the current state of policies and policy assignments. Part of the output of Azure Governance Visualizer is Azure Landing Zones (ALZ) Policy Version Checker which will allows you to see all **outDated** ALZ policies in your environment (see figure 1).
+2. Alternatively, [Azure Governance Visualizer](https://github.com/JulianHayward/Azure-MG-Sub-Governance-Reporting) can be run in your environment and reveal information about the current state of policies and policy assignments. Part of the output of Azure Governance Visualizer is Mission Azure Foundation (ALZ) Policy Version Checker which will allows you to see all **outDated** ALZ policies in your environment (see figure 1).
 ![AzGovViz-ALZ-Policy-Checker](media/AzGovViz-ALZ-Policy-outDated.png)
 *Figure 1: Azure Governance Visualizer filtering on outDated ALZ policies*
 

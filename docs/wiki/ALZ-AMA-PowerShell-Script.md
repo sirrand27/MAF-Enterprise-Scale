@@ -1,11 +1,11 @@
 # Update-AzureLandingZonesToAMA
 
 > [!IMPORTANT]  
-> This script intended for Azure Landing Zone Portal Accelerator deployments only. It is not for Terraform and Bicep deployments of ALZ.
+> This script intended for Mission Azure Foundation Portal Accelerator deployments only. It is not for Terraform and Bicep deployments of ALZ.
 
 ## Description
 
-We have created a script that can assist you with updating the Azure Landing Zones components. This script can automatically do the following tasks, you can turn on or off some parts of the script, see the Syntax section for more details:
+We have created a script that can assist you with updating the Mission Azure Foundation components. This script can automatically do the following tasks, you can turn on or off some parts of the script, see the Syntax section for more details:
 
 - Update Policies and Initiatives.
 - Delete outdated Policy Assignments.
@@ -197,7 +197,7 @@ Deploys a User Assigned Managed Identity to the Management Resource Group.
 Deploys the Data Collection Rule for VM Insights and assigns new policies. When it is run to Update AMA it will update the existing Policy Assignments to enable the single centralized UAMI by setting the feature flag `restrictBringYourOwnUserAssignedIdentityToSubscription` to `false`. Due to dependencies, running this command will also deploy the User Assigned Managed Identity resources.
 
 - Checks for an existing Data Collection rule `dcr-vminsights-prod-$location-001` in the management Resource Group.
-- Checks for existing policy assignments `Deploy-VM-Monitoring`, `Deploy-VMSS-Monitoring`, `Deploy-vmHybr-Monitoring` on the platform and landing zone scopes.
+- Checks for existing policy assignments `Deploy-VM-Monitoring`, `Deploy-VMSS-Monitoring`, `Deploy-vmHybr-Monitoring` on the platform and Azure foundation scopes.
 - Deploys a Data Collection Rule template [dataCollectionRule-VmInsights.json](https://github.com/Azure/Enterprise-Scale/blob/main/eslzArm/resourceGroupTemplates/dataCollectionRule-VmInsights.json).
 - Deploys Policy Assignment templates; [DINE-VMMonitoringPolicyAssignment.json](https://github.com/Azure/Enterprise-Scale/blob/main/eslzArm/managementGroupTemplates/policyAssignments/DINE-VMMonitoringPolicyAssignment.json), [DINE-VMSSMonitoringPolicyAssignment.json](https://github.com/Azure/Enterprise-Scale/blob/main/eslzArm/managementGroupTemplates/policyAssignments/DINE-VMSSMonitoringPolicyAssignment.json), [DINE-VMHybridMonitoringPolicyAssignment.json](https://github.com/Azure/Enterprise-Scale/blob/main/eslzArm/managementGroupTemplates/policyAssignments/DINE-VMHybridMonitoringPolicyAssignment.json)
 
@@ -211,7 +211,7 @@ Deploys the Data Collection Rule for VM Insights and assigns new policies. When 
 Deploys the Data Collection Rule for Change Tracking and assigns new policies. When it is run to Update AMA it will update the existing Policy Assignments to enable the single centralized UAMI by setting the feature flag `restrictBringYourOwnUserAssignedIdentityToSubscription` to `false`. Due to dependencies, running this command will also deploy the User Assigned Managed Identity resources.
 
 - Checks for an existing Data Collection rule `dcr-changetracking-prod-$location-001` in the management Resource Group.
-- Checks for existing policy assignments `Deploy-VM-ChangeTrack`, `Deploy-VMSS-ChangeTrack`, `Deploy-vmArc-ChangeTrack` on the platform and landing zone scopes.
+- Checks for existing policy assignments `Deploy-VM-ChangeTrack`, `Deploy-VMSS-ChangeTrack`, `Deploy-vmArc-ChangeTrack` on the platform and Azure foundation scopes.
 - Deploys a Data Collection Rule template [dataCollectionRule-CT.json](https://github.com/Azure/Enterprise-Scale/blob/main/eslzArm/resourceGroupTemplates/dataCollectionRule-CT.json).
 - Deploys Policy Assignment templates; [DINE-ChangeTrackingVMPolicyAssignment.json](https://github.com/Azure/Enterprise-Scale/blob/main/eslzArm/managementGroupTemplates/policyAssignments/DINE-ChangeTrackingVMPolicyAssignment.json), [DINE-ChangeTrackingVMSSPolicyAssignment.json](https://github.com/Azure/Enterprise-Scale/blob/main/eslzArm/managementGroupTemplates/policyAssignments/DINE-ChangeTrackingVMSSPolicyAssignment.json), [DINE-ChangeTrackingVMArcPolicyAssignment.json](https://github.com/Azure/Enterprise-Scale/blob/main/eslzArm/managementGroupTemplates/policyAssignments/DINE-ChangeTrackingVMArcPolicyAssignment.json)
 
@@ -225,7 +225,7 @@ Deploys the Data Collection Rule for Change Tracking and assigns new policies. W
 Deploys the Data Collection Rule for Defender for SQL and assigns new policies. Due to dependencies, running this command will also deploy the User Assigned Managed Identity resources.
 
 - Checks for an existing Data Collection rule `dcr-defendersql-prod-$location-001` in the management Resource Group.
-- Checks for an existing policy assignment `Deploy-MDFC-DefSQL-AMA` on the platform and landing zone scopes.
+- Checks for an existing policy assignment `Deploy-MDFC-DefSQL-AMA` on the platform and Azure foundation scopes.
 - Deploys a Data Collection Rule template [dataCollectionRule-DefenderSQL.json](https://github.com/Azure/Enterprise-Scale/blob/main/eslzArm/resourceGroupTemplates/dataCollectionRule-DefenderSQL.json).
 - Deploys Policy Assignment template [DINE-MDFCDefenderSQLAMAPolicyAssignment.json](https://github.com/Azure/Enterprise-Scale/blob/main/eslzArm/managementGroupTemplates/policyAssignments/DINE-MDFCDefenderSQLAMAPolicyAssignment.json).
 

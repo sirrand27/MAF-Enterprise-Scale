@@ -5,13 +5,13 @@
 - [Post deployment activities](#post-deployment-activities)
 
 ---
-Azure landing zone portal accelerator can be deployed both from the Azure portal directly, or from [GitHub](https://github.com/Azure/Enterprise-Scale#deploying-enterprise-scale-architecture-in-your-own-environment)
+Azure foundation portal accelerator can be deployed both from the Azure portal directly, or from [GitHub](https://github.com/Azure/Enterprise-Scale#deploying-enterprise-scale-architecture-in-your-own-environment)
 
 ![Graphical user interface, text, application  Description automatically generated](./media/clip_image004.jpg)
 
 ## Pre-requisites
 
-Azure landing zone portal accelerator can bootstrap an entire Azure tenant without any infrastructure dependencies, and the user must first have Owner permission on the tenant *root* before deploying.
+Azure foundation portal accelerator can bootstrap an entire Azure tenant without any infrastructure dependencies, and the user must first have Owner permission on the tenant *root* before deploying.
 
 *Note: Once you have completed the deployment, you can remove the Owner permission from the tenant root, as it will no longer be needed for any subsequent operations.*
 
@@ -37,7 +37,7 @@ This requires the following:
 
 ![Graphical user interface, text, application, email  Description automatically generated](./media/clip_image008.jpg)
 
-### Grant Access to the User at *tenant root scope “/”* to deploy Azure landing zone accelerator
+### Grant Access to the User at *tenant root scope “/”* to deploy Azure foundation accelerator
 
 You can use either Bash (CLI) or PowerShell to create the roleAssignment for the current user – or a dedicated user – that will do the deployment.
 
@@ -68,7 +68,7 @@ New-AzRoleAssignment -Scope '/' -RoleDefinitionName 'Owner' -ObjectId $user.Id
 
 ## Reference Implementation Deployment
 
-In the *Deploying Enterprise-Scale Architecture in your own environment* [article](https://github.com/Azure/Enterprise-Scale#deploying-enterprise-scale-architecture-in-your-own-environment), when you click on *Deploy to Azure* for the selected Azure landing zone reference implementation, it will load the Azure landing zone portal accelerator into your default Azure tenant. In case you have access to multiple tenants, ensure you are selecting the right one.
+In the *Deploying Enterprise-Scale Architecture in your own environment* [article](https://github.com/Azure/Enterprise-Scale#deploying-enterprise-scale-architecture-in-your-own-environment), when you click on *Deploy to Azure* for the selected Azure foundation reference implementation, it will load the Azure foundation portal accelerator into your default Azure tenant. In case you have access to multiple tenants, ensure you are selecting the right one.
 
 Please note that the steps below are for the AdventureWorks reference implementation, but a similar experience would be for the WingTip or Contoso reference implementations, with a slightly different experience for the network resources configuration.
 
@@ -86,13 +86,13 @@ Provide a prefix that will be used to create the management group hierarchy and 
 
 ## Baseline alerts and monitoring
 
-On the *Baseline alerts and monitoring* blade, you can configure automated alert configuration for the different scopes in your Azure landing zone implementation. Enabling the different baseline alerts will assign the relevant initiative to the corresponding management group. If you enable the "Deploy one or more Azure Monitor Baseline Alerts" option, you **must** provide an email address to get email notifications from Azure Monitor for the deployment to proceed.
+On the *Baseline alerts and monitoring* blade, you can configure automated alert configuration for the different scopes in your Azure foundation implementation. Enabling the different baseline alerts will assign the relevant initiative to the corresponding management group. If you enable the "Deploy one or more Azure Monitor Baseline Alerts" option, you **must** provide an email address to get email notifications from Azure Monitor for the deployment to proceed.
 
 ![baseline alerts and monitoring](./media/alz-portal-baselinealerts.jpg)
 
 ### Platform management, security, and governance
 
-On the *Platform management, security, and governance* blade, you will configure the core components to enable platform monitoring and security. The options you enable will also be enforced using Azure Policy to ensure resources, landing zones, and more are continuously compliant as your deployments scales and grows. To enable this, you must provide a dedicated (empty) subscription that will be used to host the requisite infrastructure.
+On the *Platform management, security, and governance* blade, you will configure the core components to enable platform monitoring and security. The options you enable will also be enforced using Azure Policy to ensure resources, Azure foundations, and more are continuously compliant as your deployments scales and grows. To enable this, you must provide a dedicated (empty) subscription that will be used to host the requisite infrastructure.
 
 ![Graphical user interface, text, application  Description automatically generated](./media/clip_image014.jpg)
 
@@ -105,7 +105,7 @@ On the *Network topology and connectivity* blade, you will configure the core ne
 
  ![img](./media/clip_image036a.png)
 
-Depending on your requirements, you may choose to deploy additional network infrastructure for your Azure landing zones deployment. The optional resources include:
+Depending on your requirements, you may choose to deploy additional network infrastructure for your Azure foundations deployment. The optional resources include:
 
 * DDoS Network Protection
 * Azure Private DNS Zones for Azure PaaS services
@@ -123,11 +123,11 @@ On the *Identity* blade you can specify if you want to assign recommended polici
 
 ### Landing zone configuration
 
-You can optionally bring in N number of subscriptions that will be bootstrapped as landing zones, governed by Azure Policy. You indicate which subscriptions will be bootstrapped as landing zones with a virtual network deployed and connected to the hub virtual network for corp connectivity. Virtual networks on these subscriptions will be connected to the hub virtual network using VNet peering, and if you deployed and enabled Azure Firewall as DNS proxy, DNS settings on these VNets will be configured with the Azure Firewall private IP address.
+You can optionally bring in N number of subscriptions that will be bootstrapped as Azure foundations, governed by Azure Policy. You indicate which subscriptions will be bootstrapped as Azure foundations with a virtual network deployed and connected to the hub virtual network for corp connectivity. Virtual networks on these subscriptions will be connected to the hub virtual network using VNet peering, and if you deployed and enabled Azure Firewall as DNS proxy, DNS settings on these VNets will be configured with the Azure Firewall private IP address.
 
-You can also indicate which subscriptions you would like to be bootstrapped as landing zones but without corp connectivity. Finally, you can select which policy you want to assign broadly to all of your landing zones.
+You can also indicate which subscriptions you would like to be bootstrapped as Azure foundations but without corp connectivity. Finally, you can select which policy you want to assign broadly to all of your Azure foundations.
 
-As part of the policies that you can assign to your landing zones, the Azure landing zone portal accelerator will allow you to protect your landing zones with a DDoS Network Protection, and for corp connected landing zones, you will have the option to prevent usage of public endpoints for Azure PaaS services as well as ensure that private endpoints to Azure PaaS services are integrated with Azure Private DNS Zones. 
+As part of the policies that you can assign to your Azure foundations, the Azure foundation portal accelerator will allow you to protect your Azure foundations with a DDoS Network Protection, and for corp connected Azure foundations, you will have the option to prevent usage of public endpoints for Azure PaaS services as well as ensure that private endpoints to Azure PaaS services are integrated with Azure Private DNS Zones. 
 
 ![Graphical user interface, application  Description automatically generated](./media/clip_image037.jpg)
 
@@ -139,4 +139,4 @@ As part of the policies that you can assign to your landing zones, the Azure lan
 
 ## Post deployment activities
 
-Once Azure landing zones has deployed, you can grant your application teams/business units access to their respective landing zones. Whenever there’s a need for a new landing zone, you can place them into their respective management groups (Online or Corp) given the characteristics of assumed workloads and their requirements.
+Once Azure foundations has deployed, you can grant your application teams/business units access to their respective Azure foundations. Whenever there’s a need for a new Azure foundation, you can place them into their respective management groups (Online or Corp) given the characteristics of assumed workloads and their requirements.

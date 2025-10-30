@@ -40,7 +40,7 @@ Similarly, as Microsoft Monitoring Agent (MMA) is on a deprecation path (August 
 
 ### Azure Database for MariaDB (Jan 2024)
 
-Azure Database for MariaDB is being deprecated, with the retirement process beginning on January 19, 2024. Due to retirement Azure is phasing out MariaDB policies, aligning with a strategic shift to Azure Database for MySQL - Flexible Server. This includes deprecating Azure Landing Zone (ALZ) custom policies 'Diagnostic Settings (Deploy)' and 'Public Endpoint (Deny)' for MariaDB. These policies are becoming redundant with MariaDB's phase-out:
+Azure Database for MariaDB is being deprecated, with the retirement process beginning on January 19, 2024. Due to retirement Azure is phasing out MariaDB policies, aligning with a strategic shift to Azure Database for MySQL - Flexible Server. This includes deprecating Mission Azure Foundation (ALZ) custom policies 'Diagnostic Settings (Deploy)' and 'Public Endpoint (Deny)' for MariaDB. These policies are becoming redundant with MariaDB's phase-out:
 
 1. Diagnostic Settings (Deploy) for MariaDB
 2. Public Endpoint (Deny) for MariaDB
